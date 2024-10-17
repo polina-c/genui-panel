@@ -9,15 +9,52 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "genui-panel.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "genui-panel.openview",
+        "title": "Sidebar View"
+      },
+      {
+        "command": "genui-panel.menu.view",
+        "category": "vscode-extension-sidebar-html",
+        "title": "Sample WebView in VS Code Sidebar",
+        "icon": "$(clear-all)"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "custom-activitybar",
+          "title": "VSCode Extension",
+          "icon": "assets/logo_bito.svg"
+        }
+      ]
+    },
+    "views": {
+      "custom-activitybar": [
+        {
+          "type": "webview",
+          "id": "genui-panel.openview",
+          "name": "View",
+          "contextualTitle": "View"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "genui-panel.menu.view",
+          "group": "navigation",
+          "when": "view == genui-panel.openview"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
