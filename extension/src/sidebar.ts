@@ -4,6 +4,7 @@ import { DartCapabilities } from "../../../shared/capabilities/dart";
 import { IAmDisposable } from "../../../shared/interfaces";
 import { disposeAll } from "../../../shared/utils";
 import { envUtils } from "../../../shared/vscode/utils";
+import { DevToolsManager } from "../../sdk/dev_tools/manager";
 
 
 export class FlutterDtdSidebar implements IAmDisposable {
@@ -11,10 +12,9 @@ export class FlutterDtdSidebar implements IAmDisposable {
 
     constructor(
         readonly devTools: DevToolsManager,
-        readonly deviceManager: FlutterDeviceManager | undefined,
         dartCapabilities: DartCapabilities,
     ) {
-        const webViewProvider = new MyWebViewProvider(devTools, deviceManager, dartCapabilities);
+        const webViewProvider = new MyWebViewProvider(devTools, dartCapabilities);
         this.disposables.push(vs.window.registerWebviewViewProvider("dartFlutterSidebar", webViewProvider, { webviewOptions: { retainContextWhenHidden: true } }));
     }
 
@@ -27,7 +27,6 @@ class MyWebViewProvider implements vs.WebviewViewProvider {
     public webviewView: vs.WebviewView | undefined;
     constructor(
         private readonly devTools: DevToolsManager,
-        private readonly deviceManager: FlutterDeviceManager | undefined,
         private readonly dartCapabilities: DartCapabilities,
     ) { }
 
