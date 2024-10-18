@@ -6,6 +6,12 @@
 
 All commands are for the directory `extension`
 
+### Rebuild packages
+
+```
+npm install
+```
+
 ### Run locally
 
 ```
