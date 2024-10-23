@@ -127,3 +127,36 @@ Content-Type: application/vscode-jsonrpc; charset=utf-8
 Content-Type: application/vscode-jsonrpc; charset=utf-8
 
 {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:43:59 AM] [Analyzer] [Info] <== Content-Length: 98
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:59 AM] [Analyzer] [Info] <== {"id":11,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:43:59 AM] [Analyzer] [Info] ==> Content-Length: 73
+[11:43:59 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":11,"result":null,"clientRequestTime":1729709039945}
+[11:43:59 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:59 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:43:59 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:59 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:43:59 AM] [Analyzer] [Info] <== Content-Length: 98
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:59 AM] [Analyzer] [Info] <== {"id":12,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:43:59 AM] [Analyzer] [Info] ==> Content-Length: 73
+[11:43:59 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":12,"result":null,"clientRequestTime":1729709039953}
+[11:43:59 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:59 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:43:59 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:59 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:44:00 AM] [Analyzer] [Info] <== Content-Length: 98
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:44:00 AM] [Analyzer] [Info] <== {"id":13,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:44:00 AM] [Analyzer] [Info] ==> Content-Length: 73
+[11:44:00 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":13,"result":null,"clientRequestTime":1729709040044}
+[11:44:00 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:44:00 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:44:00 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:44:00 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
