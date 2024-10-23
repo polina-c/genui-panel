@@ -27,5 +27,5 @@ Then one of:
 All commands are for the directory `ui`.
 
 ```
-flutter run -d chrome --web-port=49430
+flutter run -d chrome --web-port=50000
 ```
