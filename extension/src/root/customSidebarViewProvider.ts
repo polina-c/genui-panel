@@ -49,32 +49,12 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 <html>
 
 <body>
-    <div id="frame1" style="overflow: hidden"><iframe src="http://localhost:5000" title="Dynamic"
-            style="position: relative; top: -10px"></iframe></div>
+    <div id="frame1" style="overflow: hidden">
+        <iframe src="http://localhost:5000" title="Dynamic" style="position: relative; top: -10px"
+            allow="clipboard-read; clipboard-write; cross-origin-isolated"></iframe>
+    </div>
 
-    Enter URL of the Gen UI frame:</br>
-    <input type="text" id="url1" style='width:30em' value="http://localhost:57338/#?frame=1" />
-    <button type="button" onclick="embedFlutterHere(1)">Show</button>
-    </br>
-    <div id="frame1" style="overflow: hidden">frame be rendered here</div>
 
-    </br>
-    </br>
-
-    Enter URL of the Gen UI frame:</br>
-    <input type="text" id="url2" style='width:30em' value="http://localhost:57338/#?frame=2" />
-    <button type="button" onclick="embedFlutterHere(2)">Show</button>
-    </br>
-    <div id="frame2" style="overflow: hidden">frame be rendered here</div>
-
-    </br>
-    </br>
-
-    Enter URL of the Gen UI frame:</br>
-    <input type="text" id="url3" style='width:30em' value="http://localhost:57338/#?frame=3" />
-    <button type="button" onclick="embedFlutterHere(3)">Show</button>
-    </br>
-    <div id="frame3" style="overflow: hidden">frame be rendered here</div>
 
 </body>
 
