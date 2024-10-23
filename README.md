@@ -12,11 +12,13 @@ All commands are for the directory `extension`
 npm install
 ```
 
-### Run locally
+### Rebuild code
 
 ```
 npm run compile
 ```
+
+### Run locally
 
 Then one of:
 1. Open [extension.ts](extension/src/extension.ts) and press F5

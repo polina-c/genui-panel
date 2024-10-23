@@ -1,24 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'none'; style-src ${webview.cspSource}; script-src 'nonce-${nonce}';">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <link href="${styleResetUri}" rel="stylesheet">
-    <link href="${styleVSCodeUri}" rel="stylesheet">
-
-    <link href="${stylesheetUri}" rel="stylesheet">
-
-</head>
+<html>
 
 <body>
-    <iframe src="http://localhost:8000/" width="600" height="600"></iframe>
+    <h2>Gen UI Host</h2>
+
+    <div id="frame1" style="overflow: hidden"><iframe src="http://localhost:5000" title="Dynamic"
+            style="position: relative; top: -10px"></iframe></div>
+
+    Enter URL of the Gen UI frame:</br>
+    <input type="text" id="url1" style='width:30em' value="http://localhost:57338/#?frame=1" />
+    <button type="button" onclick="embedFlutterHere(1)">Show</button>
+    </br>
+    <div id="frame1" style="overflow: hidden">frame be rendered here</div>
+
+    </br>
+    </br>
+
+    Enter URL of the Gen UI frame:</br>
+    <input type="text" id="url2" style='width:30em' value="http://localhost:57338/#?frame=2" />
+    <button type="button" onclick="embedFlutterHere(2)">Show</button>
+    </br>
+    <div id="frame2" style="overflow: hidden">frame be rendered here</div>
+
+    </br>
+    </br>
+
+    Enter URL of the Gen UI frame:</br>
+    <input type="text" id="url3" style='width:30em' value="http://localhost:57338/#?frame=3" />
+    <button type="button" onclick="embedFlutterHere(3)">Show</button>
+    </br>
+    <div id="frame3" style="overflow: hidden">frame be rendered here</div>
+
 </body>
 
-</html>`
+</html>
+
+<script>
+    function embedFlutterHere(id) {
+        url = document.getElementById(`url${id}`).value;
+        embedFlutter(`frame${id}`, url);
+    }
+
+    function embedFlutter(id, url) {
+        console.log(url);
+        html = `<iframe src="${url}" title="Dynamic" style="position: relative; top: -10px"></iframe>`;
+        console.log(html);
+        document.getElementById(id).innerHTML = html;
+    }
+</script>

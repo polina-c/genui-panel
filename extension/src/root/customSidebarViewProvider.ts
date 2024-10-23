@@ -44,43 +44,42 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
     // Use a nonce to only allow a specific script to be run.
     const nonce = getNonce();
 
-    return `<!DOCTYPE html>
-			<html lang="en">
-			<head>
-				<meta charset="UTF-8">
-				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${webview.cspSource}; script-src 'nonce-${nonce}';">
-				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    return `
+<!DOCTYPE html>
+<html>
 
-        <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap" rel="stylesheet">
+<body>
+    <div id="frame1" style="overflow: hidden"><iframe src="http://localhost:5000" title="Dynamic"
+            style="position: relative; top: -10px"></iframe></div>
 
-				<link href="${styleResetUri}" rel="stylesheet">
-				<link href="${styleVSCodeUri}" rel="stylesheet">
+    Enter URL of the Gen UI frame:</br>
+    <input type="text" id="url1" style='width:30em' value="http://localhost:57338/#?frame=1" />
+    <button type="button" onclick="embedFlutterHere(1)">Show</button>
+    </br>
+    <div id="frame1" style="overflow: hidden">frame be rendered here</div>
 
-        <link href="${stylesheetUri}" rel="stylesheet">
+    </br>
+    </br>
 
-			</head>
+    Enter URL of the Gen UI frame:</br>
+    <input type="text" id="url2" style='width:30em' value="http://localhost:57338/#?frame=2" />
+    <button type="button" onclick="embedFlutterHere(2)">Show</button>
+    </br>
+    <div id="frame2" style="overflow: hidden">frame be rendered here</div>
 
-			<body>
-      <iframe src="http://localhost:8000/" width="200" height="200"></iframe>
-			<section class="wrapper">
-      <div class="container">
-            <div class="content">
-                <h2 class="subtitle">Subscribe today</h2>
-                <input type="text" class="mail" placeholder="Your email address" name="mail" required>
+    </br>
+    </br>
 
-                <button class="add-color-button">Subscribe</button>
+    Enter URL of the Gen UI frame:</br>
+    <input type="text" id="url3" style='width:30em' value="http://localhost:57338/#?frame=3" />
+    <button type="button" onclick="embedFlutterHere(3)">Show</button>
+    </br>
+    <div id="frame3" style="overflow: hidden">frame be rendered here</div>
 
-                <p class="text">We won’t send you spam.</p>
-                <p class="text">Unsubscribe at any time.</p>
+</body>
 
-            </div>
-      </div>
-			</section>
-			<!--<script nonce="${nonce}" src="${scriptUri}"></script>-->
-      </body>
-
-			</html>`;
+</html>
+`;
   }
 }
 
