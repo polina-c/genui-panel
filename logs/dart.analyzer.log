@@ -192,3 +192,25 @@ Content-Type: application/vscode-jsonrpc; charset=utf-8
 [11:45:15 AM] [Analyzer] [Info] <== Content-Length: 93
 Content-Type: application/vscode-jsonrpc; charset=utf-8
 [11:45:15 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:45:28 AM] [Analyzer] [Info] <== Content-Length: 98
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:45:28 AM] [Analyzer] [Info] <== {"id":17,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:45:28 AM] [Analyzer] [Info] ==> Content-Length: 73
+[11:45:28 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":17,"result":null,"clientRequestTime":1729709128323}
+[11:45:28 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:45:28 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:45:28 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:45:28 AM] [Analyzer] [Info] <== Content-Length: 98
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:45:28 AM] [Analyzer] [Info] <== {"id":18,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:45:28 AM] [Analyzer] [Info] ==> Content-Length: 73
+[11:45:28 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":18,"result":null,"clientRequestTime":1729709128424}
+[11:45:28 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:45:28 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:45:28 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
