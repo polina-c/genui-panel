@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 
 import { CustomSidebarViewProvider } from './root/customSidebarViewProvider';
+import { AngularView } from './root/angularView';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -42,7 +43,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// Command has been defined in the package.json file
 	// Provide the implementation of the command with registerCommand
 	// CommandId parameter must match the command field in package.json
-	let openWebView = vscode.commands.registerCommand('genui-panel.openview', () => {
+	const openWebView = vscode.commands.registerCommand('genui-panel.openview', () => {
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Command " Sidebar View [genui-panel.openview] " called.');
 	});

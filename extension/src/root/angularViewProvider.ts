@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 
-export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
+export class AngularViewProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
 
   private _view?: vscode.WebviewView;

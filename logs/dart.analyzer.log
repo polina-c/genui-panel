@@ -1,0 +1,129 @@
+!! ⚠️ PLEASE REVIEW THIS LOG FOR SENSITIVE INFORMATION BEFORE SHARING ⚠️ !!
+Dart Code extension: 3.99.20241007
+Flutter extension: 3.98.0 (not activated)
+
+App: Visual Studio Code
+App Host: desktop
+Version: mac 1.94.1
+
+
+Logging Categories:
+    Analyzer
+
+Wed Oct 23 2024 [11:39:30 GMT-0700 (Pacific Daylight Time)] Log file started
+[11:39:30 AM] [Analyzer] [Info] Spawning /Users/polinach/_/platform/flutter/bin/cache/dart-sdk/bin/dart with args ["language-server","--protocol=lsp","--client-id=VS-Code","--client-version=3.99.20241007","--instrumentation-log-file=/Users/polinach/_/genui-panel/logs/dart.analyzerInstrumentation.log"]
+[11:39:30 AM] [Analyzer] [Info]     PID: 12408
+[11:39:30 AM] [Analyzer] [Info] ==> Content-Length: 6572
+[11:39:30 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":0,"method":"initialize","params":{"processId":12312,"clientInfo":{"name":"Visual Studio Code","version":"1.94.1"},"locale":"en","rootPath":"/Users/polinach/_/genui-panel","rootUri":"file:///Users/polinach/_/genui-panel","capabilities":{"workspace":{"applyEdit":true,"workspaceEdit":{"documentChanges":true,"resourceOperations":["create","rename","delete"],"failureHandling":"textOnlyTransactional","normalizesLineEndings":true,"changeAnnotationSupport":{"groupsOnLabel":true}},"configuration":true,"didChangeWatchedFiles":{"dynamicRegistration":true,"relativePatternSupport":true},"symbol":{"dynamicRegistration":true,"symbolKind":{"valueSet":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]},"tagSupport":{"valueSet":[1]},"resolveSupport":{"properties":["location.range"]}},"codeLens":{"refreshSupport":true},"executeCommand":{"dynamicRegistration":true},"didChangeConfiguration":{"dynamicRegistration":true},"workspaceFolders":true,"semanticTokens":{"refreshSupport":true},"fileOperations":{"dynamicRegistration":true,"didCreate":true,"didRename":true,"didDelete":true,"willCreate":true,"willRename":true,"willDelete":true},"inlineValue":{"refreshSupport":true},"inlayHint":{"refreshSupport":true},"diagnostics":{"refreshSupport":true}},"textDocument":{"publishDiagnostics":{"relatedInformation":true,"versionSupport":false,"tagSupport":{"valueSet":[1,2]},"codeDescriptionSupport":true,"dataSupport":true},"synchronization":{"dynamicRegistration":true,"willSave":true,"willSaveWaitUntil":true,"didSave":true},"completion":{"dynamicRegistration":true,"contextSupport":true,"completionItem":{"snippetSupport":true,"commitCharactersSupport":true,"documentationFormat":["markdown","plaintext"],"deprecatedSupport":true,"preselectSupport":true,"tagSupport":{"valueSet":[1]},"insertReplaceSupport":true,"resolveSupport":{"properties":["documentation","detail","additionalTextEdits"]},"insertTextModeSupport":{"valueSet":[1,2]},"labelDetailsSupport":true},"…
+[11:39:32 AM] [Analyzer] [Info] <== Content-Length: 882
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"id":0,"jsonrpc":"2.0","result":{"capabilities":{"executeCommandProvider":{"commands":["dart.edit.sortMembers","dart.edit.organizeImports","dart.edit.fixAll","dart.edit.fixAllInWorkspace.preview","dart.edit.fixAllInWorkspace","dart.edit.sendWorkspaceEdit","refactor.perform","refactor.validate","dart.logAction","dart.refactor.convert_all_formal_parameters_to_named","dart.refactor.convert_selected_formal_parameters_to_named","dart.refactor.move_selected_formal_parameters_left","dart.refactor.move_top_level_to_file"],"workDoneProgress":true},"experimental":{"dartTextDocumentContentProvider":{"schemes":["dart-macro+file"]},"textDocument":{"super":{},"augmented":{},"augmentation":{}}},"workspace":{"workspaceFolders":{"changeNotifications":true,"supported":true}},"workspaceSymbolProvider":true},"serverInfo":{"name":"Dart SDK LSP Analysis Server","version":"3.7.0-50.0.dev"}}}
+[11:39:32 AM] [Analyzer] [Info] ==> Content-Length: 86
+[11:39:32 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","method":"initialized","params":{},"clientRequestTime":1729708772462}
+[11:39:32 AM] [Analyzer] [Info] <== Content-Length: 168
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"id":1,"jsonrpc":"2.0","method":"workspace/configuration","params":{"items":[{"scopeUri":"file:///Users/polinach/_/genui-panel","section":"dart"},{"section":"dart"}]}}
+[11:39:32 AM] [Analyzer] [Info] ==> Content-Length: 7915
+[11:39:32 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":1,"result":[{"analysisExcludedFolders":[],"analyzerAdditionalArgs":[],"analyzerVmAdditionalArgs":[],"analyzerDiagnosticsPort":null,"analyzerPath":null,"analyzerSshHost":null,"analyzerVmServicePort":null,"includeDependenciesInWorkspaceSymbols":true,"notifyAnalyzerErrors":true,"onlyAnalyzeProjectsWithOpenFiles":false,"showTodos":false,"showExtensionRecommendations":true,"devToolsBrowser":"chrome","devToolsPort":null,"devToolsReuseWindows":true,"devToolsTheme":"dark","devToolsLocation":{"default":"beside"},"openDevTools":"never","closeDevTools":"never","shareDevToolsWithFlutter":true,"showInspectorNotificationsForWidgetErrors":true,"customDevTools":{},"autoImportCompletions":true,"automaticCommentSlashes":"tripleSlash","closingLabels":true,"closingLabelsPrefix":" // ","closingLabelsTextStyle":"normal","completeFunctionCalls":true,"documentation":"full","enableServerSnippets":true,"hotReloadPatterns":[],"enableCompletionCommitCharacters":false,"enableSdkFormatter":true,"enableSnippets":true,"insertArgumentPlaceholders":true,"lineLength":80,"lspSnippetTextEdits":true,"renameFilesWithClasses":"never","showDartPadSampleCodeLens":true,"showMainCodeLens":true,"showTestCodeLens":true,"updateImportsOnRename":true,"warnWhenEditingFilesOutsideWorkspace":true,"warnWhenEditingFilesInPubCache":true,"flutterAdbConnectOnChromeOs":false,"flutterAdditionalArgs":[],"flutterAttachAdditionalArgs":[],"flutterCreateAndroidLanguage":"kotlin","flutterCreateIOSLanguage":"swift","flutterCreatePlatforms":null,"offline":false,"flutterCreateOrganization":null,"flutterCustomEmulators":[],"flutterGutterIcons":true,"flutterHotReloadOnSave":"manual","hotReloadOnSave":"never","flutterGenerateLocalizationsOnSave":"never","flutterOutline":true,"flutterRunAdditionalArgs":[],"flutterScreenshotPath":null,"flutterRememberSelectedDevice":true,"flutterSelectDeviceWhenConnected":true,"flutterShowEmulators":"local","flutterShowWebServerDevice":"remote","flutterTestAdditionalArgs":[],"fl…
+[11:39:32 AM] [Analyzer] [Info] <== Content-Length: 6709
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"id":2,"jsonrpc":"2.0","method":"client/registerCapability","params":{"registrations":[{"id":"0","method":"textDocument/prepareCallHierarchy","registerOptions":{"documentSelector":[{"language":"dart","scheme":"file"},{"language":"dart","scheme":"dart-macro+file"}]}},{"id":"1","method":"textDocument/codeAction","registerOptions":{"codeActionKinds":["source","source.organizeImports","source.fixAll","source.sortMembers","quickfix","refactor"],"documentSelector":[{"language":"dart","scheme":"file"},{"language":"dart","scheme":"dart-macro+file"}]}},{"id":"2","method":"textDocument/codeLens","registerOptions":{"documentSelector":[{"language":"dart","scheme":"file"},{"language":"dart","scheme":"dart-macro+file"}]}},{"id":"3","method":"textDocument/completion","registerOptions":{"completionItem":{"labelDetailsSupport":true},"documentSelector":[{"language":"dart","scheme":"file"},{"language":"dart","scheme":"dart-macro+file"}],"resolveProvider":true,"triggerCharacters":[".","=","(","$","\"","'","{","/",":"]}},{"id":"4","method":"textDocument/completion","registerOptions":{"documentSelector":[{"language":"yaml","pattern":"**/pubspec.yaml","scheme":"file"},{"language":"yaml","pattern":"**/analysis_options.yaml","scheme":"file"},{"language":"yaml","pattern":"**/lib/{fix_data.yaml,fix_data/**.yaml}","scheme":"file"}],"resolveProvider":true}},{"id":"5","method":"textDocument/definition","registerOptions":{"documentSelector":[{"language":"dart","scheme":"file"},{"language":"dart","scheme":"dart-macro+file"}]}},{"id":"6","method":"textDocument/documentLink","registerOptions":{"documentSelector":[{"language":"dart","scheme":"file"},{"language":"dart","scheme":"dart-macro+file"}],"resolveProvider":false}},{"id":"7","method":"textDocument/documentColor","registerOptions":{"documentSelector":[{"language":"dart","scheme":"file"},{"language":"dart","scheme":"dart-macro+file"}]}},{"id":"8","method":"text…
+[11:39:32 AM] [Analyzer] [Info] ==> Content-Length: 72
+[11:39:32 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":2,"result":null,"clientRequestTime":1729708772682}
+[11:39:33 AM] [Analyzer] [Info] <== Content-Length: 506
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:39:34 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"textDocument/publishDiagnostics","params":{"diagnostics":[{"code":"include_file_not_found","message":"The include file 'package:dart_flutter_team_lints/analysis_options.yaml' in '/Users/polinach/_/genui-panel/ui/analysis_options.yaml' can't be found when analyzing '/Users/polinach/_/genui-panel/ui'.","range":{"end":{"character":62,"line":0},"start":{"character":9,"line":0}},"severity":2,"source":"dart"}],"uri":"file:///Users/polinach/_/genui-panel/ui/analysis_options.yaml"}}
+[11:39:34 AM] [Analyzer] [Info] <== Content-Length: 97
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:39:34 AM] [Analyzer] [Info] <== {"id":3,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:39:34 AM] [Analyzer] [Info] ==> Content-Length: 72
+[11:39:34 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":3,"result":null,"clientRequestTime":1729708774414}
+[11:39:34 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:39:34 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:39:34 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:41:29 AM] [Analyzer] [Info] <== Content-Length: 97
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:41:29 AM] [Analyzer] [Info] <== {"id":4,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:41:29 AM] [Analyzer] [Info] ==> Content-Length: 72
+[11:41:29 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":4,"result":null,"clientRequestTime":1729708889331}
+[11:41:29 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:41:29 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:41:30 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:41:30 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:41:30 AM] [Analyzer] [Info] <== Content-Length: 97
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:41:30 AM] [Analyzer] [Info] <== {"id":5,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:41:30 AM] [Analyzer] [Info] ==> Content-Length: 72
+[11:41:30 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":5,"result":null,"clientRequestTime":1729708890963}
+[11:41:30 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:41:30 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:41:30 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:42:56 AM] [Analyzer] [Info] <== Content-Length: 97
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:42:56 AM] [Analyzer] [Info] <== {"id":6,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:42:56 AM] [Analyzer] [Info] ==> Content-Length: 72
+[11:42:56 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":6,"result":null,"clientRequestTime":1729708976465}
+[11:42:56 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:42:56 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:42:56 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:42:56 AM] [Analyzer] [Info] ==> Content-Length: 98
+[11:42:56 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","method":"$/setTrace","params":{"value":"off"},"clientRequestTime":1729708976566}
+[11:42:56 AM] [Analyzer] [Info] ==> Content-Length: 122
+[11:42:56 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","method":"workspace/didChangeConfiguration","params":{"settings":null},"clientRequestTime":1729708976566}
+[11:42:56 AM] [Analyzer] [Info] <== Content-Length: 168
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"id":7,"jsonrpc":"2.0","method":"workspace/configuration","params":{"items":[{"scopeUri":"file:///Users/polinach/_/genui-panel","section":"dart"},{"section":"dart"}]}}
+[11:42:56 AM] [Analyzer] [Info] ==> Content-Length: 7915
+[11:42:56 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":7,"result":[{"analysisExcludedFolders":[],"analyzerAdditionalArgs":[],"analyzerVmAdditionalArgs":[],"analyzerDiagnosticsPort":null,"analyzerPath":null,"analyzerSshHost":null,"analyzerVmServicePort":null,"includeDependenciesInWorkspaceSymbols":true,"notifyAnalyzerErrors":true,"onlyAnalyzeProjectsWithOpenFiles":false,"showTodos":false,"showExtensionRecommendations":true,"devToolsBrowser":"chrome","devToolsPort":null,"devToolsReuseWindows":true,"devToolsTheme":"dark","devToolsLocation":{"default":"beside"},"openDevTools":"never","closeDevTools":"never","shareDevToolsWithFlutter":true,"showInspectorNotificationsForWidgetErrors":true,"customDevTools":{},"autoImportCompletions":true,"automaticCommentSlashes":"tripleSlash","closingLabels":true,"closingLabelsPrefix":" // ","closingLabelsTextStyle":"normal","completeFunctionCalls":true,"documentation":"full","enableServerSnippets":true,"hotReloadPatterns":[],"enableCompletionCommitCharacters":false,"enableSdkFormatter":true,"enableSnippets":true,"insertArgumentPlaceholders":true,"lineLength":80,"lspSnippetTextEdits":true,"renameFilesWithClasses":"never","showDartPadSampleCodeLens":true,"showMainCodeLens":true,"showTestCodeLens":true,"updateImportsOnRename":true,"warnWhenEditingFilesOutsideWorkspace":true,"warnWhenEditingFilesInPubCache":true,"flutterAdbConnectOnChromeOs":false,"flutterAdditionalArgs":[],"flutterAttachAdditionalArgs":[],"flutterCreateAndroidLanguage":"kotlin","flutterCreateIOSLanguage":"swift","flutterCreatePlatforms":null,"offline":false,"flutterCreateOrganization":null,"flutterCustomEmulators":[],"flutterGutterIcons":true,"flutterHotReloadOnSave":"manual","hotReloadOnSave":"never","flutterGenerateLocalizationsOnSave":"never","flutterOutline":true,"flutterRunAdditionalArgs":[],"flutterScreenshotPath":null,"flutterRememberSelectedDevice":true,"flutterSelectDeviceWhenConnected":true,"flutterShowEmulators":"local","flutterShowWebServerDevice":"remote","flutterTestAdditionalArgs":[],"fl…
+[11:43:15 AM] [Analyzer] [Info] <== Content-Length: 97
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:15 AM] [Analyzer] [Info] <== {"id":8,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:43:15 AM] [Analyzer] [Info] ==> Content-Length: 72
+[11:43:15 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":8,"result":null,"clientRequestTime":1729708995585}
+[11:43:15 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:15 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:43:15 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:43:25 AM] [Analyzer] [Info] <== Content-Length: 97
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:25 AM] [Analyzer] [Info] <== {"id":9,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:43:25 AM] [Analyzer] [Info] ==> Content-Length: 72
+[11:43:25 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":9,"result":null,"clientRequestTime":1729709005439}
+[11:43:25 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:25 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}
+[11:43:25 AM] [Analyzer] [Info] <== Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:25 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
+[11:43:25 AM] [Analyzer] [Info] <== Content-Length: 98
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:25 AM] [Analyzer] [Info] <== {"id":10,"jsonrpc":"2.0","method":"window/workDoneProgress/create","params":{"token":"ANALYZING"}}
+[11:43:25 AM] [Analyzer] [Info] ==> Content-Length: 73
+[11:43:25 AM] [Analyzer] [Info] ==> {"jsonrpc":"2.0","id":10,"result":null,"clientRequestTime":1729709005536}
+[11:43:25 AM] [Analyzer] [Info] <== Content-Length: 118
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+[11:43:25 AM] [Analyzer] [Info] <== {"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"begin","title":"Analyzing…"}}}Content-Length: 93
+Content-Type: application/vscode-jsonrpc; charset=utf-8
+
+{"jsonrpc":"2.0","method":"$/progress","params":{"token":"ANALYZING","value":{"kind":"end"}}}
