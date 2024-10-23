@@ -196,3 +196,1243 @@
 1729709128424:Req:{"jsonrpc"::"2.0","id"::18,"result"::null,"clientRequestTime"::1729709128424}
 1729709128424:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
 1729709128424:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709132189:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/index:modify
+1729709132190:Res:{"id"::19,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709132190:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/objects/19/6f56043aef010bfdb318db7d44dc6fdad11ab5:add
+1729709132190:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/objects/43/269fc4aade7f9dedb3a4cb709e61469045efee:add
+1729709132190:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/objects/f5/eec7d4014591c0c0bda5567033b846a509d8c6:add
+1729709132190:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/COMMIT_EDITMSG:modify
+1729709132190:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/logs/HEAD:modify
+1729709132190:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/logs/refs/heads/main:modify
+1729709132190:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/refs/heads/main:modify
+1729709132190:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/objects/da/2c48c3447d6d48bff7bae32fbe0ea58a141af2:add
+1729709132190:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/objects/25/c5ea3af5dbe60b0568427d04278ea9becf9b54:add
+1729709132191:Req:{"jsonrpc"::"2.0","id"::19,"result"::null,"clientRequestTime"::1729709132190}
+1729709132191:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709132191:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709135448:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/logs/refs/remotes/origin/main:modify
+1729709135449:Res:{"id"::20,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709135449:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/refs/remotes/origin/main:modify
+1729709135449:Req:{"jsonrpc"::"2.0","id"::20,"result"::null,"clientRequestTime"::1729709135449}
+1729709135450:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709135450:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709136885:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/FETCH_HEAD:modify
+1729709136885:Res:{"id"::21,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709136886:Req:{"jsonrpc"::"2.0","id"::21,"result"::null,"clientRequestTime"::1729709136886}
+1729709136886:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709136886:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709138421:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/logs/refs/remotes/origin/HEAD:modify
+1729709138421:Res:{"id"::22,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709138421:Watch:<unknown>:/Users/polinach/_/genui-panel/.git/refs/remotes/origin/HEAD:modify
+1729709138426:Req:{"jsonrpc"::"2.0","id"::22,"result"::null,"clientRequestTime"::1729709138422}
+1729709138426:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709138426:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709214979:Watch:<unknown>:/Users/polinach/_/genui-panel/README.md:modify
+1729709214979:Res:{"id"::23,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709214980:Req:{"jsonrpc"::"2.0","id"::23,"result"::null,"clientRequestTime"::1729709214980}
+1729709214980:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709214981:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709222898:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/dartpad/web_plugin_registrant.dart:modify
+1729709222899:Res:{"id"::24,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709222899:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/macos/Flutter/GeneratedPluginRegistrant.swift:modify
+1729709222905:Req:{"jsonrpc"::"2.0","id"::24,"result"::null,"clientRequestTime"::1729709222903}
+1729709222905:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709222905:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709222997:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/dartpad/web_plugin_registrant.dart:modify
+1729709222997:Res:{"id"::25,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709222997:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/macos/Flutter/GeneratedPluginRegistrant.swift:modify
+1729709222999:Req:{"jsonrpc"::"2.0","id"::25,"result"::null,"clientRequestTime"::1729709222998}
+1729709222999:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709222999:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709228255:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_localizations.stamp:add
+1729709228255:Res:{"id"::26,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709228255:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_dart_plugin_registrant.stamp:add
+1729709228255:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/_composite.stamp:add
+1729709228257:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_localizations.stamp:add
+1729709228257:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_dart_plugin_registrant.stamp:add
+1729709228257:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/_composite.stamp:add
+1729709228257:Req:{"jsonrpc"::"2.0","id"::26,"result"::null,"clientRequestTime"::1729709228257}
+1729709228257:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709228258:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709228355:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:add
+1729709228356:Res:{"id"::27,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:add
+1729709228356:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:add
+1729709228356:Req:{"jsonrpc"::"2.0","id"::27,"result"::null,"clientRequestTime"::1729709228356}
+1729709228357:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709228357:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709228455:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:modify
+1729709228455:Res:{"id"::28,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709228455:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:add
+1729709228456:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:modify
+1729709228456:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:add
+1729709228456:Req:{"jsonrpc"::"2.0","id"::28,"result"::null,"clientRequestTime"::1729709228456}
+1729709228456:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709228456:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709236884:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/cache.dill.track.dill:add
+1729709236885:Res:{"id"::29,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709236885:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/cache.dill.track.dill:add
+1729709236885:Req:{"jsonrpc"::"2.0","id"::29,"result"::null,"clientRequestTime"::1729709236885}
+1729709236886:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709236886:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709236985:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/cache.dill.track.dill:modify
+1729709236985:Res:{"id"::30,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709236985:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/cache.dill.track.dill:modify
+1729709236985:Req:{"jsonrpc"::"2.0","id"::30,"result"::null,"clientRequestTime"::1729709236985}
+1729709236986:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709236986:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709247336:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOG:add
+1729709247337:Res:{"id"::31,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL:add
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database-journal:add
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData-journal:add
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor-journal:add
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/TransportSecurity:add
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor:add
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies:add
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOCK:add
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History-journal:add
+1729709247337:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/SharedStorage:add
+1729709247342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/WebStorage/QuotaManager:add
+1729709247342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons:add
+1729709247342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS:add
+1729709247342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data:add
+1729709247342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db:add
+1729709247342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons-journal:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/trusted_vault.pb:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database-journal:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData-journal:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor-journal:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/TransportSecurity:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOCK:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History-journal:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/SharedStorage:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/README:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account-journal:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Persistent State:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsState:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Secure Preferences:add
+1729709247343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens-journal:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOCK:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOG:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/README:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account-journal:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Persistent State:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsState:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Secure Preferences:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens-journal:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PreferredApps:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Visited Links:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/000003.log:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/MANIFEST-000001:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOCK:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/CURRENT:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/000003.log:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/MANIFEST-000001:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOCK:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/CURRENT:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies-journal:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL-journal:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Preferences:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/000003.log:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/MANIFEST-000001:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOCK:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/CURRENT:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db-journal:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts-journal:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/WebStorage/QuotaManager-journal:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/WebStorage/QuotaManager:add
+1729709247344:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOCK:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOG:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/000003.log:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/MANIFEST-000001:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOCK:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/CURRENT:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons-journal:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/trusted_vault.pb:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PersistentOriginTrials/LOCK:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PersistentOriginTrials/LOG:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/000003.log:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/MANIFEST-000001:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOCK:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/CURRENT:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOG:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/000003.log:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/MANIFEST-000001:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOCK:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/CURRENT:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOG:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PreferredApps:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Visited Links:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/000003.log:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/MANIFEST-000001:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOCK:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/CURRENT:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/000003.log:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/MANIFEST-000001:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOCK:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/CURRENT:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies-journal:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL-journal:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Preferences:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/000003.log:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/MANIFEST-000001:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOCK:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/CURRENT:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db-journal:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts-journal:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/WebStorage/QuotaManager-journal:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/WebStorage/QuotaManager:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOCK:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOG:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS:add
+1729709247345:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/000003.log:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/MANIFEST-000001:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOCK:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/CURRENT:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons-journal:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/trusted_vault.pb:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PersistentOriginTrials/LOCK:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PersistentOriginTrials/LOG:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/000003.log:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/MANIFEST-000001:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOCK:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/CURRENT:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOG:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/000003.log:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/MANIFEST-000001:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOCK:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/CURRENT:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOG:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOCK:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOG:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOCK:add
+1729709247346:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOG:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/MANIFEST-000001:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOCK:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_1:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0:add
+1729709247347:Req:{"jsonrpc"::"2.0","id"::31,"result"::null,"clientRequestTime"::1729709247343}
+1729709247347:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709247347:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOCK:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOG:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database-journal:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData-journal:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor-journal:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/MANIFEST-000001:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOCK:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_1:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/TransportSecurity:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOCK:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History-journal:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/SharedStorage:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOCK:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOG:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOCK:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOG:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOCK:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOG:add
+1729709247347:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/README:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db-journal:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/000003.log:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/MANIFEST-000001:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/CURRENT:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account-journal:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Persistent State:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database-journal:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData-journal:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor-journal:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/MANIFEST-000001:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_1:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/TransportSecurity:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History-journal:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/SharedStorage:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/README:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db-journal:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/000003.log:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/MANIFEST-000001:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/CURRENT:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account-journal:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Persistent State:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PersistentOriginTrials/LOCK:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PersistentOriginTrials/LOG:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/000003.log:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/MANIFEST-000001:add
+1729709247348:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/CURRENT:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db-journal:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/000003.log:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/MANIFEST-000001:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/CURRENT:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182847213766:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182839988438:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/MANIFEST-000001:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_1:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOG:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/000003.log:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/MANIFEST-000001:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOCK:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/CURRENT:add
+1729709247349:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/000003.log:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/MANIFEST-000001:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/000003.log:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/MANIFEST-000001:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/CURRENT:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/000003.log:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/MANIFEST-000001:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/CURRENT:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db-journal:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/000003.log:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOCK:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/MANIFEST-000001:add
+1729709247350:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOCK:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182847213766:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182839988438:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOCK:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182847213766:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182839988438:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOCK:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/000003.log:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOCK:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/MANIFEST-000001:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOCK:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsState:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Secure Preferences:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens-journal:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOCK:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data-journal:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites-journal:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOCK:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS-journal:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data-journal:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOCK:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOCK:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOG:add
+1729709247351:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies-journal:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182847213766:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182839988438:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/000003.log:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/MANIFEST-000001:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsState:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Secure Preferences:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens-journal:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data-journal:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites-journal:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS-journal:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data-journal:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOCK:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOG:add
+1729709247352:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies-journal:add
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOG:modify
+1729709247419:Res:{"id"::32,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account:modify
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens:modify
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOCK:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data-journal:modify
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites-journal:modify
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOCK:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOG:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS-journal:modify
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites:modify
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data-journal:modify
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOCK:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies:modify
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOCK:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOG:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOCK:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOG:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOCK:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOG:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOCK:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOG:remove
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOCK:add
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOG:add
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies-journal:modify
+1729709247419:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Preferences:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOG:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOCK:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data-journal:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites-journal:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOCK:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOG:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS-journal:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data-journal:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOCK:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies:modify
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOCK:remove
+1729709247420:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOG:remove
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOCK:remove
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOG:remove
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOCK:remove
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOG:remove
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOCK:remove
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOG:remove
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies-journal:modify
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Preferences:modify
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOCK:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOCK:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOG:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOCK:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOG:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOCK:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOCK:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOG:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOCK:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOG:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOCK:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOG:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOCK:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOG:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOCK:add
+1729709247421:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOG:add
+1729709247422:Req:{"jsonrpc"::"2.0","id"::32,"result"::null,"clientRequestTime"::1729709247420}
+1729709247422:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709247422:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOCK:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOCK:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOG:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOCK:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOG:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/000003.log:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOCK:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOCK:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOG:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOCK:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOG:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOCK:add
+1729709247422:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOG:add
+1729709250530:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/dartpad/web_plugin_registrant.dart:modify
+1729709250530:Res:{"id"::33,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709250531:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/dartpad/web_plugin_registrant.dart:modify
+1729709250532:Req:{"jsonrpc"::"2.0","id"::33,"result"::null,"clientRequestTime"::1729709250531}
+1729709250532:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709250532:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709250631:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/macos/Flutter/GeneratedPluginRegistrant.swift:modify
+1729709250631:Res:{"id"::34,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709250631:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/macos/Flutter/GeneratedPluginRegistrant.swift:modify
+1729709250632:Req:{"jsonrpc"::"2.0","id"::34,"result"::null,"clientRequestTime"::1729709250631}
+1729709250632:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709250632:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709250732:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_localizations.stamp:modify
+1729709250732:Res:{"id"::35,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709250732:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_dart_plugin_registrant.stamp:modify
+1729709250732:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_localizations.stamp:modify
+1729709250732:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_dart_plugin_registrant.stamp:modify
+1729709250733:Req:{"jsonrpc"::"2.0","id"::35,"result"::null,"clientRequestTime"::1729709250733}
+1729709250733:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709250733:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:remove
+1729709250834:Res:{"id"::36,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:remove
+1729709250834:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:remove
+1729709250835:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:add
+1729709250835:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:add
+1729709250835:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:add
+1729709250835:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:add
+1729709250835:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:add
+1729709250835:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:add
+1729709250835:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:add
+1729709250836:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:add
+1729709250836:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:add
+1729709250836:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:add
+1729709250836:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:add
+1729709250836:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:add
+1729709250836:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:add
+1729709250836:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:add
+1729709250836:Req:{"jsonrpc"::"2.0","id"::36,"result"::null,"clientRequestTime"::1729709250835}
+1729709250836:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709250836:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709250933:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:add
+1729709250933:Res:{"id"::37,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709250933:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:add
+1729709250934:Req:{"jsonrpc"::"2.0","id"::37,"result"::null,"clientRequestTime"::1729709250934}
+1729709250934:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709250934:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709259454:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/cache.dill.track.dill:modify
+1729709259454:Res:{"id"::38,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709259454:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/cache.dill.track.dill:modify
+1729709259455:Req:{"jsonrpc"::"2.0","id"::38,"result"::null,"clientRequestTime"::1729709259455}
+1729709259455:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709259455:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709264741:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PreferredApps:modify
+1729709264741:Res:{"id"::39,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709264741:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Visited Links:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/000003.log:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/MANIFEST-000001:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/CURRENT:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG.old:add
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/MANIFEST-000001:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/CURRENT:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG.old:add
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/MANIFEST-000001:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/CURRENT:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/WebStorage/QuotaManager:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/000003.log:modify
+1729709264742:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/MANIFEST-000001:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PreferredApps:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Visited Links:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/000003.log:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/MANIFEST-000001:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/CURRENT:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG.old:add
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/MANIFEST-000001:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/CURRENT:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG.old:add
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/MANIFEST-000001:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/CURRENT:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/WebStorage/QuotaManager:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/000003.log:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/MANIFEST-000001:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/CURRENT:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG.old:add
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/trusted_vault.pb:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PersistentOriginTrials/LOG.old:add
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/000003.log:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/MANIFEST-000001:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/CURRENT:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOG:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/000003.log:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/MANIFEST-000001:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/CURRENT:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOG:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/MANIFEST-000001:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT:modify
+1729709264743:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG:modify
+1729709264743:Req:{"jsonrpc"::"2.0","id"::39,"result"::null,"clientRequestTime"::1729709264743}
+1729709264744:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709264744:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709264746:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG.old:add
+1729709264746:Res:{"id"::40,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709264746:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_1:modify
+1729709264746:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0:modify
+1729709264746:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/ba23d8ecda68de77_0:add
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/TransportSecurity:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/SharedStorage:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOG.old:add
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/README:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/000003.log:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/MANIFEST-000001:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/CURRENT:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG.old:add
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOG.old:add
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Persistent State:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData:modify
+1729709264747:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182847213766:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182839988438:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182862498520:add
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182862327355:add
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/000003.log:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG.old:add
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/MANIFEST-000001:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG.old:add
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsState:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts:modify
+1729709264748:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Secure Preferences:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Preferences:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/CURRENT:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/trusted_vault.pb:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PersistentOriginTrials/LOG.old:add
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/000003.log:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/MANIFEST-000001:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/CURRENT:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOG:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/000003.log:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/MANIFEST-000001:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/CURRENT:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOG:modify
+1729709264749:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/MANIFEST-000001:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_1:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/ba23d8ecda68de77_0:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/TransportSecurity:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/SharedStorage:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/discounts_db/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/README:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/000003.log:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/MANIFEST-000001:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/CURRENT:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/commerce_subscription_db/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Persistent State:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182847213766:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182839988438:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182862498520:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182862327355:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/000003.log:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/MANIFEST-000001:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsState:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Secure Preferences:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/ClientCertificates/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies:modify
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/parcel_tracking_db/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SegmentInfoDB/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalStorageConfigDB/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Segmentation Platform/SignalDB/LOG.old:add
+1729709264750:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Preferences:modify
+1729709264750:Req:{"jsonrpc"::"2.0","id"::40,"result"::null,"clientRequestTime"::1729709264749}
+1729709264751:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709264751:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709320787:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/dartpad/web_plugin_registrant.dart:modify
+1729709320787:Res:{"id"::41,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709320787:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/macos/Flutter/GeneratedPluginRegistrant.swift:modify
+1729709320788:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/dartpad/web_plugin_registrant.dart:modify
+1729709320788:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/macos/Flutter/GeneratedPluginRegistrant.swift:modify
+1729709320788:Req:{"jsonrpc"::"2.0","id"::41,"result"::null,"clientRequestTime"::1729709320788}
+1729709320788:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709320789:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709320901:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_localizations.stamp:modify
+1729709320902:Res:{"id"::42,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709320902:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_dart_plugin_registrant.stamp:modify
+1729709320902:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_localizations.stamp:modify
+1729709320902:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/d085b1354e7d3b86d5e816ce87d41588/gen_dart_plugin_registrant.stamp:modify
+1729709320903:Req:{"jsonrpc"::"2.0","id"::42,"result"::null,"clientRequestTime"::1729709320902}
+1729709320903:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709320903:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709321001:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:remove
+1729709321001:Res:{"id"::43,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709321001:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:remove
+1729709321001:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:remove
+1729709321001:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:remove
+1729709321001:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:remove
+1729709321001:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:remove
+1729709321001:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:remove
+1729709321001:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:remove
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:remove
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:remove
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:remove
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:remove
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:remove
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:remove
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:remove
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:remove
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:add
+1729709321002:Req:{"jsonrpc"::"2.0","id"::43,"result"::null,"clientRequestTime"::1729709321002}
+1729709321002:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709321002:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:add
+1729709321002:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/fonts/MaterialIcons-Regular.otf:add
+1729709321101:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:modify
+1729709321102:Res:{"id"::44,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709321102:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:modify
+1729709321102:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:modify
+1729709321102:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:modify
+1729709321102:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:modify
+1729709321102:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:add
+1729709321103:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin:modify
+1729709321103:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.json:modify
+1729709321103:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/FontManifest.json:modify
+1729709321103:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/AssetManifest.bin.json:modify
+1729709321103:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/NOTICES:modify
+1729709321103:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/flutter_assets/shaders/ink_sparkle.frag:add
+1729709321103:Req:{"jsonrpc"::"2.0","id"::44,"result"::null,"clientRequestTime"::1729709321103}
+1729709321103:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709321103:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709329766:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/cache.dill.track.dill:modify
+1729709329766:Res:{"id"::45,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709329766:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/build/cache.dill.track.dill:modify
+1729709329767:Req:{"jsonrpc"::"2.0","id"::45,"result"::null,"clientRequestTime"::1729709329767}
+1729709329767:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709329767:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709350579:Watch:<unknown>:/Users/polinach/_/genui-panel/README.md:modify
+1729709350580:Res:{"id"::46,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709350583:Req:{"jsonrpc"::"2.0","id"::46,"result"::null,"clientRequestTime"::1729709350583}
+1729709350584:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709350584:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PreferredApps:modify
+1729709352342:Res:{"id"::47,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Visited Links:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/000003.log:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/MANIFEST-000001:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/CURRENT:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG.old:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/MANIFEST-000001:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/CURRENT:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG.old:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Preferences:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/MANIFEST-000001:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/CURRENT:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG.old:add
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/WebStorage/QuotaManager:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOG.old:add
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/000003.log:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/MANIFEST-000001:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/CURRENT:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG.old:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/trusted_vault.pb:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/000003.log:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/MANIFEST-000001:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/CURRENT:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOG:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/000003.log:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/MANIFEST-000001:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/CURRENT:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOG:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL:modify
+1729709352342:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOG.old:add
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/MANIFEST-000001:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG.old:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_1:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/67a473248953641b_0:add
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/ba23d8ecda68de77_0:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/TransportSecurity:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/SharedStorage:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOG.old:add
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOG.old:add
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/README:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/000003.log:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/MANIFEST-000001:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/CURRENT:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG.old:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Persistent State:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOG.old:add
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182932839227:add
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182933139329:add
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182862498520:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182862327355:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOG.old:add
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/000003.log:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG.old:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/MANIFEST-000001:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG:modify
+1729709352343:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG.old:modify
+1729709352344:Req:{"jsonrpc"::"2.0","id"::47,"result"::null,"clientRequestTime"::1729709352344}
+1729709352344:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709352344:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709352438:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsState:modify
+1729709352438:Res:{"id"::48,"jsonrpc"::"2.0","method"::"window/workDoneProgress/create","params"::{"token"::"ANALYZING"}}
+1729709352438:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History:modify
+1729709352438:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts:modify
+1729709352438:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Secure Preferences:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG.old:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG.old:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Preferences:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/PreferredApps:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Visited Links:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/000003.log:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/MANIFEST-000001:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/CURRENT:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Session Storage/LOG.old:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/MANIFEST-000001:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/CURRENT:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Platform Notifications/LOG.old:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/MANIFEST-000001:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/CURRENT:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/GCM Store/Encryption/LOG.old:add
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/WebStorage/QuotaManager:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Favicons:modify
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOG.old:add
+1729709352439:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/DIPS:modify
+1729709352439:Req:{"jsonrpc"::"2.0","id"::48,"result"::null,"clientRequestTime"::1729709352439}
+1729709352440:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"begin","title"::"Analyzing…"}}}
+1729709352440:Res:{"jsonrpc"::"2.0","method"::"$/progress","params"::{"token"::"ANALYZING","value"::{"kind"::"end"}}}
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/000003.log:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/MANIFEST-000001:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/CURRENT:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Site Characteristics Database/LOG.old:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Web Data:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/heavy_ad_intervention_opt_out.db:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/trusted_vault.pb:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/000003.log:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/MANIFEST-000001:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/CURRENT:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Scripts/LOG:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/000003.log:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/MANIFEST-000001:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/CURRENT:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension Rules/LOG:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Reporting and NEL:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Download Service/EntryDB/LOG.old:add
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/000003.log:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/MANIFEST-000001:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/CURRENT:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/Database/LOG.old:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_1:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/4cb013792b196a35_0:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/f1cdccba37924bda_0:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/index:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/67a473248953641b_0:add
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/2cc80dabc69f58b6_0:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Service Worker/ScriptCache/ba23d8ecda68de77_0:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/TransportSecurity:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Action Predictor:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Safe Browsing Cookies:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/SharedStorage:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/EventDB/LOG.old:add
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Feature Engagement Tracker/AvailabilityDB/LOG.old:add
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/README:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index-dir/the-real-index:modify
+1729709352440:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/cache/index:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shared Dictionary/db:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/000003.log:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/MANIFEST-000001:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/CURRENT:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Extension State/LOG.old:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Network Persistent State:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BudgetDatabase/LOG.old:add
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182932839227:add
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182933139329:add
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Tabs_13374182862498520:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sessions/Session_13374182862327355:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/optimization_guide_hint_cache_store/LOG.old:add
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Affiliation Database:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/000003.log:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/MANIFEST-000001:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/CURRENT:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/LOG.old:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/MANIFEST-000001:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/CURRENT:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/shared_proto_db/metadata/LOG.old:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/BrowsingTopicsState:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/History:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Shortcuts:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Secure Preferences:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Login Data For Account:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Trust Tokens:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/000003.log:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/MANIFEST-000001:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/CURRENT:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Sync Data/LevelDB/LOG.old:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Top Sites:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/MANIFEST-000001:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/CURRENT:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Local Storage/leveldb/LOG.old:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Cookies:modify
+1729709352441:Watch:<unknown>:/Users/polinach/_/genui-panel/ui/.dart_tool/chrome-device/Default/Preferences:modify
