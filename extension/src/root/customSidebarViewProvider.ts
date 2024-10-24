@@ -24,17 +24,9 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 
   private getHtmlContent(webview: vscode.Webview): string {
 
-    const indexUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
-    );
-
-    const picUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "assets", "web", "favicon.png")
-    );
-
-    const baseUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "assets", "web")
-    );
+    // const indexUri = webview.asWebviewUri(
+    //   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
+    // );
 
     return `
 <!DOCTYPE html>
