@@ -12,6 +12,12 @@ All commands are for the directory `extension`
 npm install
 ```
 
+### Start web
+
+```
+python3 -m http.server 50001 --directory assets/web
+```
+
 ### Rebuild code
 
 ```
@@ -29,5 +35,6 @@ Then one of:
 All commands are for the directory `ui`.
 
 ```
+flutter build web
 flutter run -d chrome --web-port=50000
 ```

@@ -23,22 +23,17 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
   }
 
   private getHtmlContent(webview: vscode.Webview): string {
-    // Get the local path to main script run in the webview,
-    // then convert it to a uri we can use in the webview.
-    const scriptUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "assets", "main.js")
+
+    const indexUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
     );
 
-    const styleResetUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "assets", "reset.css")
-    );
-    const styleVSCodeUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "assets", "vscode.css")
+    const picUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, "assets", "web", "favicon.png")
     );
 
-    // Same for stylesheet
-    const stylesheetUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "assets", "main.css")
+    const baseUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, "assets", "web")
     );
 
     // Use a nonce to only allow a specific script to be run.
@@ -47,17 +42,14 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
     return `
 <!DOCTYPE html>
 <html>
-
+<head>
+</head>
 <body>
-    <div id="frame1" style="overflow: hidden">
-        <iframe src="http://localhost:5000" title="Dynamic" style="position: relative; top: -10px"
-            allow="clipboard-read; clipboard-write; cross-origin-isolated"></iframe>
-    </div>
-
-
-
+  <div id="frame1" style="overflow: hidden">
+    <iframe src="http://localhost:5000" title="Dynamic" style=" border: none;"
+          allow="clipboard-read; clipboard-write; cross-origin-isolated"></iframe>
+  </div>
 </body>
-
 </html>
 `;
   }
