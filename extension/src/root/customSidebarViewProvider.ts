@@ -36,31 +36,21 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
       vscode.Uri.joinPath(this._extensionUri, "assets", "web")
     );
 
-    // Use a nonce to only allow a specific script to be run.
-    const nonce = getNonce();
-
     return `
 <!DOCTYPE html>
 <html>
 <head>
 </head>
 <body>
-  <div id="frame1" style="overflow: hidden">
-    <iframe src="http://localhost:5000" title="Dynamic" style=" border: none;"
-          allow="clipboard-read; clipboard-write; cross-origin-isolated"></iframe>
-  </div>
+  <iframe
+    src="http://localhost:5000"
+    width="100%"
+    style="border: none;"
+    allow="clipboard-read; clipboard-write; cross-origin-isolated">
+  </iframe>
+  hello
 </body>
 </html>
 `;
   }
-}
-
-function getNonce() {
-  let text = "";
-  const possible =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  for (let i = 0; i < 32; i++) {
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  }
-  return text;
 }
