@@ -40,7 +40,6 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
     style="border: none;"
     allow="clipboard-read; clipboard-write; cross-origin-isolated">
   </iframe>
-  hello
 </body>
 </html>
 `;
