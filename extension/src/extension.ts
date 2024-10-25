@@ -2,7 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-import { SidebarViewProvider } from './root/sidebarViewProvider';
+import { SidebarProvider } from './root/sidebarProvider';
 import { UiRunner } from './root/uiRunner';
 
 // This method is called when your extension is activated
@@ -27,13 +27,13 @@ export async function activate(context: vscode.ExtensionContext) {
 	const uiAppDirectory = vscode.Uri.joinPath(context.extensionUri, "assets", "web").toString().replace('file://', '');
 	console.log('!!!!!!!!! 2');
 	const uiRunner = new UiRunner(uiAppDirectory.toString());
-	await new Promise(f => setTimeout(f, 2000));
+	await new Promise(f => setTimeout(f, 20000));
 	console.log('!!!!!!!!! done');
 
-	const provider = new SidebarViewProvider(context.extensionUri, uiRunner.port);
+	const provider = new SidebarProvider(context.extensionUri, uiRunner.port);
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(
-			SidebarViewProvider.viewType,
+			SidebarProvider.viewType,
 			provider
 		)
 	);

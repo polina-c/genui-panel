@@ -32,9 +32,14 @@ Then one of:
 
 ### Test in IDX
 
-Create vsix file by running `vsce package`.
-Open the tab "Extensions" in an IDX project.
-Drag and drop vsix file to IDX folder.
+1. Create vsix file:
+
+    ```
+    vsce package --allow-missing-repository
+    ```
+
+2. Open the tab "Extensions" in an IDX project.
+3. Drag and drop vsix file to IDX folder.
 
 ## UI
 
