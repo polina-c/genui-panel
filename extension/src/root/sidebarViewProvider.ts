@@ -28,6 +28,8 @@ export class SidebarViewProvider implements vscode.WebviewViewProvider {
     //   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
     // );
 
+    console.log('!!!!! accessing app at http://127.0.0.1:' + this._port);
+
     return `
 <!DOCTYPE html>
 <html>
@@ -35,7 +37,7 @@ export class SidebarViewProvider implements vscode.WebviewViewProvider {
 </head>
 <body>
   <iframe
-    src="http://localhost:${this._port}"
+    src="http://127.0.0.1:${this._port}"
     width="100%"
     style="border: none;"
     allow="clipboard-read; clipboard-write; cross-origin-isolated">
