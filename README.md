@@ -38,3 +38,7 @@ All commands are for the directory `ui`.
 flutter build web
 flutter run -d chrome --web-port=50000
 ```
+
+## TODO before releasing
+
+1. What if hard coded port is occupied?
