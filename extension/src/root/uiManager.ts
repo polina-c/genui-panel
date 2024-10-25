@@ -3,11 +3,14 @@ import { nullLogger } from "../shared/logging";
 import { StdIOService } from "../shared/services/stdio_service";
 
 export class UiRunner extends StdIOService<{ type: string }> {
-    constructor() {
+    constructor(uiAppDirectory: string) {
         super(nullLogger, 1000, true, true, true, "uiRunnerLogFile.txt");
-        const executable = "python3 -m http.server 50001 --directory assets/web";
-        this.createProcess(".", executable, [], {});
+        const executable = "python3";
+        const args = ["-m", "http.server", this.port];
+        this.createProcess(uiAppDirectory, executable, args, {});
     }
+
+    private port = "50001";
 
     protected shouldHandleMessage(message: string): boolean {
         return (message.startsWith("{") && message.endsWith("}"))
