@@ -30,6 +30,12 @@ Then one of:
 1. Open [extension.ts](extension/src/extension.ts) and press F5
 2. Run and Debug > Run Extension
 
+### Test in IDX
+
+Create vsix file by running `vsce package`.
+Open the tab "Extensions" in an IDX project.
+Drag and drop vsix file to IDX folder.
+
 ## UI
 
 All commands are for the directory `ui`.
@@ -42,3 +48,5 @@ flutter run -d chrome --web-port=50000
 ## TODO before releasing
 
 1. What if hard coded port is occupied?
+2. Write readme for extension
+3. Cleanup and test cover
