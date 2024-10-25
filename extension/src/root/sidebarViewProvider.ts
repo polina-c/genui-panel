@@ -1,11 +1,11 @@
 import * as vscode from "vscode";
 
-export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
+export class SidebarViewProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
 
   private _view?: vscode.WebviewView;
 
-  constructor(private readonly _extensionUri: vscode.Uri) { }
+  constructor(private readonly _extensionUri: vscode.Uri, private _port: string) { }
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
@@ -35,7 +35,7 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 </head>
 <body>
   <iframe
-    src="http://localhost:5000"
+    src="http://localhost:${this._port}"
     width="100%"
     style="border: none;"
     allow="clipboard-read; clipboard-write; cross-origin-isolated">

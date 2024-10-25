@@ -15,7 +15,5 @@ export class UiRunner extends StdIOService<{ type: string }> {
         this.createProcess(uiAppDirectory, executable, args, {});
     }
 
-    private port = "50001";
+    public port = "50002";
 }
-
-
