@@ -27,6 +27,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	const uiAppDirectory = vscode.Uri.joinPath(context.extensionUri, "assets", "web").toString().replace('file://', '');
 	console.log('!!!!!!!!! 2');
 	const uiRunner = new UiRunner(uiAppDirectory.toString());
+	await new Promise(f => setTimeout(f, 2000));
 	console.log('!!!!!!!!! done');
 
 	const provider = new SidebarViewProvider(context.extensionUri, uiRunner.port);
