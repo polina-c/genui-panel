@@ -47,6 +47,14 @@ In IDX: chrome console
 In host vscode: debug console
 In child vscode: command Open Webview Developer Tools
 
+### Recreate flutter app
+
+IMPORTANT: switch to flutter stable to get support in IDX
+
+```
+flutter create flutter_app  --platforms=web
+```
+
 ## UI
 
 All commands are for the directory `ui`.
