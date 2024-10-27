@@ -3,10 +3,11 @@
 import * as vscode from 'vscode';
 
 import { CustomSidebarViewProvider } from './root/customSidebarViewProvider';
+import { UiRunner } from './root/uiRunner';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext) {
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
@@ -22,6 +23,9 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(disposable);
+
+	const uiRunner = new UiRunner(context.extensionUri);
+	await new Promise(f => setTimeout(f, 20000));
 
 	const provider = new CustomSidebarViewProvider(context.extensionUri);
 
