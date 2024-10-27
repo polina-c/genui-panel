@@ -3,7 +3,6 @@
 import * as vscode from 'vscode';
 
 import { CustomSidebarViewProvider } from './root/customSidebarViewProvider';
-import { AngularView } from './root/angularView';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
