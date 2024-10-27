@@ -30,6 +30,17 @@ Then one of:
 1. Open [extension.ts](extension/src/extension.ts) and press F5
 2. Run and Debug > Run Extension
 
+### Test in IDX
+
+1. Create vsix file:
+
+    ```
+    vsce package --allow-missing-repository
+    ```
+
+2. Open the tab "Extensions" in an IDX project.
+3. Drag and drop vsix file to IDX folder.
+
 ## UI
 
 All commands are for the directory `ui`.
