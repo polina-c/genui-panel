@@ -45,7 +45,7 @@ Then one of:
 
 In IDX: chrome console
 In host vscode: debug console
-In child vscode: command
+In child vscode: command Open Webview Developer Tools
 
 ## UI
 
