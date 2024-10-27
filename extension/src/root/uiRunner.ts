@@ -18,7 +18,7 @@ export class UiRunner extends StdIOService<{ type: string }> {
         // const executable = "python3";
         // const args = ["-m", "http.server", this.port];
 
-        const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "flutter").toString().replace('file://', '');
+        const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "flutter_app").toString().replace('file://', '');
         console.log("!!!!!!!!!!!! uiAppDirectory: " + uiAppDirectory);
         const executable = "flutter";
         const args = ["run", "-d", "web-server", `--web-port=${this.port}`];
