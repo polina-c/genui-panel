@@ -26,6 +26,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	const uiRunner = new UiRunner(context.extensionUri);
 
+	// Use completer instead!
 	console.log(`!!!! monitoring...`);
 	while (!uiRunner.isDone()) {
 		await new Promise(resolve => setTimeout(resolve, 1000));

@@ -41,6 +41,12 @@ Then one of:
 2. Open the tab "Extensions" in an IDX project.
 3. Drag and drop vsix file to IDX folder.
 
+### Read logs
+
+In IDX: chrome console
+In host vscode: debug console
+In child vscode: command
+
 ## UI
 
 All commands are for the directory `ui`.
