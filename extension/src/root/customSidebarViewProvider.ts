@@ -5,7 +5,7 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 
   private _view?: vscode.WebviewView;
 
-  constructor(private readonly _extensionUri: vscode.Uri) { }
+  constructor(private readonly _extensionUri: vscode.Uri, private readonly _port: string) { }
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
@@ -35,7 +35,7 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 </head>
 <body>
   <iframe
-    src="http://localhost:5000"
+    src="http://localhost:${this._port}"
     width="100%"
     style="border: none;"
     allow="clipboard-read; clipboard-write; cross-origin-isolated">

@@ -27,7 +27,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	const uiRunner = new UiRunner(context.extensionUri);
 	await new Promise(f => setTimeout(f, 20000));
 
-	const provider = new CustomSidebarViewProvider(context.extensionUri);
+	const provider = new CustomSidebarViewProvider(context.extensionUri, uiRunner.port);
 
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(
