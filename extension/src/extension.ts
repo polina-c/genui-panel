@@ -29,7 +29,6 @@ export async function activate(context: vscode.ExtensionContext) {
 	console.log(`!!!! monitoring...`);
 	while (!uiRunner.isDone()) {
 		await new Promise(resolve => setTimeout(resolve, 1000));
-		console.log(`!!!! ...${uiRunner.isDone()}`);
 	}
 
 	console.log(`!!!! starting panel`);

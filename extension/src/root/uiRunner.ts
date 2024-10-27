@@ -44,11 +44,9 @@ export class UiRunner extends StdIOService<{ type: string }> {
     }
 
     private handleLogMessage(logMessage: LogMessage) {
-        console.log(`!!!! done = ${this.done}`);
-        console.log(`!!!! isDone = ${this.isDone()}`);
-
         const message = logMessage.toLine(1000);
         console.log(`!!!! log from runner: ${message}`);
+        if (this.done) return;
 
         const startedMessage = `lib/main.dart is being served at http://localhost:`;
         const terminatedMessage = `Process flutter terminated!`;
@@ -56,8 +54,6 @@ export class UiRunner extends StdIOService<{ type: string }> {
         if (message.includes(startedMessage) || message.includes(terminatedMessage)) {
             console.log(`!!!! done: ${message}`);
             this.done = true;
-            console.log(`!!!! done = ${this.done}`);
-            console.log(`!!!! isDone = ${this.isDone()}`);
         }
     }
 }
