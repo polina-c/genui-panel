@@ -5,7 +5,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
   private _view?: vscode.WebviewView;
 
-  constructor(private readonly _extensionUri: vscode.Uri, private _port: string) { }
+  constructor(private readonly _extensionUri: vscode.Uri, private readonly _port: string) { }
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
@@ -14,57 +14,32 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   ): void | Thenable<void> {
     this._view = webviewView;
 
-    const path = vscode.Uri.joinPath(this._extensionUri, "assets", "web");
-    console.log(`!!!!! ${path}`);
-    const localResourceRoots = webviewView.webview.asWebviewUri(path);
-
-    console.log(`!!!!! ${localResourceRoots}`);
-
-
     webviewView.webview.options = {
+      // Allow scripts in the webview
       enableScripts: true,
-      localResourceRoots: [path],
-      enableCommandUris: true,
-      enableForms: true,
+      localResourceRoots: [this._extensionUri],
     };
-    webviewView.webview.html = this.getHtmlContent(path.toString());
-
+    webviewView.webview.html = this.getHtmlContent(webviewView.webview);
   }
 
-  private getHtmlContent(base: string): string {
+  private getHtmlContent(webview: vscode.Webview): string {
 
     // const indexUri = webview.asWebviewUri(
     //   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
     // );
 
-    // console.log('!!!!! accessing app at http://127.0.0.1:' + this._port);
-
     return `
 <!DOCTYPE html>
 <html>
 <head>
-  <base href="${base}/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="ui">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>ui</title>
-  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-hello!!!
-<img src="favicon.png" alt="A flutter app" width="100" height="100">
-  <script src="flutter_bootstrap.js" async></script>
+  <iframe
+    src="http://localhost:${this._port}"
+    width="100%"
+    style="border: none;"
+    allow="clipboard-read; clipboard-write; cross-origin-isolated">
+  </iframe>
 </body>
 </html>
 `;

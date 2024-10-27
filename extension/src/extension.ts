@@ -3,8 +3,6 @@
 import * as vscode from 'vscode';
 
 import { SidebarProvider } from './root/sidebarProvider';
-import { UiServer } from './root/uiServer';
-import { CustomSidebarViewProvider } from './root/customSidebarViewProvider';
 import { UiRunner } from './root/uiRunner';
 
 // This method is called when your extension is activated
@@ -29,9 +27,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	const uiRunner = new UiRunner(context.extensionUri);
 	await new Promise(f => setTimeout(f, 20000));
 
-	const provider = new CustomSidebarViewProvider(context.extensionUri, uiRunner.port);
-
-	const provider = new SidebarProvider(context.extensionUri, "");
+	const provider = new SidebarProvider(context.extensionUri, uiRunner.port);
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(
 			SidebarProvider.viewType,
