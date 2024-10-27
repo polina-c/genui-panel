@@ -10,19 +10,19 @@ export class UiRunner extends StdIOService<{ type: string }> {
         logger.info("!!!! test logging");
         super(logger, 1000, true, true, true, "uiRunnerLogFile.txt");
 
-        const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "web").toString().replace('file://', '');
-        const executable = "python3";
-        const args = ["-m", "http.server", this.port];
+        // const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "web").toString().replace('file://', '');
+        // const executable = "python3";
+        // const args = ["-m", "http.server", this.port];
 
-        // const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "flutter").toString().replace('file://', '');
-        // const executable = "flutter";
-        // const args = ["run", "-d", "chrome", `--web-port=${this.port}`];
+        const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "flutter").toString().replace('file://', '');
+        const executable = "flutter";
+        const args = ["run", "-d", "web-server", `--web-port=${this.port}`];
 
         this.createProcess(uiAppDirectory, executable, args, {});
         console.log("!!!!!!!!!!!! UiRunner constructor done");
     }
 
-    public port = "50000";
+    public port = "5001";
 
     protected shouldHandleMessage(message: string): boolean {
         throw new Error("Method not implemented.");
