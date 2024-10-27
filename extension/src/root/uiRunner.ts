@@ -1,25 +1,34 @@
-// import { EmittingLogger, logToConsole, nullLogger } from "../shared/logging";
-// import { StdIOService } from "../shared/services/stdio_service";
+import { EmittingLogger, logToConsole, nullLogger } from "../shared/logging";
+import { StdIOService } from "../shared/services/stdio_service";
+import * as vscode from "vscode";
 
-// export class UiRunner extends StdIOService<{ type: string }> {
-//     constructor(uiAppDirectory: string) {
-//         console.log("!!!!!!!!!!!! UiRunner constructor");
-//         const logger = new EmittingLogger();
-//         logger.onLog((m) => { console.log("!!!!!!!! " + m.toLine(1000)); });
-//         logger.info("!!!! test logging");
-//         super(logger, 1000, true, true, true, "uiRunnerLogFile.txt");
-//         const executable = "python3";
-//         const args = ["-m", "http.server", this.port];
-//         this.createProcess(uiAppDirectory, executable, args, {});
-//         console.log("!!!!!!!!!!!! UiRunner constructor done");
-//     }
+export class UiRunner extends StdIOService<{ type: string }> {
+    constructor(extensionUri: vscode.Uri) {
+        console.log("!!!!!!!!!!!! UiRunner constructor");
+        const logger = new EmittingLogger();
+        logger.onLog((m) => { console.log("!!!!!!!! " + m.toLine(1000)); });
+        logger.info("!!!! test logging");
+        super(logger, 1000, true, true, true, "uiRunnerLogFile.txt");
 
-//     public port = "50006";
+        // const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "web").toString().replace('file://', '');
+        // const executable = "python3";
+        // const args = ["-m", "http.server", this.port];
 
-//     protected shouldHandleMessage(message: string): boolean {
-//         throw new Error("Method not implemented.");
-//     }
-//     protected handleNotification(evt: { type: string; }): Promise<void> {
-//         throw new Error("Method not implemented.");
-//     }
-// }
+        const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "flutter").toString().replace('file://', '');
+        console.log("!!!!!!!!!!!! uiAppDirectory: " + uiAppDirectory);
+        const executable = "flutter";
+        const args = ["run", "-d", "web-server", `--web-port=${this.port}`];
+
+        this.createProcess(uiAppDirectory, executable, args, {});
+        console.log("!!!!!!!!!!!! UiRunner constructor done");
+    }
+
+    public port = "5001";
+
+    protected shouldHandleMessage(message: string): boolean {
+        throw new Error("Method not implemented.");
+    }
+    protected handleNotification(evt: { type: string; }): Promise<void> {
+        throw new Error("Method not implemented.");
+    }
+}

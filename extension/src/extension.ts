@@ -4,6 +4,8 @@ import * as vscode from 'vscode';
 
 import { SidebarProvider } from './root/sidebarProvider';
 import { UiServer } from './root/uiServer';
+import { CustomSidebarViewProvider } from './root/customSidebarViewProvider';
+import { UiRunner } from './root/uiRunner';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -24,11 +26,10 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(disposable);
 
-	// const uiAppDirectory = vscode.Uri.joinPath(context.extensionUri, "assets", "web").toString().replace('file://', '');
-	// console.log('!!!!!!!!! 2');
-	// const uiServer = new UiServer(uiAppDirectory.toString());
-	// await new Promise(f => setTimeout(f, 500));
-	// console.log('!!!!!!!!! done');
+	const uiRunner = new UiRunner(context.extensionUri);
+	await new Promise(f => setTimeout(f, 20000));
+
+	const provider = new CustomSidebarViewProvider(context.extensionUri, uiRunner.port);
 
 	const provider = new SidebarProvider(context.extensionUri, "");
 	context.subscriptions.push(
