@@ -164,7 +164,6 @@ export abstract class StdIOService<T> implements IAmDisposable {
 				msg = msg[0];
 		} catch (e: any) {
 			if (this.treatHandlingErrorsAsUnhandledMessages) {
-				this.logger.error(`Unexpected non-JSON message, assuming normal stdout (${e})\n\n${e.stack}\n\n${message}`);
 				return this.processUnhandledMessage(message);
 			} else {
 				throw e;

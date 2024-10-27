@@ -25,8 +25,14 @@ export async function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 
 	const uiRunner = new UiRunner(context.extensionUri);
-	await new Promise(f => setTimeout(f, 20000));
 
+	console.log(`!!!! monitoring...`);
+	while (!uiRunner.isDone()) {
+		await new Promise(resolve => setTimeout(resolve, 1000));
+		console.log(`!!!! ...${uiRunner.isDone()}`);
+	}
+
+	console.log(`!!!! starting panel`);
 	const provider = new SidebarProvider(context.extensionUri, uiRunner.port);
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(
@@ -34,6 +40,7 @@ export async function activate(context: vscode.ExtensionContext) {
 			provider
 		)
 	);
+
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand("genui-panel.menu.view", () => {

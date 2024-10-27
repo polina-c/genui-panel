@@ -1,14 +1,18 @@
-import { EmittingLogger, logToConsole, nullLogger } from "../shared/logging";
+import { EmittingLogger } from "../shared/logging";
 import { StdIOService } from "../shared/services/stdio_service";
 import * as vscode from "vscode";
+import { LogMessage } from "../shared/interfaces";
 
 export class UiRunner extends StdIOService<{ type: string }> {
     constructor(extensionUri: vscode.Uri) {
         console.log("!!!!!!!!!!!! UiRunner constructor");
         const logger = new EmittingLogger();
-        logger.onLog((m) => { console.log("!!!!!!!! " + m.toLine(1000)); });
+        super(logger, 1000, true, true, true, undefined);
+        this.port = "5001";
+        this.done = false;
+
+        logger.onLog((logMessage) => this.handleLogMessage(logMessage));
         logger.info("!!!! test logging");
-        super(logger, 1000, true, true, true, "uiRunnerLogFile.txt");
 
         // const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "web").toString().replace('file://', '');
         // const executable = "python3";
@@ -23,12 +27,37 @@ export class UiRunner extends StdIOService<{ type: string }> {
         console.log("!!!!!!!!!!!! UiRunner constructor done");
     }
 
-    public port = "5001";
+    public port: string;
+
+    public isDone(): boolean {
+        return this.done;
+    }
+    private done: boolean;
 
     protected shouldHandleMessage(message: string): boolean {
-        throw new Error("Method not implemented.");
+        return true;
     }
-    protected handleNotification(evt: { type: string; }): Promise<void> {
-        throw new Error("Method not implemented.");
+
+    protected async handleNotification(evt: { type: string; }): Promise<void> {
+        const message = JSON.stringify(evt);
+        console.log(`!!!! notification from runner:\n${message}`);
+    }
+
+    private handleLogMessage(logMessage: LogMessage) {
+        console.log(`!!!! done = ${this.done}`);
+        console.log(`!!!! isDone = ${this.isDone()}`);
+
+        const message = logMessage.toLine(1000);
+        console.log(`!!!! log from runner: ${message}`);
+
+        const startedMessage = `lib/main.dart is being served at http://localhost:`;
+        const terminatedMessage = `Process flutter terminated!`;
+
+        if (message.includes(startedMessage) || message.includes(terminatedMessage)) {
+            console.log(`!!!! done: ${message}`);
+            this.done = true;
+            console.log(`!!!! done = ${this.done}`);
+            console.log(`!!!! isDone = ${this.isDone()}`);
+        }
     }
 }
