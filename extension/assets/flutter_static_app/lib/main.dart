@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'primitives/post_message/post_message.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {
     setState(() {
       _counter++;
+      postMessage('!!!! Counter is $_counter now!', 'flutter_static_app');
     });
   }
 

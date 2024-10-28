@@ -52,7 +52,7 @@ In child vscode: command Open Webview Developer Tools
 IMPORTANT: switch to flutter stable to get support in IDX
 
 ```
-flutter create flutter_app  --platforms=web
+flutter create flutter_static_app  --platforms=web
 ```
 
 ## UI
