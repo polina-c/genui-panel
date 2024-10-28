@@ -66,6 +66,7 @@ flutter run -d chrome --web-port=50000
 
 ## TODO before releasing
 
-1. What if hard coded port is occupied?
+1. Handle runtime errors
 2. Write readme for extension
-3. Cleanup and test cover
+3. Cleanup dead code and test cover live code
+4. Dispose and shut down what is created and started

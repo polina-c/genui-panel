@@ -5,6 +5,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
   private _view?: vscode.WebviewView;
 
+  private _frameId = 'flutterAppFrame';
+
   constructor(private readonly _extensionUri: vscode.Uri, private readonly _port: string) { }
 
   resolveWebviewView(
@@ -19,10 +21,10 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       enableScripts: true,
       localResourceRoots: [this._extensionUri],
     };
-    webviewView.webview.html = this.getHtmlContent(webviewView.webview);
+    webviewView.webview.html = this._getHtmlContent(webviewView.webview);
   }
 
-  private getHtmlContent(webview: vscode.Webview): string {
+  private _getHtmlContent(webview: vscode.Webview): string {
 
     // const indexUri = webview.asWebviewUri(
     //   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
@@ -32,9 +34,12 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
+	<script>${this._getJsScriptText()}</script>
 </head>
 <body>
   <iframe
+    id="${this._frameId}"
     src="http://localhost:${this._port}"
     width="100%"
     style="border: none;"
@@ -42,6 +47,23 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   </iframe>
 </body>
 </html>
+`;
+  }
+
+  private _getJsScriptText(): string {
+    return `
+const vscodeInJs = acquireVsCodeApi();
+
+window.addEventListener('message', (event) => {
+
+  const message = event.data;
+  const messageOrigin = event.origin;
+
+  console.log('!!!!!! message from', eventOrigin);
+  console.log('!!!!!! message content: ', messageOrigin);
+
+  vscode.postMessage(message);
+});
 `;
   }
 }
