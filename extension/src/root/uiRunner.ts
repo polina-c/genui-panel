@@ -8,7 +8,7 @@ export class UiRunner extends StdIOService<{ type: string }> {
         console.log("!!!!!!!!!!!! UiRunner constructor");
         const logger = new EmittingLogger();
         super(logger, 1000, true, true, true, undefined);
-        this.port = "5001";
+        this.port = "5002";
         this.done = false;
 
         logger.onLog((logMessage) => this.handleLogMessage(logMessage));

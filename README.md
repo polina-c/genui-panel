@@ -43,7 +43,7 @@ Then one of:
 
 ### Read logs
 
-In IDX: chrome console
+In IDX: chrome console (open it with Chrome > menu > more tools > developer tools)
 In host vscode: debug console
 In child vscode: command Open Webview Developer Tools
 
@@ -57,7 +57,7 @@ flutter create flutter_static_app  --platforms=web
 
 ## UI
 
-All commands are for the directory `ui`.
+All commands here are for the directory `ui`.
 
 ```
 flutter build web

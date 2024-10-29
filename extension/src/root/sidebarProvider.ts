@@ -29,12 +29,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     webviewView.webview.onDidReceiveMessage(
       (message) => {
         console.log('!!!!!! node got message', message);
-        // // Handle messages from the webview
-        // switch (message.command) {
-        //   case "alert":
-        //     vscode.window.showErrorMessage(message.text);
-        //     return;
-        // }
+        vscode.window.showInformationMessage(message);
       },
     );
   }
