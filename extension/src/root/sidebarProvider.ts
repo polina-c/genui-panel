@@ -3,27 +3,21 @@ import * as vscode from "vscode";
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
 
-  private _view?: vscode.WebviewView;
-
-  private _frameId = 'flutterAppFrame';
-
-  constructor(private readonly _extensionUri: vscode.Uri, port: string) {
-    this._flutterAppOrigin = 'https://genui-panel.web.app';
+  constructor() {
+    this._flutterAppUri = 'https://genui-panel.web.app';
   }
 
-  private _flutterAppOrigin: string;
+  private _flutterAppUri: string;
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
     context: vscode.WebviewViewResolveContext<unknown>,
     token: vscode.CancellationToken
   ): void | Thenable<void> {
-    this._view = webviewView;
 
     webviewView.webview.options = {
       // Allow scripts in the webview
       enableScripts: true,
-      localResourceRoots: [this._extensionUri],
     };
     webviewView.webview.html = this._getHtmlContent(webviewView.webview);
     webviewView.webview.onDidReceiveMessage(
@@ -48,11 +42,12 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 	<script>${this._getJsScriptText()}</script>
 </head>
 <body>
-  flutter iframe hosted at ${this._flutterAppOrigin}:
+  flutter iframe hosted at ${this._flutterAppUri}:
   <br>
   <iframe
-    src="${this._flutterAppOrigin}"
+    src="${this._flutterAppUri}"
     width="100%"
+    height="1200px" // 100% doe not work here, because of infinite vertical size of container.
     style="border: none;"
     allow="clipboard-read; clipboard-write; cross-origin-isolated">
   </iframe>
@@ -70,7 +65,7 @@ window.addEventListener('message', (event) => {
   let message = event.data;
   let origin = event.origin;
   console.log('!!!!!! details', message, origin);
-  if (origin !== '${this._flutterAppOrigin}') return;
+  if (origin !== '${this._flutterAppUri}') return;
   console.log('!!!!!! passing to vscode');
   vscodeInJs.postMessage(message);
 });

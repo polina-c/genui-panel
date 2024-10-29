@@ -24,16 +24,8 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(disposable);
 
-	// const uiRunner = new UiRunner(context.extensionUri);
-
-	// // Use completer instead!
-	// console.log(`!!!! monitoring...`);
-	// while (!uiRunner.isDone()) {
-	// 	await new Promise(resolve => setTimeout(resolve, 1000));
-	// }
-
 	console.log(`!!!! starting panel`);
-	const provider = new SidebarProvider(context.extensionUri, "5003");  //uiRunner.port);
+	const provider = new SidebarProvider();
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(
 			SidebarProvider.viewType,

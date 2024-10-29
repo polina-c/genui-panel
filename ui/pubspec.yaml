@@ -3,6 +3,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
+  # Keep it in stable version, to avoid issues with Firebase hosting.
   sdk: ^3.4.3
 
 dependencies:
