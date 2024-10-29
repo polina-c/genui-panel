@@ -48,8 +48,9 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 	<script>${this._getJsScriptText()}</script>
 </head>
 <body>
+  flutter iframe hosted at ${this._flutterAppOrigin}:
+  <br>
   <iframe
-    id="${this._frameId}"
     src="${this._flutterAppOrigin}"
     width="100%"
     style="border: none;"

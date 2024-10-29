@@ -35,6 +35,9 @@ Then one of:
 1. Create vsix file:
 
     ```
+    cd assets/flutter_static_app
+    flutter build web
+    cd ../..
     vsce package --allow-missing-repository
     ```
 
