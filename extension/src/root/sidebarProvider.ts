@@ -7,7 +7,11 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
   private _frameId = 'flutterAppFrame';
 
-  constructor(private readonly _extensionUri: vscode.Uri, private readonly _port: string) { }
+  constructor(private readonly _extensionUri: vscode.Uri, port: string) {
+    this._flutterAppOrigin = `http://localhost:${port}`;
+  }
+
+  private _flutterAppOrigin: string;
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
@@ -40,7 +44,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 <body>
   <iframe
     id="${this._frameId}"
-    src="http://localhost:${this._port}"
+    src="${this._flutterAppOrigin}"
     width="100%"
     style="border: none;"
     allow="clipboard-read; clipboard-write; cross-origin-isolated">
@@ -55,14 +59,13 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 const vscodeInJs = acquireVsCodeApi();
 
 window.addEventListener('message', (event) => {
-
-  const message = event.data;
-  const messageOrigin = event.origin;
-
-  console.log('!!!!!! message from', eventOrigin);
-  console.log('!!!!!! message content: ', messageOrigin);
-
-  vscode.postMessage(message);
+  console.log('!!!!!! got message', event);
+  let message = event.data;
+  let origin = event.origin;
+  console.log('!!!!!! details', message, origin);
+  if (origin !== '${this._flutterAppOrigin}') return;
+  console.log('!!!!!! passing to vscode');
+  vscodeInJs.postMessage(message);
 });
 `;
   }
