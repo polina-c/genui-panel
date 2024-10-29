@@ -26,6 +26,17 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       localResourceRoots: [this._extensionUri],
     };
     webviewView.webview.html = this._getHtmlContent(webviewView.webview);
+    webviewView.webview.onDidReceiveMessage(
+      (message) => {
+        console.log('!!!!!! node got message', message);
+        // // Handle messages from the webview
+        // switch (message.command) {
+        //   case "alert":
+        //     vscode.window.showErrorMessage(message.text);
+        //     return;
+        // }
+      },
+    );
   }
 
   private _getHtmlContent(webview: vscode.Webview): string {
