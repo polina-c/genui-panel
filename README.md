@@ -57,11 +57,17 @@ flutter create flutter_static_app  --platforms=web
 
 ## UI
 
-All commands here are for the directory `ui`.
+All commands here are for the directory `extension/assets/flutter_static_app`.
 
 ```
 flutter build web
 flutter run -d chrome --web-port=50000
+```
+
+### Re-add web
+
+```
+flutter create --platforms=web .
 ```
 
 ## TODO before releasing
