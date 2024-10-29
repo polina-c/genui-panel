@@ -21,8 +21,8 @@ export class UiRunner extends StdIOService<{ type: string }> {
         const uiAppDirectory = vscode.Uri.joinPath(extensionUri, "assets", "flutter_static_app").toString().replace('file://', '');
         console.log("!!!!!!!!!!!! uiAppDirectory: " + uiAppDirectory);
         const executable = "flutter";
+        //const args = ["run", "-d", "web-server", `--web-port=${this.port}`, "--web-renderer", "html", "--web-browser-flag", '"--disable-web-security --user-data-dir=."'];
         const args = ["run", "-d", "web-server", `--web-port=${this.port}`];
-
         this.createProcess(uiAppDirectory, executable, args, {});
         console.log("!!!!!!!!!!!! UiRunner constructor done");
     }

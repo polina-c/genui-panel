@@ -17,5 +17,8 @@ Stream<PostMessageEvent> get onPostMessage {
   );
 }
 
-void postMessage(Object? message, String targetOrigin) =>
-    window.parent?.postMessage(message.jsify(), targetOrigin.toJS);
+void postMessage(Object? message, String targetOrigin) {
+  print('!!!! hello from postMessage');
+  window.parentCrossOrigin?.postMessage(message.jsify(), targetOrigin.toJS);
+  print('!!!! hello from postMessage, done');
+}
