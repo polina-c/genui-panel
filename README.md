@@ -35,9 +35,6 @@ Then one of:
 1. Create vsix file:
 
     ```
-    cd assets/flutter_static_app
-    flutter build web
-    cd ../..
     vsce package --allow-missing-repository
     ```
 
@@ -55,16 +52,26 @@ In child vscode: command Open Webview Developer Tools
 IMPORTANT: switch to flutter stable to get support in IDX
 
 ```
-flutter create flutter_static_app  --platforms=web
+flutter create ui  --platforms=web
 ```
 
 ## UI
 
-All commands here are for the directory `extension/assets/flutter_static_app`.
+All commands here are for the directory `ui`.
 
 ```
 flutter build web
 flutter run -d chrome --web-port=50000
+```
+
+### Deploy to Firebase
+
+Demo version is hosted on polina's account: https://genui-panel.web.app/
+
+To deploy ask @polinach to give you permissions or to run:
+
+```
+firebase deploy
 ```
 
 ### Re-add web

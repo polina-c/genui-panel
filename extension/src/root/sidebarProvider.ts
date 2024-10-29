@@ -8,7 +8,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   private _frameId = 'flutterAppFrame';
 
   constructor(private readonly _extensionUri: vscode.Uri, port: string) {
-    this._flutterAppOrigin = `http://localhost:${port}`;
+    this._flutterAppOrigin = 'https://genui-panel.web.app';
   }
 
   private _flutterAppOrigin: string;
