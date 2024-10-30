@@ -61,8 +61,6 @@ export class GenUiProvider implements vscode.WebviewViewProvider {
 			<head>
 				<meta charset="UTF-8">
 
-
-
 				<link href="${styleResetUri}" rel="stylesheet">
 				<link href="${styleVSCodeUri}" rel="stylesheet">
 				<link href="${styleMainUri}" rel="stylesheet">

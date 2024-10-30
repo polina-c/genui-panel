@@ -6,7 +6,7 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Run Extension",
+			"name": "extension",
 			"type": "extensionHost",
 			"request": "launch",
 			"args": [
@@ -17,6 +17,12 @@
 			],
 			"preLaunchTask": "${defaultBuildTask}",
 			"cwd": "extension",
-		}
+		},
+		{
+			"name": "ui",
+			"request": "launch",
+			"type": "dart",
+			"program": "ui/lib/main.dart",
+		},
 	]
 }
