@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 
-class GenUiProvider implements vscode.WebviewViewProvider {
+export class GenUiProvider implements vscode.WebviewViewProvider {
 
     public static readonly viewType = 'genui-panel.genUiView';
 
@@ -40,7 +40,7 @@ class GenUiProvider implements vscode.WebviewViewProvider {
         }
     }
 
-    public clearColors() {
+    public generate() {
         if (this._view) {
             this._view.webview.postMessage({ type: 'clearColors' });
         }

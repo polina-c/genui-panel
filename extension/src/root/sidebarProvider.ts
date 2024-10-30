@@ -16,13 +16,15 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   ): void | Thenable<void> {
 
     webviewView.webview.options = {
-      // Allow scripts in the webview
       enableScripts: true,
     };
     webviewView.webview.html = this._getHtmlContent(webviewView.webview);
     webviewView.webview.onDidReceiveMessage(
-      (message) => {
+      (message: string) => {
         console.log('!!!!!! node got message', message);
+        if (message.includes('generate')) {
+
+        }
         vscode.window.showInformationMessage(message);
       },
     );
