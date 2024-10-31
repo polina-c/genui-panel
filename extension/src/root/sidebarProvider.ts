@@ -1,9 +1,10 @@
 import * as vscode from "vscode";
+import { ContentPanel } from "./contentProvider";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
 
-  constructor() {
+  constructor(private _extensionUri: vscode.Uri) {
     this._flutterAppUri = 'https://genui-panel.web.app';
   }
 
@@ -23,7 +24,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       (message: string) => {
         console.log('!!!!!! node got message', message);
         if (message.includes('generate')) {
-
+          ContentPanel.show(this._extensionUri);
         }
         vscode.window.showInformationMessage(message);
       },

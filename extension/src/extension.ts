@@ -25,7 +25,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 
 	console.log(`!!!! starting panel`);
-	const provider = new SidebarProvider();
+	const provider = new SidebarProvider(context.extensionUri);
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(
 			SidebarProvider.viewType,
