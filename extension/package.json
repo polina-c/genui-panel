@@ -25,6 +25,11 @@
         "category": "vscode-extension-sidebar-html",
         "title": "Sample WebView in VS Code Sidebar",
         "icon": "$(clear-all)"
+      },
+      {
+        "command": "catCodicons.show",
+        "title": "Show Cat Codicons",
+        "category": "Cat Codicons"
       }
     ],
     "viewsContainers": {

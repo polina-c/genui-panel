@@ -3,7 +3,7 @@
 import * as vscode from 'vscode';
 
 import { SidebarProvider } from './root/sidebarProvider';
-import { GenUiProvider } from './root/genUiProvider';
+import { ContentPanel } from './root/contentProvider';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -34,13 +34,11 @@ export async function activate(context: vscode.ExtensionContext) {
 		)
 	);
 
-	const provider1 = new GenUiProvider(context.extensionUri);
 	context.subscriptions.push(
-		vscode.window.registerWebviewViewProvider(GenUiProvider.viewType, provider1));
-	context.subscriptions.push(
-		vscode.commands.registerCommand('genui-panel.generate', () => {
-			provider1.generate();
-		}));
+		vscode.commands.registerCommand('catCodicons.show', () => {
+			ContentPanel.show(context.extensionUri);
+		})
+	);
 
 
 	context.subscriptions.push(
