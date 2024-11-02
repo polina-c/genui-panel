@@ -1,5 +1,5 @@
 import * as vs from "vscode";
-import { DartCapabilities } from "../capabilities/dart";
+import { DartCapabilities } from "../not_used/capabilities/dart";
 import { CommandSource, alwaysOpenAction, doNotAskAgainAction, flutterSurveyDataUrl, iUnderstandAction, longRepeatPromptThreshold, moreInfoAction, noRepeatPromptThreshold, notTodayAction, openAction, sdkDeprecationInformationUrl, skipThisSurveyAction, takeSurveyAction, wantToTryDevToolsPrompt } from "../constants";
 import { WebClient } from "../fetch";
 import { Analytics, FlutterRawSurveyData, FlutterSurveyData, Logger } from "../interfaces";

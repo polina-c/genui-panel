@@ -1,6 +1,6 @@
 import * as path from "path";
 import { URI } from "vscode-uri";
-import { BasicDebugConfiguration } from "../../shared/debug/interfaces";
+import { BasicDebugConfiguration } from "../not_used/debug/interfaces";
 import { escapeRegExp } from "../../shared/utils";
 import { OpenedFileInformation, Position } from "../interfaces";
 import { GroupNode, SuiteNode, TestNode, TreeNode } from "../test/test_model";

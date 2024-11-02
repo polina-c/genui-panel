@@ -1,14 +1,10 @@
 import * as vscode from "vscode";
-import { ContentPanel } from "./contentProvider";
+import { ContentPanel } from "./contentPanel";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
 
-  constructor(private _extensionUri: vscode.Uri) {
-    this._flutterAppUri = 'https://genui-panel.web.app';
-  }
-
-  private _flutterAppUri: string;
+  constructor(private _extensionUri: vscode.Uri, private _uiUri: string) { }
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
@@ -50,7 +46,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 </head>
 <body>
   <iframe
-    src="${this._flutterAppUri}"
+    src="${this._uiUri}"
     width="100%"
     height="${heightPx}px"
     style="border: none;"
@@ -70,7 +66,7 @@ window.addEventListener('message', (event) => {
   let message = event.data;
   let origin = event.origin;
   console.log('!!!!!! details', message, origin);
-  if (origin !== '${this._flutterAppUri}') return;
+  if (origin !== '${this._uiUri}') return;
   console.log('!!!!!! passing to vscode');
   vscodeInJs.postMessage(message);
 });

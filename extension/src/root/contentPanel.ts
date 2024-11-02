@@ -1,39 +1,31 @@
 import * as vscode from 'vscode';
 
-export function activate(context: vscode.ExtensionContext) {
-    context.subscriptions.push(
-        vscode.commands.registerCommand('catCodicons.show', () => {
-            ContentPanel.show(context.extensionUri);
-        })
-    );
-}
-
-
 export class ContentPanel {
+	constructor(private _uiUri: string) { }
 
-    public static readonly viewType = 'catCodicons';
+	public static readonly viewType = 'catCodicons';
 
-    public static show(extensionUri: vscode.Uri) {
-        const column = vscode.window.activeTextEditor
-            ? vscode.window.activeTextEditor.viewColumn
-            : undefined;
+	public static show(extensionUri: vscode.Uri,) {
+		const column = vscode.window.activeTextEditor
+			? vscode.window.activeTextEditor.viewColumn
+			: undefined;
 
-        const panel = vscode.window.createWebviewPanel(
-            ContentPanel.viewType,
-            "Cat Codicons",
-            column || vscode.ViewColumn.One
-        );
+		const panel = vscode.window.createWebviewPanel(
+			ContentPanel.viewType,
+			"Cat Codicons",
+			column || vscode.ViewColumn.One
+		);
 
-        panel.webview.html = this._getHtmlForWebview(panel.webview, extensionUri);
-    }
+		panel.webview.html = this._getHtmlForWebview(panel.webview, extensionUri);
+	}
 
-    private static _getHtmlForWebview(webview: vscode.Webview, extensionUri: vscode.Uri) {
+	private static _getHtmlForWebview(webview: vscode.Webview, extensionUri: vscode.Uri) {
 
-        // Get resource paths
-        const styleUri = webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, 'media', 'styles.css'));
-        const codiconsUri = webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, 'node_modules', '@vscode/codicons', 'dist', 'codicon.css'));
+		// Get resource paths
+		const styleUri = webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, 'media', 'styles.css'));
+		const codiconsUri = webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, 'node_modules', '@vscode/codicons', 'dist', 'codicon.css'));
 
-        return `<!DOCTYPE html>
+		return `<!DOCTYPE html>
 			<html lang="en">
 			<head>
 				<meta charset="UTF-8">
@@ -380,6 +372,6 @@ export class ContentPanel {
 				</div>
 			</body>
 			</html>`;
-    }
+	}
 }
 

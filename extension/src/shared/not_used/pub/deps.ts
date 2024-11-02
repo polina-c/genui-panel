@@ -1,5 +1,5 @@
 import * as path from "path";
-import { DartCapabilities } from "../capabilities/dart";
+import { DartCapabilities } from "../not_used/capabilities/dart";
 import { dartVMPath, flutterPath } from "../constants";
 import { DartWorkspaceContext, Logger } from "../interfaces";
 import { runProcess, safeSpawn } from "../processes";

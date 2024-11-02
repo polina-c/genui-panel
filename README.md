@@ -27,8 +27,7 @@ npm run compile
 ### Run locally
 
 1. If you want to use local UI:
-    a. Add to your .bach_profile `export GENUI_PANEL_UI_URL=http://localhost:8080`
-    b. Reopen VS Code to apply the value
+    a. Temporarily extension.ts to have uiUrl equal to `http://localhost:8080`
     c. In separate terminal cd to ui and run `flutter run -d chrome --web-port=8080`
     d. In Run and Debug select `ui` and run (or press F5)
 

@@ -2,7 +2,7 @@ import { CancellationToken, CompletionItem, CompletionItemProvider, DebugAdapter
 
 import { AvailableSuggestion, FlutterOutline, Outline } from "../analysis_server_types";
 import { Analyzer } from "../analyzer";
-import { DartCapabilities } from "../capabilities/dart";
+import { DartCapabilities } from "../not_used/capabilities/dart";
 import { DebuggerType, VersionStatus, VmService, VmServiceExtension } from "../enums";
 import { WebClient } from "../fetch";
 import { CustomScript, DartWorkspaceContext, SpawnedProcess } from "../interfaces";

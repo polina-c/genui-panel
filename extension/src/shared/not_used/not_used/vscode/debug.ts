@@ -1,5 +1,5 @@
 import * as vs from "vscode";
-import { DartVsCodeLaunchArgs } from "../../shared/debug/interfaces";
+import { DartVsCodeLaunchArgs } from "../../debug/interfaces";
 import { DebuggerType, VmServiceExtension } from "../../shared/enums";
 import { PromiseCompleter } from "../../shared/utils";
 
