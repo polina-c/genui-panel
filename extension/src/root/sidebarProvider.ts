@@ -39,6 +39,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     //   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
     // );
 
+    const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
+
     return `
 <!DOCTYPE html>
 <html>
@@ -47,12 +49,10 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 	<script>${this._getJsScriptText()}</script>
 </head>
 <body>
-  flutter iframe hosted at ${this._flutterAppUri}:
-  <br>
   <iframe
     src="${this._flutterAppUri}"
     width="100%"
-    height="1200px" // 100% doe not work here, because of infinite vertical size of container.
+    height="${heightPx}px"
     style="border: none;"
     allow="clipboard-read; clipboard-write; cross-origin-isolated">
   </iframe>
