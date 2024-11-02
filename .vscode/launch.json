@@ -22,6 +22,9 @@
 			"name": "ui",
 			"request": "launch",
 			"type": "dart",
+			"args": [
+				"--web-port=8080"
+			],
 			"program": "ui/lib/main.dart",
 		},
 	]

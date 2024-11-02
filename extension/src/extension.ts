@@ -9,9 +9,11 @@ import { ContentPanel } from './root/contentProvider';
 // Your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
 
+	const uiUrl = process.env.GENUI_PANEL_UI_URL || "https://genui-panel.web.app";
+
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('The extension "genui-panel" is now active!');
+	console.log(`The extension "genui-panel" is now active and is working with ${uiUrl}`);
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand

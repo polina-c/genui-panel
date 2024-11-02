@@ -26,9 +26,15 @@ npm run compile
 
 ### Run locally
 
-Then one of:
-1. Open [extension.ts](extension/src/extension.ts) and press F5
-2. Run and Debug > Run Extension
+1. If you want to use local UI:
+    a. Add to your .bach_profile `export GENUI_PANEL_UI_URL=http://localhost:8080`
+    b. Reopen VS Code to apply the value
+    c. In separate terminal cd to ui and run `flutter run -d chrome --web-port=8080`
+    d. In Run and Debug select `ui` and run (or press F5)
+
+2. Run `npm run watch` to start recompilation on changes.
+
+3. In Run and Debug select `extension` and run (or press F5)
 
 ### Test in IDX
 
