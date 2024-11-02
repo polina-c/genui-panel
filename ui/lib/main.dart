@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'gen UI, home!'),
+      home: const MyHomePage(title: 'gen UI, home :)'),
     );
   }
 }
@@ -32,6 +32,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    onPostMessage.listen((event) {
+      print('!!!! dart received message: ${event.origin}, ${event.data}');
+    });
+  }
 
   void _incrementCounter() {
     setState(() {

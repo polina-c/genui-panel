@@ -27,6 +27,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           ContentPanel.show(this._extensionUri);
         }
         vscode.window.showInformationMessage(message);
+
+        webviewView.webview.postMessage({ type: `hello from node to webview about ${message}` });
       },
     );
   }
