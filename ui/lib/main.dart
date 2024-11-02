@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'primitives/post_message/post_message.dart';
+import 'shared/primitives/post_message/post_message.dart';
 
 void main() {
   runApp(const MyApp());
