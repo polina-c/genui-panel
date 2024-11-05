@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Sidebar extends StatefulWidget {
-  const Sidebar({super.key});
+class ContentScreen extends StatefulWidget {
+  const ContentScreen({super.key});
 
   @override
-  State<Sidebar> createState() => _SidebarState();
+  State<ContentScreen> createState() => _ContentScreenState();
 }
 
-class _SidebarState extends State<Sidebar> {
+class _ContentScreenState extends State<ContentScreen> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder(child: Text('content'));
