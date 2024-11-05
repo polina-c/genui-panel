@@ -30,16 +30,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       initialRoute: AppRoutes.unknown,
-      // Using this instead of [routes] to turn off animation during navigation.
-      onGenerateRoute: (settings) {
-        final route = settings.name ?? AppRoutes.unknown;
-        return PageRouteBuilder(
-          pageBuilder: (context, __, ___) =>
-              AppScaffold(content: _screens[route] ?? _unknownScreenBuilder),
-          transitionsBuilder: (_, __, ___, child) => child,
-          settings: settings,
-        );
-      },
+      routes: _screens,
     );
   }
 }
