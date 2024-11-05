@@ -10,6 +10,6 @@ class ContentScreen extends StatefulWidget {
 class _ContentScreenState extends State<ContentScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder(child: Text('content'));
+    return const Text('gen UI will be here');
   }
 }
