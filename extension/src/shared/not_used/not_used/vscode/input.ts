@@ -1,5 +1,5 @@
 import * as vs from "vscode";
-import { Context } from "../../shared/vscode/workspace";
+import { Context } from "../../vscode/workspace";
 
 export async function showInputBoxWithSettings(
 	context: Context,

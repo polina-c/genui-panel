@@ -1,6 +1,6 @@
 import * as path from "path";
-import { flutterPath } from "../shared/constants";
-import { Logger } from "../shared/interfaces";
+import { flutterPath } from "../constants";
+import { Logger } from "../interfaces";
 import { runToolProcess } from "./processes";
 
 let isShowingAnalyzerError = false;

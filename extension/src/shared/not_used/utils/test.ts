@@ -1,7 +1,7 @@
 import * as path from "path";
 import { URI } from "vscode-uri";
-import { BasicDebugConfiguration } from "../not_used/debug/interfaces";
-import { escapeRegExp } from "../../shared/utils";
+import { BasicDebugConfiguration } from "../debug/interfaces";
+import { escapeRegExp } from "../utils";
 import { OpenedFileInformation, Position } from "../interfaces";
 import { GroupNode, SuiteNode, TestNode, TreeNode } from "../test/test_model";
 import { fsPath } from "./fs";

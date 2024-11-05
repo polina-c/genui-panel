@@ -2,7 +2,7 @@ import * as child_process from "child_process";
 import * as stream from "stream";
 import { LogCategory, LogSeverity } from "./enums";
 import { Event } from "./events";
-import * as f from "./not_used/flutter/daemon_interfaces";
+import * as f from "./flutter/daemon_interfaces";
 import { UnknownResponse } from "./services/interfaces";
 import { WorkspaceContext } from "./workspace";
 

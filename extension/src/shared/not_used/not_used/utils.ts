@@ -4,12 +4,12 @@ import { minimatch } from "minimatch";
 import * as os from "os";
 import * as path from "path";
 import { commands, Uri, window, workspace, WorkspaceFolder } from "vscode";
-import { showLogAction } from "../shared/constants";
+import { showLogAction } from "../constants";
 import { BasicDebugConfiguration } from "../debug/interfaces";
-import { WorkspaceConfig } from "../shared/interfaces";
-import { filenameSafe } from "../shared/utils";
-import { fsPath, getRandomInt, hasPubspec, isFlutterProjectFolder } from "../shared/utils/fs";
-import { isDartWorkspaceFolder } from "../shared/vscode/utils";
+import { WorkspaceConfig } from "../interfaces";
+import { filenameSafe } from "../utils";
+import { fsPath, getRandomInt, hasPubspec, isFlutterProjectFolder } from "../utils/fs";
+import { isDartWorkspaceFolder } from "../vscode/utils";
 
 export function isFlutterWorkspaceFolder(folder?: WorkspaceFolder): boolean {
 	return !!(folder && isDartWorkspaceFolder(folder) && isFlutterProjectFolder(fsPath(folder.uri)));

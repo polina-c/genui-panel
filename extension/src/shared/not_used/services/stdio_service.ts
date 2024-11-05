@@ -1,6 +1,6 @@
 import * as fs from "fs";
-import { IAmDisposable, Logger, SpawnedProcess } from "../../shared/interfaces";
-import { Request, UnknownResponse } from "../../shared/services/interfaces";
+import { IAmDisposable, Logger, SpawnedProcess } from "../interfaces";
+import { Request, UnknownResponse } from "../services/interfaces";
 import { safeSpawn } from "../processes";
 
 // Reminder: This class is used in the debug adapter as well as the main Code process!

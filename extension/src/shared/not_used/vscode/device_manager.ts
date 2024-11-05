@@ -1,9 +1,9 @@
 import * as vs from "vscode";
-import { disposeAll, flatMap, notNullOrUndefined, uniq, withTimeout } from "../../shared/utils";
-import { getAllProjectFolders } from "../../shared/vscode/utils";
+import { disposeAll, flatMap, notNullOrUndefined, uniq, withTimeout } from "../utils";
+import { getAllProjectFolders } from "../vscode/utils";
 import { cancelAction, runFlutterCreatePrompt, skipAction, yesAction } from "../constants";
 import { LogCategory } from "../enums";
-import * as f from "../not_used/flutter/daemon_interfaces";
+import * as f from "../flutter/daemon_interfaces";
 import { CustomEmulator, CustomEmulatorDefinition, Emulator, EmulatorCreator, FlutterCreateCommandArgs, IFlutterDaemon, Logger, PlatformEnabler } from "../interfaces";
 import { logProcess } from "../logging";
 import { safeSpawn } from "../processes";

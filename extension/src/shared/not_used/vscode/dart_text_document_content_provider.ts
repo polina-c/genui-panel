@@ -1,7 +1,7 @@
 import { Uri, workspace } from "vscode";
 import { ClientCapabilities, DocumentUri, FeatureState, NotificationType, RequestType, StaticFeature } from "vscode-languageclient";
 import { LanguageClient } from "vscode-languageclient/node";
-import { DartCapabilities } from "../not_used/capabilities/dart";
+import { DartCapabilities } from "../capabilities/dart";
 import { EventEmitter } from "../events";
 import { IAmDisposable, Logger } from "../interfaces";
 import { disposeAll } from "../utils";

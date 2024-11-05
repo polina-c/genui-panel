@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import { ContentPanel } from "./contentPanel";
+import { sidebarUri } from "../shared/html_content";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
@@ -46,7 +47,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 </head>
 <body>
   <iframe
-    src="${this._uiUri}"
+    src="${sidebarUri(this._uiUri)}"
     width="100%"
     height="${heightPx}px"
     style="border: none;"

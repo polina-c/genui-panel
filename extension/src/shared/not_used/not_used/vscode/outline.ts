@@ -1,5 +1,5 @@
 import * as vs from "vscode";
-import * as as from "../../shared/analysis_server_types";
+import * as as from "../../analysis_server_types";
 
 export function findNearestOutlineNode(fileTracker: any, document: vs.TextDocument, position: vs.Position, useReducedRange = false, kinds: as.ElementKind[] = ["CLASS", "METHOD", "GETTER", "SETTER"]) {
 	const outline = fileTracker.getOutlineFor(document.uri);

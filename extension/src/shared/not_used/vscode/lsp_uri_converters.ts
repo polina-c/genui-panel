@@ -1,7 +1,7 @@
 import * as vs from "vscode";
 import * as c2p from "vscode-languageclient/lib/common/codeConverter";
 import * as p2c from "vscode-languageclient/lib/common/protocolConverter";
-import { fsPath } from "../../shared/utils/fs";
+import { fsPath } from "../utils/fs";
 
 export class LspUriConverters implements LspConverters {
 	constructor(private readonly normalizeFileCasing: boolean) { }

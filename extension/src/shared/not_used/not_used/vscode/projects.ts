@@ -1,10 +1,10 @@
 import * as path from "path";
 import * as vs from "vscode";
 import { Uri } from "vscode";
-import { Logger } from "../../shared/interfaces";
-import { notUndefined } from "../../shared/utils";
-import { fsPath, homeRelativePath, isFlutterProjectFolder } from "../../shared/utils/fs";
-import { getAllProjectFolders } from "../../shared/vscode/utils";
+import { Logger } from "../../interfaces";
+import { notUndefined } from "../../utils";
+import { fsPath, homeRelativePath, isFlutterProjectFolder } from "../../utils/fs";
+import { getAllProjectFolders } from "../../vscode/utils";
 
 import { getExcludedFolders } from "../utils";
 

@@ -1,7 +1,7 @@
 import * as vs from "vscode";
 import { DartVsCodeLaunchArgs } from "../../debug/interfaces";
-import { DebuggerType, VmServiceExtension } from "../../shared/enums";
-import { PromiseCompleter } from "../../shared/utils";
+import { DebuggerType, VmServiceExtension } from "../../enums";
+import { PromiseCompleter } from "../../utils";
 
 export class DartDebugSessionInformation {
 	public observatoryUri?: string;

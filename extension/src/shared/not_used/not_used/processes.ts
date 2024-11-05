@@ -1,7 +1,7 @@
 import { CancellationToken } from "vscode";
-import { isDartCodeTestRun } from "../shared/constants";
-import { Logger, SpawnedProcess } from "../shared/interfaces";
-import { RunProcessResult, runProcess, safeSpawn } from "../shared/processes";
+import { isDartCodeTestRun } from "../constants";
+import { Logger, SpawnedProcess } from "../interfaces";
+import { RunProcessResult, runProcess, safeSpawn } from "../processes";
 
 // Environment used when spawning Dart and Flutter processes.
 let flutterRoot: string | undefined;
