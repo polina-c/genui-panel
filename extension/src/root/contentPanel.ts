@@ -1,22 +1,67 @@
 import * as vscode from 'vscode';
+import { contentUri } from '../shared/html_content';
 
 export class ContentPanel {
-	constructor(private _uiUri: string) { }
+	constructor() { }
 
 	public static readonly viewType = 'catCodicons';
 
-	public static show(extensionUri: vscode.Uri,) {
+	public static show(extensionUri: vscode.Uri, uiUri: string) {
 		const column = vscode.window.activeTextEditor
 			? vscode.window.activeTextEditor.viewColumn
 			: undefined;
 
 		const panel = vscode.window.createWebviewPanel(
 			ContentPanel.viewType,
-			"Cat Codicons",
+			"GenUI",
 			column || vscode.ViewColumn.One
 		);
 
-		panel.webview.html = this._getHtmlForWebview(panel.webview, extensionUri);
+		panel.webview.html = this._getHtmlContent(panel.webview, uiUri);
+	}
+
+	private static _getHtmlContent(webview: vscode.Webview, uiUri: string): string {
+
+		// const indexUri = webview.asWebviewUri(
+		//   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
+		// );
+
+		const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
+
+		return `
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
+	<script>${ContentPanel._getJsScriptText(uiUri)}</script>
+</head>
+<body>
+  <iframe
+    src="${contentUri(uiUri)}"
+    width="100%"
+    height="${heightPx}px"
+    style="border: none;"
+    allow="clipboard-read; clipboard-write; cross-origin-isolated">
+  </iframe>
+</body>
+</html>
+`;
+	}
+
+	private static _getJsScriptText(uiUri: string): string {
+		return `
+const vscodeInJs = acquireVsCodeApi();
+
+window.addEventListener('message', (event) => {
+  console.log('!!!!!! got message', event);
+  let message = event.data;
+  let origin = event.origin;
+  console.log('!!!!!! details', message, origin);
+  if (origin !== '${uiUri}') return;
+  console.log('!!!!!! passing to vscode');
+  vscodeInJs.postMessage(message);
+});
+`;
 	}
 
 	private static _getHtmlForWebview(webview: vscode.Webview, extensionUri: vscode.Uri) {

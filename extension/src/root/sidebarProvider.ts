@@ -21,7 +21,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       (message: string) => {
         console.log('!!!!!! node got message', message);
         if (message.includes('generate')) {
-          ContentPanel.show(this._extensionUri);
+          ContentPanel.show(this._extensionUri, this._uiUri);
         }
         vscode.window.showInformationMessage(message);
 
