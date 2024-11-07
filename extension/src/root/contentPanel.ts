@@ -17,6 +17,10 @@ export class ContentPanel {
 			column || vscode.ViewColumn.One
 		);
 
+		panel.webview.options = {
+			enableScripts: true,
+			enableCommandUris: true,
+		};
 		panel.webview.html = this._getHtmlContent(panel.webview, uiUri);
 	}
 
@@ -33,16 +37,18 @@ export class ContentPanel {
 <html>
 <head>
 	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
-	<script>${ContentPanel._getJsScriptText(uiUri)}</script>
+
 </head>
 <body>
+hello!!!
   <iframe
-    src="${contentUri(uiUri)}"
+    src="https://genui-panel.web.app"
     width="100%"
     height="${heightPx}px"
     style="border: none;"
     allow="clipboard-read; clipboard-write; cross-origin-isolated">
   </iframe>
+end of iframe
 </body>
 </html>
 `;

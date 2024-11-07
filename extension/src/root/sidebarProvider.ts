@@ -15,6 +15,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
     webviewView.webview.options = {
       enableScripts: true,
+      enableCommandUris: true,
     };
     webviewView.webview.html = this._getHtmlContent(webviewView.webview);
     webviewView.webview.onDidReceiveMessage(
