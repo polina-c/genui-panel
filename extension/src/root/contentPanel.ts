@@ -37,18 +37,16 @@ export class ContentPanel {
 <html>
 <head>
 	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
-
+	<script>${ContentPanel._getJsScriptText(uiUri)}</script>
 </head>
 <body>
-hello!!!
   <iframe
-    src="https://genui-panel.web.app"
+    src="${contentUri(uiUri)}"
     width="100%"
     height="${heightPx}px"
     style="border: none;"
     allow="clipboard-read; clipboard-write; cross-origin-isolated">
   </iframe>
-end of iframe
 </body>
 </html>
 `;
@@ -59,13 +57,12 @@ end of iframe
 const vscodeInJs = acquireVsCodeApi();
 
 window.addEventListener('message', (event) => {
-  console.log('!!!!!! got message', event);
+  console.log('!!!!!! node content: got message', event);
   let message = event.data;
   let origin = event.origin;
-  console.log('!!!!!! details', message, origin);
-  if (origin !== '${uiUri}') return;
-  console.log('!!!!!! passing to vscode');
+  console.log('!!!!!! node content: posting message to dart...', message, origin);
   vscodeInJs.postMessage(message);
+  console.log('!!!!!! node content: posted message to dart.', message, origin);
 });
 `;
 	}

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ui/screens/content.dart';
 import 'package:ui/screens/sidebar.dart';
 import 'package:ui/screens/unknown.dart';
-import 'shared/primitives/app_scaffold.dart';
 import 'shared/primitives/navigation.dart';
 import 'shared/primitives/post_message/post_message.dart';
 
@@ -18,8 +17,28 @@ final _screens = <String, WidgetBuilder>{
   AppRoutes.content: (_) => const ContentScreen(),
 };
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    print('!!! dart init started.');
+    super.initState();
+
+    onPostMessage.map((event) {
+      print('!!! dart event1: $event');
+      return event.data;
+    });
+    onPostMessage.listen((event) {
+      print('!!! dart event2: $event');
+    });
+    print('!!! dart init done.');
+  }
 
   @override
   Widget build(BuildContext context) {

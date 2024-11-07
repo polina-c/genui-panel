@@ -19,13 +19,19 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     };
     webviewView.webview.html = this._getHtmlContent(webviewView.webview);
     webviewView.webview.onDidReceiveMessage(
-      (message: string) => {
+      (message) => {
+        message = JSON.stringify(message); // just in case
         console.log('!!!!!! node got message', message);
+        if (message.includes('hello from node to webview about')) {
+          console.log('!!!!!! exiting on recursion');
+          return;
+        }
         if (message.includes('generate')) {
           ContentPanel.show(this._extensionUri, this._uiUri);
         }
         vscode.window.showInformationMessage(message);
 
+        console.log('!!!!!! node sending message to webview...');
         webviewView.webview.postMessage({ type: `hello from node to webview about ${message}` });
       },
     );
@@ -64,13 +70,16 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 const vscodeInJs = acquireVsCodeApi();
 
 window.addEventListener('message', (event) => {
-  console.log('!!!!!! got message', event);
-  let message = event.data;
+  console.log('!!!!!! node sidebar: got message', event);
+  let message = JSON.stringify(event.data);
+  if (message.includes('(from webview)')) return;
+  message = message + '(from webview)';
   let origin = event.origin;
-  console.log('!!!!!! details', message, origin);
-  if (origin !== '${this._uiUri}') return;
-  console.log('!!!!!! passing to vscode');
+  console.log('!!!!!! node sidebar: posting message to dart...', message, origin);
   vscodeInJs.postMessage(message);
+  console.log('!!!!!! node sidebar: posted to vscodeInJs');
+  window.postMessage(message);
+  console.log('!!!!!! node sidebar: posted message to dart.', message, origin);
 });
 `;
   }

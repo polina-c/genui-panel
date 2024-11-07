@@ -10,8 +10,8 @@ import { ContentPanel } from './root/contentPanel';
 export async function activate(context: vscode.ExtensionContext) {
 
 	const uiUrl =
-		//   "http://localhost:8080";
-		"https://genui-panel.web.app";
+		"http://localhost:8080";
+	//"https://genui-panel.web.app";
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
