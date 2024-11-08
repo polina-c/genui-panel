@@ -26,15 +26,17 @@ npm run compile
 
 ### Run locally
 
-1. To start recompilation on changes run:
+1. If you want to use local UI:
+    a. Temporarily  update config.ts to have isLocal = true
+    d. In Run and Debug select `ui` and run (or press F5)
 
-* For hosted UI:
-`npm run watch`
+2. To start recompilation on changes run:
 
-* For local UI:
-`npm run watch-local-ui`
+```
+npm run watch
+```
 
-2. In Run and Debug select `extension` and run (or press F5)
+3. In Run and Debug select `extension` and run (or press F5)
 
 ### Test in IDX
 
