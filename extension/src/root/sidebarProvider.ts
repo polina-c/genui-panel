@@ -1,11 +1,12 @@
 import * as vscode from "vscode";
 import { ContentPanel } from "./contentPanel";
 import { sidebarUri } from "../shared/html_content";
+import { Config } from "../shared/config";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
 
-  constructor(private _extensionUri: vscode.Uri, private _uiUri: string) { }
+  constructor(private _extensionUri: vscode.Uri) { }
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
@@ -27,7 +28,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           return;
         }
         if (message.includes('generate')) {
-          ContentPanel.show(this._extensionUri, this._uiUri);
+          ContentPanel.show(this._extensionUri, Config.uiUrl);
         }
         vscode.window.showInformationMessage(message);
 
@@ -59,7 +60,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   <br/>
   <iframe
     id="sidebar"
-    src="${sidebarUri(this._uiUri)}"
+    src="${Config.sidebarUrl}"
     width="100%"
     height="${heightPx}px"
     style="border: none;"
@@ -78,7 +79,6 @@ function messageToDart() {
 
   console.log('!!!!!! node sidebar: posting message to dart...');
   document.getElementById('sidebar').contentWindow.postMessage('hello from webview to dart', '*');
-
   console.log('!!!!!! node sidebar: posting message to dart done.');
 }
 

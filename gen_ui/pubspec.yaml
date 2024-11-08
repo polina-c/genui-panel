@@ -1,0 +1,23 @@
+name: gen_ui
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  # Keep it in stable version, to avoid issues with Firebase hosting.
+  sdk: ^3.4.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  web: ^1.1.0
+  cupertino_icons: ^1.0.8
+  url_launcher: ^6.2.6
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

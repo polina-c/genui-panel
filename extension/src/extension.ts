@@ -3,19 +3,14 @@
 import * as vscode from 'vscode';
 
 import { SidebarProvider } from './root/sidebarProvider';
-import { ContentPanel } from './root/contentPanel';
+import { Config } from './shared/config';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
-
-	const uiUrl =
-		"http://localhost:8080";
-	//"https://genui-panel.web.app";
-
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log(`The extension "genui-panel" is now active and is working with ${uiUrl}`);
+	console.log(`The extension "genui-panel" is now active and is working with ${Config.uiUrl}`);
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
@@ -29,7 +24,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 
 	console.log(`!!!! starting panel`);
-	const provider = new SidebarProvider(context.extensionUri, uiUrl);
+	const provider = new SidebarProvider(context.extensionUri);
 	context.subscriptions.push(
 		vscode.window.registerWebviewViewProvider(
 			SidebarProvider.viewType,

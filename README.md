@@ -26,14 +26,15 @@ npm run compile
 
 ### Run locally
 
-1. If you want to use local UI:
-    a. Temporarily extension.ts to have uiUrl equal to `http://localhost:8080`
-    c. In separate terminal cd to ui and run `flutter run -d chrome --web-port=8080`
-    d. In Run and Debug select `ui` and run (or press F5)
+1. To start recompilation on changes run:
 
-2. Run `npm run watch` to start recompilation on changes.
+* For hosted UI:
+`npm run watch`
 
-3. In Run and Debug select `extension` and run (or press F5)
+* For local UI:
+`npm run watch-local-ui`
+
+2. In Run and Debug select `extension` and run (or press F5)
 
 ### Test in IDX
 
