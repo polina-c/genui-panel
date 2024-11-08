@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ContentScreen extends StatefulWidget {
-  const ContentScreen({super.key});
+  const ContentScreen({super.key, required this.prompt});
+
+  final String prompt;
 
   @override
   State<ContentScreen> createState() => _ContentScreenState();
@@ -10,6 +12,11 @@ class ContentScreen extends StatefulWidget {
 class _ContentScreenState extends State<ContentScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Text('gen UI will be here'));
+    return Scaffold(
+        body: Column(
+      children: [
+        Text(widget.prompt),
+      ],
+    ));
   }
 }

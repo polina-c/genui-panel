@@ -12,3 +12,6 @@ class AppRoutes {
 void push(String route, BuildContext context) {
   Navigator.of(context).pushNamed(route);
 }
+
+typedef ScreenBuilder = Widget Function(
+    BuildContext context, Map<String, String> params);

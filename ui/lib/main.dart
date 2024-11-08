@@ -9,12 +9,13 @@ void main() {
   runApp(const MyApp());
 }
 
-Widget _unknownScreenBuilder(BuildContext context) => const UnknownScreen();
+Widget _unknownScreenBuilder(BuildContext context, Map<String, String> args) =>
+    const UnknownScreen();
 
-final _screens = <String, WidgetBuilder>{
+final _screens = <String, ScreenBuilder>{
   AppRoutes.unknown: _unknownScreenBuilder,
-  AppRoutes.sidebar: (_) => const SidebarScreen(),
-  AppRoutes.content: (_) => const ContentScreen(),
+  AppRoutes.sidebar: (_, __) => const SidebarScreen(),
+  AppRoutes.content: (_, args) => ContentScreen(prompt: args['prompt'] ?? ''),
 };
 
 class MyApp extends StatefulWidget {
@@ -48,8 +49,14 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: AppRoutes.unknown,
-      routes: _screens,
+      onGenerateRoute: (settings) {
+        // print('!!! generating route: name:${settings.name}');
+        final uri = Uri.parse(settings.name ?? AppRoutes.unknown);
+        // print('!!! ${uri.path}, ${uri.queryParameters}');
+        final builder = _screens[uri.path] ?? _unknownScreenBuilder;
+        return MaterialPageRoute(
+            builder: (context) => builder(context, uri.queryParameters));
+      },
     );
   }
 }
