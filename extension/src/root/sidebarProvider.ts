@@ -53,7 +53,12 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 	<script>${this._getJsScriptText()}</script>
 </head>
 <body>
+  <button onclick="messageToDart()">Message to Dart</ button>
+  <br/>
+  <br/>
+  <br/>
   <iframe
+    id="sidebar"
     src="${sidebarUri(this._uiUri)}"
     width="100%"
     height="${heightPx}px"
@@ -68,6 +73,14 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   private _getJsScriptText(): string {
     return `
 const vscodeInJs = acquireVsCodeApi();
+
+function messageToDart() {
+
+  console.log('!!!!!! node sidebar: posting message to dart...');
+  document.getElementById('sidebar').contentWindow.postMessage('hello from webview to dart', '*');
+
+  console.log('!!!!!! node sidebar: posting message to dart done.');
+}
 
 window.addEventListener('message', (event) => {
   console.log('!!!!!! node sidebar: got message', event);
