@@ -48,7 +48,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
         height: 1200,
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            padding: const EdgeInsets.symmetric(horizontal: 26.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -57,9 +57,10 @@ class _SidebarScreenState extends State<SidebarScreen> {
                   controller: _text,
                   keyboardType: TextInputType.multiline,
                   minLines:
-                      5, // It does not limit input, but defines the min height of the input.
+                      2, // It does not limit input, but defines the min height of the input.
                   maxLines:
                       15, // It does not limit input, but defines the max height of the input.
+                  autofocus: true,
                 ),
                 const Text(
                   'Enter your prompt here',
