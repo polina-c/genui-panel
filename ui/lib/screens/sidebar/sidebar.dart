@@ -49,8 +49,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 const SizedBox(height: 20),
                 TextField(
                   controller: _text,
-                  decoration:
-                      const InputDecoration.collapsed(hintText: _defaultPrompt),
+                  decoration: const InputDecoration(hintText: _defaultPrompt),
                   keyboardType: TextInputType.multiline,
                   // It does not limit input, but defines the min height of the input:
                   minLines: 2,
