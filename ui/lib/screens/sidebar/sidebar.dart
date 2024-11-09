@@ -11,8 +11,8 @@ class SidebarScreen extends StatefulWidget {
 }
 
 class _SidebarScreenState extends State<SidebarScreen> {
-  int _counter = 0;
-  final _text = TextEditingController(text: 'Generate something nice, please!');
+  static const _defaultPrompt = 'Generate something nice, please.';
+  final _text = TextEditingController();
 
   @override
   void dispose() {
@@ -34,7 +34,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Gen UI"),
+        title: const Text("Gen UI"),
         // This is to disable back button.
         leading: const SizedBox.shrink(),
       ),
@@ -49,6 +49,8 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 const SizedBox(height: 20),
                 TextField(
                   controller: _text,
+                  decoration:
+                      const InputDecoration.collapsed(hintText: _defaultPrompt),
                   keyboardType: TextInputType.multiline,
                   // It does not limit input, but defines the min height of the input:
                   minLines: 2,
@@ -64,7 +66,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                   onPressed: () {
                     postMessage('We want to generate something 🤷‍♀️', '*');
                   },
-                  child: const Text('Generate UI!'),
+                  child: const Text('Generate UI'),
                 ),
               ],
             ),
