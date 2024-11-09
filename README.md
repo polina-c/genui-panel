@@ -95,8 +95,7 @@ Using:
 * https://pub.dev/packages/google_sign_in_web
 * To generate client ID: https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
 
-Project configuration:
-https://pantheon.corp.google.com/apis/dashboard?project=fluttergenui
+Internal information: go/genui-panel-readme
 
 ## TODO before releasing
 
