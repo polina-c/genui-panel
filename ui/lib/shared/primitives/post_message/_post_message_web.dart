@@ -18,7 +18,7 @@ Stream<PostMessageEvent> get onPostMessage {
 }
 
 void postMessage(Object? message, String targetOrigin) {
-  print('!!!! hello from postMessage');
+  print('!!!! dart posting message');
   window.parentCrossOrigin?.postMessage(message.jsify(), targetOrigin.toJS);
-  print('!!!! hello from postMessage, done');
+  print('!!!! dart posted message');
 }
