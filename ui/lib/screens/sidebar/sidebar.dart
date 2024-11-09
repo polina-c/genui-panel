@@ -72,7 +72,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
-      floatingActionButton: SignIn(),
+      floatingActionButton: const SignIn(),
     );
   }
 }
