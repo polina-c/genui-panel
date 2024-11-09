@@ -50,10 +50,11 @@ class _MyAppState extends State<MyApp> {
         scaffoldBackgroundColor: Colors.white,
       ),
       onGenerateRoute: (settings) {
-        // print('!!! generating route: name:${settings.name}');
+        print('!!! generating route: name:${settings.name}');
         final uri = Uri.parse(settings.name ?? AppRoutes.unknown);
-        // print('!!! ${uri.path}, ${uri.queryParameters}');
-        final builder = _screens[uri.path] ?? _unknownScreenBuilder;
+        print('!!! ${uri.path}, ${uri.queryParameters}');
+        final screenBuilder = _screens[uri.path];
+        final builder = screenBuilder ?? _unknownScreenBuilder;
         return MaterialPageRoute(
             builder: (context) => builder(context, uri.queryParameters));
       },

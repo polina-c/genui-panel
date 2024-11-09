@@ -40,6 +40,7 @@ export class ContentPanel {
 	<script>${ContentPanel._getJsScriptText(uiUri)}</script>
 </head>
 <body>
+${Config.contentUrl}
   <iframe
     src="${Config.contentUrl}"
     width="100%"
