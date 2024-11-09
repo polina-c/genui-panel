@@ -20,16 +20,19 @@ class _SidebarScreenState extends State<SidebarScreen> {
   void dispose() {
     _text.dispose();
     _auth.dispose();
+    // It seems [onPostMessage] does not provide a way to remove listeners.
     super.dispose();
   }
 
   @override
   void initState() {
     super.initState();
-    onPostMessage.listen((event) {
-      print(
-          '!!!! dart sidebar received message: ${event.origin}, ${event.data}');
-    });
+    onPostMessage.listen(_handleMessage);
+    _auth.addListener(() => setState(() {}));
+  }
+
+  void _handleMessage(PostMessageEvent event) {
+    print('!!!! dart sidebar received message: ${event.origin}, ${event.data}');
   }
 
   @override
@@ -65,10 +68,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {
-                    _requestGenUi();
-                    postMessage('We want to generate something 🤷‍♀️', '*');
-                  },
+                  onPressed: _requestGenUi,
                   child: const Text('Generate UI'),
                 ),
               ],
@@ -82,10 +82,12 @@ class _SidebarScreenState extends State<SidebarScreen> {
   }
 
   void _requestGenUi() async {
+    postMessage('We want to generate something 🤷‍♀️', '*');
     final http.Response response = await http.get(
       Uri.parse('https://people.googleapis.com/v1/people/me/connections'
           '?requestMask.includeField=person.names'),
       headers: await _auth.currentUser!.authHeaders,
     );
+    print('Response status: ${response.statusCode}');
   }
 }
