@@ -7,7 +7,9 @@ abstract class InIdeMessage {
 }
 
 enum _OutIdeMessageType {
-  generateContent, // Do not rename, because the name is hard coded in node.
+  // Do not rename, because the name is hard coded in node.
+  // Should we use proto?
+  generateContent,
 }
 
 class _JsonFields {

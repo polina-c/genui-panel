@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import { ContentPanel } from "./contentPanel";
 import { Config } from "../shared/config";
+import { everyScreenJsScript } from "../shared/js_script";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
@@ -12,7 +13,6 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     context: vscode.WebviewViewResolveContext<unknown>,
     token: vscode.CancellationToken
   ): void | Thenable<void> {
-
     webviewView.webview.options = {
       enableScripts: true,
       enableCommandUris: true,
@@ -50,7 +50,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 <html>
 <head>
 	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
-	<script>${this._getJsScriptText()}</script>
+	<script>${everyScreenJsScript}</script>
 </head>
 <body>
   <button onclick="messageToDart()">Message to Dart :)</ button>
@@ -67,32 +67,6 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
   </iframe>
 </body>
 </html>
-`;
-  }
-
-  private _getJsScriptText(): string {
-    return `
-const vscodeInJs = acquireVsCodeApi();
-
-function messageToDart() {
-
-  console.log('!!!!!! node sidebar: posting message to dart...');
-  document.getElementById('sidebar').contentWindow.postMessage('hello from webview to dart', '*');
-  console.log('!!!!!! node sidebar: posting message to dart done.');
-}
-
-window.addEventListener('message', (event) => {
-  console.log('!!!!!! node sidebar: got message', event);
-  let message = JSON.stringify(event.data);
-  if (message.includes('(from webview)')) return;
-  message = message + '(from webview)';
-  let origin = event.origin;
-  console.log('!!!!!! node sidebar: posting message to dart...', message, origin);
-  vscodeInJs.postMessage(message);
-  console.log('!!!!!! node sidebar: posted to vscodeInJs');
-  window.postMessage(message);
-  console.log('!!!!!! node sidebar: posted message to dart.', message, origin);
-});
 `;
   }
 }
