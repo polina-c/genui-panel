@@ -22,17 +22,12 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       (message) => {
         message = JSON.stringify(message); // just in case
         console.log('!!!!!! node got message', message);
-        if (message.includes('hello from node to webview about')) {
-          console.log('!!!!!! exiting on recursion');
-          return;
-        }
+
         if (message.includes('generate')) {
           ContentPanel.show(this._extensionUri, Config.uiUrl);
         }
         vscode.window.showInformationMessage(message);
 
-        console.log('!!!!!! node sending message to webview...');
-        webviewView.webview.postMessage({ type: `hello from node to webview about ${message}` });
       },
     );
   }
