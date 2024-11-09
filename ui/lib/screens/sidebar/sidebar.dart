@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart' as http;
 
+import '../../shared/primitives/custom_font_icons.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '_sign_in.dart';
+
+const IconData _logo = IconData(0xe900, fontFamily: 'icomoon');
 
 class SidebarScreen extends StatefulWidget {
   const SidebarScreen({super.key});
@@ -50,8 +54,21 @@ class _SidebarScreenState extends State<SidebarScreen> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Gen UI'),
-        // This is to disable back button.
-        leading: const SizedBox.shrink(),
+        // See https://stackoverflow.com/questions/44087400/flutter-svg-rendering.
+        leading: const Icon(_logo),
+        // Container(
+        //     color: Colors.green,
+        //     child: SvgPicture.asset(
+        //       'lib/assets/logo.svg',
+        //       width: 10,
+        //       height: 10,
+        //       semanticsLabel: 'GenUI logo',
+        //       // colorFilter: ColorFilter.linearToSrgbGamma(),
+        //       // color: Colors.red,
+        //     )),
+        // // color: Colors.blue,
+        // ),
+        // const ImageIcon(AssetImage('logo.svg')),
       ),
       body: SizedBox(
         height: 1200,
