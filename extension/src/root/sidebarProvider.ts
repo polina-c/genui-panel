@@ -2,6 +2,7 @@ import * as vscode from "vscode";
 import { ContentPanel } from "./contentPanel";
 import { Config } from "../shared/config";
 import { everyScreenJsScript } from "../shared/js_script";
+import { generateContentMessageType } from "../shared/cross_app_constants";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
@@ -23,7 +24,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         message = JSON.stringify(message); // just in case
         console.log('!!!!!! node got message', message);
 
-        if (message.includes('generate')) {
+        if (message.includes(generateContentMessageType)) {
           ContentPanel.show(this._extensionUri, Config.uiUrl);
         }
         vscode.window.showInformationMessage(message);
