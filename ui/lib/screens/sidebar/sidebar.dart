@@ -49,7 +49,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("Gen UI"),
+        title: const Text('Gen UI'),
         // This is to disable back button.
         leading: const SizedBox.shrink(),
       ),
@@ -75,10 +75,20 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 const Text(
                   'Enter your prompt here',
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 40),
                 ElevatedButton(
                   onPressed: _auth.currentUser == null ? null : _requestGenUi,
                   child: const Text('Generate UI'),
+                  style: ButtonStyle(
+                    elevation: WidgetStateProperty.resolveWith<double>(
+                      (Set<WidgetState> states) {
+                        if (states.contains(WidgetState.disabled)) {
+                          return 0;
+                        }
+                        return 4;
+                      },
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -92,7 +102,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
 
   void _requestGenUi() async {
     postMessage('We want to generate something 🤷‍♀️', '*');
-    final http.Response response = await http.get(
+    final response = await http.get(
       Uri.parse('https://people.googleapis.com/v1/people/me/connections'
           '?requestMask.includeField=person.names'),
       headers: await _auth.currentUser!.authHeaders,

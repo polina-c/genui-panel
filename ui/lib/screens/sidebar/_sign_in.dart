@@ -82,7 +82,7 @@ class _AuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: onPressed,
-      elevation: 0,
+      elevation: 1,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: FittedBox(
