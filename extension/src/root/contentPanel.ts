@@ -7,7 +7,7 @@ export class ContentPanel {
 
 	public static readonly viewType = 'catCodicons';
 
-	public static show(extensionUri: vscode.Uri, uiUri: string) {
+	public static show() {
 		const column = vscode.window.activeTextEditor
 			? vscode.window.activeTextEditor.viewColumn
 			: undefined;
@@ -22,10 +22,10 @@ export class ContentPanel {
 			enableScripts: true,
 			enableCommandUris: true,
 		};
-		panel.webview.html = this._getHtmlContent(panel.webview, uiUri);
+		panel.webview.html = this._getHtmlContent();
 	}
 
-	private static _getHtmlContent(webview: vscode.Webview, uiUri: string): string {
+	private static _getHtmlContent(): string {
 
 		// const indexUri = webview.asWebviewUri(
 		//   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
