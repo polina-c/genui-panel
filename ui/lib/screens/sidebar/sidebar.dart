@@ -15,11 +15,13 @@ class _SidebarScreenState extends State<SidebarScreen> {
   static const _defaultPrompt = 'Generate something nice, please.';
   final _text = TextEditingController();
   final _auth = SignInController();
+  final _focus = FocusNode();
 
   @override
   void dispose() {
     _text.dispose();
     _auth.dispose();
+    _focus.dispose();
     // It seems [onPostMessage] does not provide a way to remove listeners.
     super.dispose();
   }
@@ -28,11 +30,18 @@ class _SidebarScreenState extends State<SidebarScreen> {
   void initState() {
     super.initState();
     onPostMessage.listen(_handleMessage);
-    _auth.addListener(() => setState(() {}));
+    _auth.addListener(_handleAuthChange);
   }
 
   void _handleMessage(PostMessageEvent event) {
     print('!!!! dart sidebar received message: ${event.origin}, ${event.data}');
+  }
+
+  void _handleAuthChange() {
+    if (_auth.currentUser != null) {
+      _focus.requestFocus();
+    }
+    setState(() {});
   }
 
   @override
@@ -68,7 +77,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: _requestGenUi,
+                  onPressed: _auth.currentUser == null ? null : _requestGenUi,
                   child: const Text('Generate UI'),
                 ),
               ],
@@ -77,7 +86,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
-      floatingActionButton: const SignIn(),
+      floatingActionButton: SignIn(controller: _auth),
     );
   }
 

@@ -20,7 +20,7 @@ class SignInController extends ChangeNotifier {
   GoogleSignInAccount? _user;
   GoogleSignInAccount? get currentUser => _user;
   set currentUser(GoogleSignInAccount? value) {
-    _user;
+    _user = value;
     notifyListeners();
   }
 
@@ -51,12 +51,15 @@ class _SignInState extends State<SignIn> {
     }
   }
 
+  void _handleCurrentUserChange(GoogleSignInAccount? account) {
+    widget.controller?.currentUser = account;
+    setState(() => _currentUser = account);
+  }
+
   @override
   void initState() {
     super.initState();
-    _googleSignIn.onCurrentUserChanged.listen((GoogleSignInAccount? account) {
-      setState(() => _currentUser = account);
-    });
+    _googleSignIn.onCurrentUserChanged.listen(_handleCurrentUserChange);
   }
 
   @override
@@ -79,6 +82,7 @@ class _AuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: onPressed,
+      elevation: 0,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: FittedBox(
