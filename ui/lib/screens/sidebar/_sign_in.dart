@@ -10,46 +10,61 @@ const List<String> _scopes = <String>[
 ];
 
 GoogleSignIn _googleSignIn = GoogleSignIn(
-  // The same as in <meta> in index.html in web folder.
+  // Mast be the same as in <meta> in index.html in web folder.
   clientId:
       '975757934897-7aca7oc2f00qeqrhaaadasktspv4f60d.apps.googleusercontent.com',
   scopes: _scopes,
 );
 
+class SignInController extends ChangeNotifier {
+  GoogleSignInAccount? _user;
+  GoogleSignInAccount? get currentUser => _user;
+  set currentUser(GoogleSignInAccount? value) {
+    _user;
+    notifyListeners();
+  }
+
+  @override
+  void dispose() {
+    _user = null;
+    super.dispose();
+  }
+}
+
 class SignIn extends StatefulWidget {
-  const SignIn({super.key});
+  const SignIn({super.key, this.controller});
+
+  final SignInController? controller;
 
   @override
   State<SignIn> createState() => _SignInState();
 }
 
 class _SignInState extends State<SignIn> {
-  bool _isSignedIn = false;
+  GoogleSignInAccount? _currentUser;
+
+  @override
+  void didUpdateWidget(covariant SignIn oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.controller != oldWidget.controller) {
+      widget.controller?.currentUser = _currentUser;
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _googleSignIn.onCurrentUserChanged.listen((GoogleSignInAccount? account) {
+      setState(() => _currentUser = account);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    if (_isSignedIn) {
-      return _AuthButton('Sign Out', _handleSignOut);
+    if (_currentUser == null) {
+      return _AuthButton('Sign In', _googleSignIn.signIn);
     } else {
-      return _AuthButton('Sign In', _handleSignIn);
-    }
-  }
-
-  Future<void> _handleSignIn() async {
-    try {
-      await _googleSignIn.signIn();
-      setState(() => _isSignedIn = true);
-    } catch (error) {
-      print('!!!! error in _handleSignIn: $error');
-    }
-  }
-
-  void _handleSignOut() async {
-    try {
-      await _googleSignIn.signOut();
-      setState(() => _isSignedIn = false);
-    } catch (error) {
-      print('!!!! error in _handleSignOut: $error');
+      return _AuthButton('Sign Out', _googleSignIn.signOut);
     }
   }
 }

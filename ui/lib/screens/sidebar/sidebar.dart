@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui/screens/sidebar/_sign_in.dart';
+import 'package:http/http.dart' as http;
 
 import '../../shared/primitives/post_message/post_message.dart';
 
@@ -13,10 +14,12 @@ class SidebarScreen extends StatefulWidget {
 class _SidebarScreenState extends State<SidebarScreen> {
   static const _defaultPrompt = 'Generate something nice, please.';
   final _text = TextEditingController();
+  final _auth = SignInController();
 
   @override
   void dispose() {
     _text.dispose();
+    _auth.dispose();
     super.dispose();
   }
 
@@ -63,6 +66,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
+                    _requestGenUi();
                     postMessage('We want to generate something 🤷‍♀️', '*');
                   },
                   child: const Text('Generate UI'),
@@ -74,6 +78,14 @@ class _SidebarScreenState extends State<SidebarScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
       floatingActionButton: const SignIn(),
+    );
+  }
+
+  void _requestGenUi() async {
+    final http.Response response = await http.get(
+      Uri.parse('https://people.googleapis.com/v1/people/me/connections'
+          '?requestMask.includeField=person.names'),
+      headers: await _auth.currentUser!.authHeaders,
     );
   }
 }
