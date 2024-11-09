@@ -53,7 +53,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 	<script>${this._getJsScriptText()}</script>
 </head>
 <body>
-  <button onclick="messageToDart()">Message to Dart</ button>
+  <button onclick="messageToDart()">Message to Dart :)</ button>
   <br/>
   <br/>
   <br/>

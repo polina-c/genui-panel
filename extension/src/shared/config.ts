@@ -4,7 +4,7 @@ export class Config {
     static isLocal: boolean = true;
 
     public static get uiUrl(): string {
-        return Config.isLocal ? "https://genui-panel.web.app" : "http://localhost:8080";
+        return Config.isLocal ? "http://localhost:8080" : "https://genui-panel.web.app";
     }
 
     public static get sidebarUrl(): string {
