@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart' as http;
 
+import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/post_message/post_message.dart';
+import '../../shared/primitives/post_message/primitives.dart';
 import '_sign_in.dart';
 
 class SidebarScreen extends StatefulWidget {
@@ -13,7 +15,7 @@ class SidebarScreen extends StatefulWidget {
 }
 
 class _SidebarScreenState extends State<SidebarScreen> {
-  static const _defaultPrompt = 'Generate something nice, please.';
+  static const _defaultPrompt = 'Describe UI you want to generate.';
   final _text = TextEditingController();
   final _auth = SignInController();
   final _focus = FocusNode();
@@ -30,7 +32,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
   @override
   void initState() {
     super.initState();
-    onPostMessage.listen(_handleMessage);
+    onMessagePosted.listen(_handleMessage);
     _auth.addListener(_handleAuthChange);
   }
 
@@ -81,9 +83,6 @@ class _SidebarScreenState extends State<SidebarScreen> {
                   maxLines: 15,
                   autofocus: true,
                 ),
-                const Text(
-                  'Enter your prompt here',
-                ),
                 const SizedBox(height: 40),
                 ElevatedButton(
                   onPressed: _auth.currentUser == null ? null : _requestGenUi,
@@ -110,7 +109,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
   }
 
   void _requestGenUi() async {
-    postMessage('We want to generate something 🤷‍♀️', '*');
+    postMessageToAll(GenerateContentMessage(_text.text).jsonEncode());
     final response = await http.get(
       Uri.parse('https://people.googleapis.com/v1/people/me/connections'
           '?requestMask.includeField=person.names'),

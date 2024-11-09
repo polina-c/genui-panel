@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be found
 // in the LICENSE file.
 
-import 'post_message.dart';
+import 'primitives.dart';
 
 Stream<PostMessageEvent> get onPostMessage =>
     throw UnsupportedError('unsupported platform');

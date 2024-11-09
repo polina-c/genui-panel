@@ -6,7 +6,7 @@ import 'dart:js_interop';
 
 import 'package:web/web.dart';
 
-import 'post_message.dart';
+import 'primitives.dart';
 
 Stream<PostMessageEvent> get onPostMessage {
   return window.onMessage.map(
