@@ -88,6 +88,16 @@ firebase deploy
 flutter create --platforms=web .
 ```
 
+### Authentication in Google
+
+Using:
+* https://pub.dev/packages/google_sign_in
+* https://pub.dev/packages/google_sign_in_web
+* To generate client ID: https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+
+Project configuration:
+https://pantheon.corp.google.com/apis/dashboard?project=fluttergenui
+
 ## TODO before releasing
 
 1. Handle runtime errors

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui/screens/content/content.dart';
-import 'package:ui/screens/sidebar.dart';
+import 'package:ui/screens/sidebar/sidebar.dart';
 import 'package:ui/screens/unknown.dart';
 import 'shared/primitives/navigation.dart';
 import 'shared/primitives/post_message/post_message.dart';
