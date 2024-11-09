@@ -21,7 +21,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     webviewView.webview.html = this._getHtmlContent(webviewView.webview);
     webviewView.webview.onDidReceiveMessage(
       (message) => {
-        console.log(`!!!!!! node sidebar got message: ${typeof (message)}, ${message}`)
+        console.log(`!!!!!! node sidebar got message: ${typeof (message)}, ${message}`);
         // let obj = JSON.parse(message);
         // // const type = message.type;
 

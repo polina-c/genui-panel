@@ -10,9 +10,7 @@ function messageToDart() {
 
 window.addEventListener('message', (event) => {
   console.log('!!!!!! script: got message', event);
-  let message = JSON.stringify(event.data);
-  let origin = event.origin;
-  console.log('!!!!!! script: posting message to node...', message, origin);
-  vscodeInJs.postMessage(message);
+  vscodeInJs.postMessage(JSON.stringify({data: event.data, origin: event.origin}));
+  console.log('!!!!!! script: posted message to node.');
 });
 `;
