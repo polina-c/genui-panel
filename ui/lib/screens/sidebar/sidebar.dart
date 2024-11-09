@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart' as http;
 
-import '../../shared/primitives/custom_font_icons.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '_sign_in.dart';
 
@@ -55,20 +54,17 @@ class _SidebarScreenState extends State<SidebarScreen> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Gen UI'),
         // See https://stackoverflow.com/questions/44087400/flutter-svg-rendering.
-        leading: const Icon(_logo),
-        // Container(
-        //     color: Colors.green,
-        //     child: SvgPicture.asset(
-        //       'lib/assets/logo.svg',
-        //       width: 10,
-        //       height: 10,
-        //       semanticsLabel: 'GenUI logo',
-        //       // colorFilter: ColorFilter.linearToSrgbGamma(),
-        //       // color: Colors.red,
-        //     )),
-        // // color: Colors.blue,
-        // ),
-        // const ImageIcon(AssetImage('logo.svg')),
+        leading: Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: SvgPicture.asset(
+            'assets/logo.svg',
+            colorFilter: ColorFilter.mode(
+              Theme.of(context).colorScheme.primary,
+              BlendMode.srcIn,
+            ),
+            semanticsLabel: 'GenUI logo',
+          ),
+        ),
       ),
       body: SizedBox(
         height: 1200,
