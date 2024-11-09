@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ui/shared/primitives/navigation.dart';
 import 'package:url_launcher/link.dart';
+
+import '../shared/primitives/navigation.dart';
 
 // Shows a list of all routes in the app.
 class UnknownScreen extends StatefulWidget {

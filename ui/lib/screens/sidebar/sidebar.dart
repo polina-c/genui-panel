@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ui/screens/sidebar/_sign_in.dart';
 import 'package:http/http.dart' as http;
 
 import '../../shared/primitives/post_message/post_message.dart';
+import '_sign_in.dart';
 
 class SidebarScreen extends StatefulWidget {
   const SidebarScreen({super.key});
@@ -66,9 +66,9 @@ class _SidebarScreenState extends State<SidebarScreen> {
                   controller: _text,
                   decoration: const InputDecoration(hintText: _defaultPrompt),
                   keyboardType: TextInputType.multiline,
-                  // It does not limit input, but defines the min height of the input:
+                  // Defines the min height:
                   minLines: 2,
-                  // It does not limit input, but defines the max height of the input, after which it scrolls:
+                  // Defines the max height, before scrolling:
                   maxLines: 15,
                   autofocus: true,
                 ),

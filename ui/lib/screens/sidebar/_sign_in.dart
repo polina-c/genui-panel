@@ -12,6 +12,7 @@ const List<String> _scopes = <String>[
 GoogleSignIn _googleSignIn = GoogleSignIn(
   // Mast be the same as in <meta> in index.html in web folder.
   clientId:
+      // ignore: lines_longer_than_80_chars
       '975757934897-7aca7oc2f00qeqrhaaadasktspv4f60d.apps.googleusercontent.com',
   scopes: _scopes,
 );

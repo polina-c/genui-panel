@@ -21,11 +21,11 @@ class _GenUiState extends State<GenUi> {
   @override
   Widget build(BuildContext context) {
     if (!_isLoaded) return const Placeholder();
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         children: [
-          const Text('gen UI'),
-          const SizedBox(height: 20),
+          Text('gen UI'),
+          SizedBox(height: 20),
         ],
       ),
     );

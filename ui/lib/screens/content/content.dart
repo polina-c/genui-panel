@@ -16,7 +16,7 @@ class _ContentScreenState extends State<ContentScreen> {
         body: Column(
       children: [
         Text(widget.prompt),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
       ],
     ));
   }
