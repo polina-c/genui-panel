@@ -3,7 +3,6 @@ export const everyScreenJsScript = `
 const vscodeInJs = acquireVsCodeApi();
 
 function messageToDart() {
-
   console.log('!!!!!! script: posting message to dart...');
   document.getElementById('sidebar').contentWindow.postMessage('hello from webview to dart', '*');
   console.log('!!!!!! script: posting message to dart done.');

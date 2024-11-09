@@ -109,13 +109,13 @@ class _SidebarScreenState extends State<SidebarScreen> {
     );
   }
 
-  void _requestGenUi() async {
+  void _requestGenUi() {
     postMessageToAll(GenerateContentMessage(_text.text).jsonEncode());
-    final response = await http.get(
-      Uri.parse('https://people.googleapis.com/v1/people/me/connections'
-          '?requestMask.includeField=person.names'),
-      headers: await _auth.currentUser!.authHeaders,
-    );
-    print('Response status: ${response.statusCode}');
+    // final response = await http.get(
+    //   Uri.parse('https://people.googleapis.com/v1/people/me/connections'
+    //       '?requestMask.includeField=person.names'),
+    //   headers: await _auth.currentUser!.authHeaders,
+    // );
+    // print('Response status: ${response.statusCode}');
   }
 }
