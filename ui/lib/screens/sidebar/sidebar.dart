@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui/screens/sidebar/sign_in.dart';
+import 'package:ui/screens/sidebar/_sign_in.dart';
 
 import '../../shared/primitives/post_message/post_message.dart';
 
