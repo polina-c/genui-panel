@@ -24,14 +24,8 @@ class _SidebarScreenState extends State<SidebarScreen> {
   void initState() {
     super.initState();
     onPostMessage.listen((event) {
-      print('!!!! dart received message: ${event.origin}, ${event.data}');
-    });
-  }
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-      postMessage('!!!! Counter is $_counter now!', '*');
+      print(
+          '!!!! dart sidebar received message: ${event.origin}, ${event.data}');
     });
   }
 
@@ -56,10 +50,10 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 TextField(
                   controller: _text,
                   keyboardType: TextInputType.multiline,
-                  minLines:
-                      2, // It does not limit input, but defines the min height of the input.
-                  maxLines:
-                      15, // It does not limit input, but defines the max height of the input.
+                  // It does not limit input, but defines the min height of the input:
+                  minLines: 2,
+                  // It does not limit input, but defines the max height of the input, after which it scrolls:
+                  maxLines: 15,
                   autofocus: true,
                 ),
                 const Text(
