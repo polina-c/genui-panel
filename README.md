@@ -67,9 +67,12 @@ flutter create ui  --platforms=web
 
 All commands here are for the directory `ui`.
 
+
+Basic commands:
 ```
 flutter build web
-flutter run -d chrome --web-port=50000
+flutter run -d chrome --web-port=8080
+flutter run -d web-server --web-port=8080
 ```
 
 ### Deploy to Firebase
@@ -80,12 +83,6 @@ To deploy ask @polinach to give you permissions or to run:
 
 ```
 firebase deploy
-```
-
-### Re-add web
-
-```
-flutter create --platforms=web .
 ```
 
 ### Authentication in Google

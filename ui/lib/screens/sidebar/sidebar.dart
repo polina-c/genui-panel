@@ -25,7 +25,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
     _text.dispose();
     _auth.dispose();
     _focus.dispose();
-    // It seems [onPostMessage] does not provide a way to remove listeners.
+    // It seems [onMessagePosted] does not provide a way to remove listeners.
     super.dispose();
   }
 
@@ -85,7 +85,8 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 ),
                 const SizedBox(height: 40),
                 ElevatedButton(
-                  onPressed: _auth.currentUser == null ? null : _requestGenUi,
+                  onPressed:
+                      _requestGenUi, //_auth.currentUser == null ? null : _requestGenUi,
                   child: const Text('Generate UI'),
                   style: ButtonStyle(
                     elevation: WidgetStateProperty.resolveWith<double>(

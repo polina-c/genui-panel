@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { contentUri } from '../shared/html_content';
+import { Config } from '../shared/config';
 
 export class ContentPanel {
 	constructor() { }
@@ -41,7 +41,7 @@ export class ContentPanel {
 </head>
 <body>
   <iframe
-    src="${contentUri(uiUri)}"
+    src="${Config.contentUrl}"
     width="100%"
     height="${heightPx}px"
     style="border: none;"

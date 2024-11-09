@@ -1,6 +1,5 @@
 import * as vscode from "vscode";
 import { ContentPanel } from "./contentPanel";
-import { sidebarUri } from "../shared/html_content";
 import { Config } from "../shared/config";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
