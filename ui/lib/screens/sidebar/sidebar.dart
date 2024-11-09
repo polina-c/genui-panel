@@ -5,8 +5,6 @@ import 'package:http/http.dart' as http;
 import '../../shared/primitives/post_message/post_message.dart';
 import '_sign_in.dart';
 
-const IconData _logo = IconData(0xe900, fontFamily: 'icomoon');
-
 class SidebarScreen extends StatefulWidget {
   const SidebarScreen({super.key});
 
@@ -49,19 +47,17 @@ class _SidebarScreenState extends State<SidebarScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final primaryColor = Theme.of(context).colorScheme.primary;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Gen UI'),
+        title: Text('Gen UI', style: TextStyle(color: primaryColor)),
         // See https://stackoverflow.com/questions/44087400/flutter-svg-rendering.
         leading: Padding(
           padding: const EdgeInsets.all(14.0),
           child: SvgPicture.asset(
             'assets/logo.svg',
-            colorFilter: ColorFilter.mode(
-              Theme.of(context).colorScheme.primary,
-              BlendMode.srcIn,
-            ),
+            colorFilter: ColorFilter.mode(primaryColor, BlendMode.srcIn),
             semanticsLabel: 'GenUI logo',
           ),
         ),
