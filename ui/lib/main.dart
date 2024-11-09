@@ -48,6 +48,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        scaffoldBackgroundColor: Colors.white,
       ),
       onGenerateRoute: (settings) {
         // print('!!! generating route: name:${settings.name}');
