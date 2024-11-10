@@ -28,6 +28,7 @@ export class ContentPanel {
 	private static _getHtmlContent(prompt: string): string {
 
 		const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
+		const url = Config.contentUrl(prompt);
 
 		return `
 <!DOCTYPE html>
@@ -37,9 +38,8 @@ export class ContentPanel {
 	<script>${everyScreenJsScript}</script>
 </head>
 <body>
-${Config.contentUrl}
   <iframe
-    src="${Config.contentUrl}"
+    src="${url}"
     width="100%"
     height="${heightPx}px"
     style="border: none;"

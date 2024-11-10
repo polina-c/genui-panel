@@ -11,7 +11,7 @@ export class Config {
         return Config.uiUrl + "/#/sidebar";
     }
 
-    public static get contentUrl(): string {
-        return Config.uiUrl + "/#/content";
+    public static contentUrl(prompt: string): string {
+        return Config.uiUrl + "/#/content?prompt=" + prompt;
     }
 }
