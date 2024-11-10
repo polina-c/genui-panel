@@ -12,6 +12,6 @@ export class Config {
     }
 
     public static contentUrl(prompt: string): string {
-        return Config.uiUrl + "/#/content?prompt=" + prompt;
+        return Config.uiUrl + "/#/content?prompt=" + encodeURI(prompt);
     }
 }
