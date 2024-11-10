@@ -8,7 +8,8 @@ final List<PromptExample> promptExamples = [
   PromptExample(
     name: 'App scaffold',
     prompt:
-        "Scaffold application with placeholder for title and three menu items: 'Dashboard', 'Settings', 'Help' and 'About'",
+        'Scaffold application with placeholder for title and three menu items:'
+        "'Dashboard', 'Settings', 'Help' and 'About'",
   ),
   PromptExample(
     name: 'App theme',
@@ -16,7 +17,7 @@ final List<PromptExample> promptExamples = [
 Define a theme for the app and create a widget that shows how basic widgets look with the theme applied.
 The theme should target children of age 6 to 12, with a playful and colorful design.
 
-Use a bright color palette.
+Use a bright color palette, and white background with a lot of space.
 The primary color should be a vibrant shade of blue, while the secondary color should be a warm yellow.
 Use contrasting colors for text and background to ensure readability.
 The font style should be a fun, friendly and easy to read.
@@ -24,7 +25,7 @@ Buttons should have rounded corners and a subtle shadow effect when pressed.
 Text fields should have a light gray border and a hint text color that matches the primary color.
 Headings should be bold and slightly larger than body text, with a color that complements the primary color.
 The widget should display a preview of the theme with examples of buttons,
-text fields, and headings styled according to the theme. The preview should be interactive,
+text fields, selectable lists, and headings styled according to the theme. The preview should be interactive,
 allowing users to see how the colors and sizes change with selections.
 
  The design should be visually appealing and engaging for children, encouraging them to explore and interact with the app.''',
@@ -36,16 +37,16 @@ allowing users to see how the colors and sizes change with selections.
   ),
   PromptExample(
     name: 'Ask for rate',
-    prompt:
-        'Ask user to rate the experience from 1 to 5 stars, to provide optional details, and to submit the feedback.',
+    prompt: 'Ask user to rate the experience from 1 to 5 stars, '
+        'to provide optional details, and to submit the feedback.',
   ),
   PromptExample(
     name: 'Math quest',
-    prompt:
-        'Show user two random numbers, ask user to sum them and verify the result.',
+    prompt: 'Show user two random numbers, ask user'
+        'to sum them and verify the result.',
   ),
   PromptExample(
-    name: 'Contact search',
+    name: 'Search for contacts',
     prompt:
         r"""Create a UI for a contact search input field that accepts only phone number input.
 It should trigger a search on input change, with the search results displayed below it.

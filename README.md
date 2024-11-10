@@ -93,7 +93,7 @@ Using:
 * https://pub.dev/packages/google_sign_in_web
 * To generate client ID: https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
 
-See more details in http://go/genui-panel-readme
+See internal details in http://go/genui-panel-readme
 
 ## TODO before releasing
 

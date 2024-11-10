@@ -4,6 +4,7 @@ import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/logo_icon.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
+import '_prompt_input.dart';
 import '_sign_in.dart';
 
 class SidebarScreen extends StatefulWidget {
@@ -14,7 +15,6 @@ class SidebarScreen extends StatefulWidget {
 }
 
 class _SidebarScreenState extends State<SidebarScreen> {
-  static const _defaultPrompt = 'Describe UI you want to generate.';
   final _text = TextEditingController();
   final _auth = SignInController();
   final _focus = FocusNode();
@@ -73,16 +73,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 const SizedBox(height: 20),
-                TextField(
-                  controller: _text,
-                  decoration: const InputDecoration(hintText: _defaultPrompt),
-                  keyboardType: TextInputType.multiline,
-                  // Defines the min height:
-                  minLines: 2,
-                  // Defines the max height, before scrolling:
-                  maxLines: 15,
-                  autofocus: true,
-                ),
+                PromptInput(_text),
                 const SizedBox(height: 40),
                 ElevatedButton(
                   onPressed:
