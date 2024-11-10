@@ -27,7 +27,7 @@ class _GenUiCardState extends State<GenUiCard> {
 
   @override
   Widget build(BuildContext context) {
-    const size = 256.0;
+    const size = 420.0;
 
     return HorizontalCard(
       height: size,
