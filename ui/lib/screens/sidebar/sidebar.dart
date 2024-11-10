@@ -56,7 +56,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
     final primaryColor = Theme.of(context).colorScheme.primary;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.white,
         title: Text('Gen UI', style: TextStyle(color: primaryColor)),
         // See https://stackoverflow.com/questions/44087400/flutter-svg-rendering.
         leading: Padding(

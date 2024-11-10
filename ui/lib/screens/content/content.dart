@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../shared/primitives/horizontal_card.dart';
 import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 
@@ -26,7 +27,9 @@ class ContentScreen extends StatefulWidget {
 class _ContentScreenState extends State<ContentScreen> {
   @override
   Widget build(BuildContext context) {
+    final backgroundColor = Theme.of(context).colorScheme.primaryFixedDim;
     return Scaffold(
+      backgroundColor: backgroundColor,
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
@@ -76,18 +79,11 @@ class _CardState extends State<_Card> {
   Widget build(BuildContext context) {
     const size = 256.0;
 
-    return Card(
-      color: Colors.white,
-      elevation: 4,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SizedBox(
-          height: size,
-          child: _isLoaded
-              ? const _CardContentLoaded(size)
-              : const _CardContentWaiting(),
-        ),
-      ),
+    return HorizontalCard(
+      height: size,
+      child: _isLoaded
+          ? const _CardContentLoaded(size)
+          : const _CardContentWaiting(),
     );
   }
 }
