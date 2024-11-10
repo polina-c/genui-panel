@@ -33,13 +33,6 @@ export async function activate(context: vscode.ExtensionContext) {
 		)
 	);
 
-	// context.subscriptions.push(
-	// 	vscode.commands.registerCommand('catCodicons.show', () => {
-	// 		ContentPanel.show(context.extensionUri);
-	// 	})
-	// );
-
-
 	context.subscriptions.push(
 		vscode.commands.registerCommand("genui-panel.menu.view", () => {
 			const message = "Menu/Title of extension is clicked !";
