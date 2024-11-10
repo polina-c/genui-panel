@@ -29,7 +29,8 @@ class ContentScreen extends StatefulWidget {
 class _ContentScreenState extends State<ContentScreen> {
   @override
   Widget build(BuildContext context) {
-    final backgroundColor = Theme.of(context).colorScheme.primaryFixedDim;
+    final backgroundColor =
+        Theme.of(context).colorScheme.primaryFixedDim.withAlpha(150);
     return Scaffold(
       backgroundColor: backgroundColor,
       body: Padding(
