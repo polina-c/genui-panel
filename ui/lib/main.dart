@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'screens/content/content.dart';
 import 'screens/sidebar/sidebar.dart';
 import 'screens/unknown.dart';
@@ -39,6 +40,7 @@ class _MyAppState extends State<MyApp> {
         print('!!! generating route: name:${settings.name}');
         final uri = Uri.parse(settings.name ?? AppRoutes.unknown);
         print('!!! ${uri.path}, ${uri.queryParameters}');
+        SystemNavigator.routeInformationUpdated(uri: uri);
         final builder = _screens[uri.path] ?? _unknownScreenBuilder;
         return NoAnimationMaterialPageRoute(
           builder: (context) => builder(context, uri.queryParameters),
