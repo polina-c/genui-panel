@@ -6,10 +6,11 @@ abstract class InIdeMessage {
   String jsonEncode() => convert.jsonEncode(toJson());
 }
 
-enum _OutIdeMessageType {
-  // Do not rename, because the name is hard coded in node.
-  // Should we use proto?
-  generateContent,
+// Do not rename, because the names are hard coded in node.
+// Should we use proto?
+enum _InIdeMessageType {
+  generateUi,
+  reveal,
 }
 
 class _JsonFields {
@@ -19,21 +20,35 @@ class _JsonFields {
 
 InIdeMessage fromJson(Map<String, dynamic> json) {
   final typeString = json[_JsonFields.type] as String;
-  final type = _OutIdeMessageType.values.byName(typeString);
+  final type = _InIdeMessageType.values.byName(typeString);
   switch (type) {
-    case _OutIdeMessageType.generateContent:
-      return GenerateContentMessage(json[_JsonFields.prompt] as String);
+    case _InIdeMessageType.generateUi:
+      return GenerateUiMessage(json[_JsonFields.prompt] as String);
+    case _InIdeMessageType.reveal:
+      return RevealMessage(json[_JsonFields.prompt] as String);
   }
 }
 
-class GenerateContentMessage extends InIdeMessage {
-  GenerateContentMessage(this.prompt);
+class GenerateUiMessage extends InIdeMessage {
+  GenerateUiMessage(this.prompt);
 
   final String prompt;
 
   @override
   Map<String, dynamic> toJson() => {
-        _JsonFields.type: _OutIdeMessageType.generateContent.name,
+        _JsonFields.type: _InIdeMessageType.generateUi.name,
+        _JsonFields.prompt: prompt,
+      };
+}
+
+class RevealMessage extends InIdeMessage {
+  RevealMessage(this.prompt);
+
+  final String prompt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        _JsonFields.type: _InIdeMessageType.reveal.name,
         _JsonFields.prompt: prompt,
       };
 }

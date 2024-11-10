@@ -110,7 +110,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
   }
 
   void _requestGenUi() {
-    postMessageToAll(GenerateContentMessage(_text.text).jsonEncode());
+    postMessageToAll(GenerateUiMessage(_text.text).jsonEncode());
     // final response = await http.get(
     //   Uri.parse('https://people.googleapis.com/v1/people/me/connections'
     //       '?requestMask.includeField=person.names'),

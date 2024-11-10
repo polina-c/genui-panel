@@ -1,1 +1,1 @@
-export const generateContentMessageType = 'generateContent';
+export const generateContentMessageType = 'generateUi';
