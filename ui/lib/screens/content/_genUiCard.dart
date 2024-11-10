@@ -73,7 +73,7 @@ class _CardContentLoaded extends StatelessWidget {
             ),
             const VerticalDivider(),
             const SizedBox(width: 8),
-            ScrolledText(_code),
+            ScrollableText(_code),
           ],
         ),
         Align(

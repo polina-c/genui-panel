@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ScrolledText extends StatelessWidget {
-  ScrolledText(this.text, {super.key});
+class ScrollableText extends StatelessWidget {
+  ScrollableText(this.text, {super.key});
 
   final String text;
 

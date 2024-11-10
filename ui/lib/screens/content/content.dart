@@ -9,6 +9,7 @@ import '../../shared/primitives/post_message/post_message.dart';
 
 import '_genUiCard.dart';
 import '../../shared/primitives/scrolled_text.dart';
+import '_promptCard.dart';
 
 class ContentScreen extends StatefulWidget {
   ContentScreen({super.key, String? prompt}) {
@@ -34,7 +35,9 @@ class _ContentScreenState extends State<ContentScreen> {
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            PromptCard(widget.prompt ?? '<No prompt>'),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
