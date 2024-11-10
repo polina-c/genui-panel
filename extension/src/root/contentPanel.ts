@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { Config } from '../shared/config';
 import { htmlWithFlutterIFrame } from '../shared/iframe_with_flutter';
 import { RevealCallback } from '../shared/reveal';
-import { messageTypes } from '../shared/cross_app_constants';
+import { messageTypes } from '../shared/in_ide_message';
 
 
 export function showContentPanel(prompt: string, revealCallback: RevealCallback) {

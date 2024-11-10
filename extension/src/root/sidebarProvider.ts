@@ -2,49 +2,48 @@ import * as vscode from "vscode";
 import { showContentPanel } from "./contentPanel";
 import { Config } from "../shared/config";
 import { everyScreenJsScript, htmlWithFlutterIFrame } from "../shared/iframe_with_flutter";
-import { messageTypes } from "../shared/cross_app_constants";
+import { messageLocations, messageTypes } from "../shared/in_ide_message";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
 
   constructor() { }
 
-  private _view?: vscode.WebviewView;
-
-  private get _webview(): vscode.Webview { return this._view!.webview; }
-
-  private handleReveal(prompt: string) {
-    console.log(`!!!!!! node sidebar, handleReveal, ${prompt}`);
-    this._webview.postMessage({
-      type: messageTypes.reveal,
-      to: 'dart',
-      prompt: prompt,
-    });
-  }
-
   resolveWebviewView(
     webviewView: vscode.WebviewView,
     context: vscode.WebviewViewResolveContext<unknown>,
     token: vscode.CancellationToken
   ): void | Thenable<void> {
-    this._view = webviewView;
+    const view = webviewView.webview;
 
-    this._webview.options = {
+    view.options = {
       enableScripts: true,
       enableCommandUris: true,
     };
-    this._webview.html = htmlWithFlutterIFrame(Config.sidebarUrl);
+    view.html = htmlWithFlutterIFrame(Config.sidebarUrl);
 
-    this._webview.onDidReceiveMessage(
+    view.onDidReceiveMessage(
       (message) => {
         console.log(`!!!!!! node sidebar, got message, ${typeof (message)}, ${message}`);
-        const data = JSON.parse(message?.data);
+
+        let data = message?.data;
+        if (typeof (data) === 'string') {
+          console.log('!!!! parsing data');
+          data = JSON.parse(data);
+          console.log('!!!! parsed data');
+        }
         const type = data?.type;
 
         console.log(`!!!!!! node sidebar, type: ${type}, prompt: ${data?.prompt}`);
 
         if (type === messageTypes.generateUi) {
-          showContentPanel(data?.prompt, this.handleReveal);
+          showContentPanel(data?.prompt, () => view.postMessage(
+            {
+              type: messageTypes.reveal,
+              to: messageLocations.dart,
+              prompt: data?.prompt,
+            }
+          ));
         }
       },
     );

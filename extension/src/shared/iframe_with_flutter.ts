@@ -37,8 +37,18 @@ function messageToDart(message) {
 window.addEventListener('message', (event) => {
   console.log('!!!!!! script: got message', event);
   const message = {data: event.data, origin: event.origin};
-  messageToDart(message);
-  console.log('!!!!!! script: posted message to dart.');
+
+  console.log('!!!!!! script: 1');
+
+  const to = message.data?.to;
+
+  console.log('!!!!!! script: to ', to);
+
+  if (to === 'dart') {
+    messageToDart(JSON.stringify(message));
+    console.log('!!!!!! script: posted message to dart.');
+  }
+
   vscodeInJs.postMessage(message);
   console.log('!!!!!! script: posted message to node.');
 });
