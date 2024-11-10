@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
 import { Config } from '../shared/config';
 import { htmlWithFlutterIFrame } from '../shared/iframe_with_flutter';
-import { revealMessageType } from '../shared/cross_app_constants';
 import { RevealCallback } from '../shared/reveal';
+import { messageTypes } from '../shared/cross_app_constants';
 
 
 export function showContentPanel(prompt: string, revealCallback: RevealCallback) {
@@ -13,7 +13,11 @@ export function showContentPanel(prompt: string, revealCallback: RevealCallback)
 	const panel = vscode.window.createWebviewPanel(
 		'genUiContent',
 		"GenUI",
-		column || vscode.ViewColumn.One
+		column || vscode.ViewColumn.One,
+		{
+			enableScripts: true,
+			retainContextWhenHidden: true,
+		},
 	);
 
 	panel.webview.options = {
@@ -32,7 +36,7 @@ export function showContentPanel(prompt: string, revealCallback: RevealCallback)
 
 			console.log(`!!!!!! node content, type: ${type}, prompt: ${data?.prompt}`);
 
-			if (type === revealMessageType) {
+			if (type === messageTypes.reveal) {
 				revealCallback(data?.prompt);
 			}
 		},

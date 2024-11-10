@@ -13,7 +13,7 @@ export function htmlWithFlutterIFrame(flutterUrl: string): string {
 </head>
 <body>
   <iframe
-    id="sidebar"
+    id="flutterIFrame"
     src="${flutterUrl}"
     width="100%"
     height="${heightPx}px"
@@ -28,16 +28,17 @@ export function htmlWithFlutterIFrame(flutterUrl: string): string {
 export const everyScreenJsScript = `
 const vscodeInJs = acquireVsCodeApi();
 
-function messageToDart() {
+function messageToDart(message) {
   console.log('!!!!!! script: posting message to dart...');
-  document.getElementById('sidebar').contentWindow.postMessage('hello from webview to dart', '*');
+  document.getElementById('flutterIFrame').contentWindow.postMessage(message, '*');
   console.log('!!!!!! script: posting message to dart done.');
 }
 
 window.addEventListener('message', (event) => {
-  console.log('!!!!!! script: got message, posting to node', event);
+  console.log('!!!!!! script: got message', event);
   const message = {data: event.data, origin: event.origin};
-
+  messageToDart(message);
+  console.log('!!!!!! script: posted message to dart.');
   vscodeInJs.postMessage(message);
   console.log('!!!!!! script: posted message to node.');
 });
