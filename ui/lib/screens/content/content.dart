@@ -44,7 +44,7 @@ class _ContentScreenState extends State<ContentScreen> {
               ],
             ),
             const SizedBox(height: 20),
-            const _Content(),
+            const _ContentCard(),
           ],
         ),
       ),
@@ -52,30 +52,26 @@ class _ContentScreenState extends State<ContentScreen> {
   }
 }
 
-class _Content extends StatefulWidget {
-  const _Content();
+class _ContentCard extends StatefulWidget {
+  const _ContentCard();
 
   @override
-  State<_Content> createState() => _ContentState();
+  State<_ContentCard> createState() => _ContentCardState();
 }
 
-class _ContentState extends State<_Content> {
+class _ContentCardState extends State<_ContentCard> {
   bool _isLoaded = false;
 
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(milliseconds: 300), () {
+    Future.delayed(const Duration(milliseconds: 30000), () {
       setState(() => _isLoaded = true);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    if (!_isLoaded) {
-      return const CircularProgressIndicator();
-    }
-
     const size = 256.0;
 
     return Card(
@@ -85,20 +81,38 @@ class _ContentState extends State<_Content> {
         padding: const EdgeInsets.all(8.0),
         child: SizedBox(
           height: size,
-          child: Row(
-            children: [
-              SizedBox(
-                child: FittedBox(
-                  child: _GenUi(),
+          child: _isLoaded
+              ? const _CardContent(size)
+              : Row(
+                  children: [
+                    const CircularProgressIndicator(),
+                  ],
                 ),
-                width: size,
-              ),
-              const VerticalDivider(),
-              ScrolledText(_code),
-            ],
-          ),
         ),
       ),
+    );
+  }
+}
+
+class _CardContent extends StatelessWidget {
+  const _CardContent(this.size);
+
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        SizedBox(
+          child: FittedBox(
+            child: _GenUi(),
+          ),
+          width: size,
+        ),
+        const VerticalDivider(),
+        const SizedBox(width: 8),
+        ScrolledText(_code),
+      ],
     );
   }
 }
