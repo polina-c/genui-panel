@@ -129,7 +129,11 @@ class _SidebarScreenState extends State<SidebarScreen> {
       // /// Use `signInSilently` and `renderButton` to authenticate your users instead.
       // /// Read more: https://pub.dev/packages/google_sign_in_web
     }
-    postMessageToAll(GenerateUiMessage(_text.text).jsonEncode());
+    postMessageToAll(GenerateUiMessage(
+      prompt: _text.text,
+      numberOfOptions: _settings.numberOfOptions,
+      openOnSide: _settings.openOnSide,
+    ).jsonEncode());
 
     // final response = await http.get(
     //   Uri.parse('https://people.googleapis.com/v1/people/me/connections'

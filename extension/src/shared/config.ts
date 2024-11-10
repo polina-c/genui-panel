@@ -11,7 +11,7 @@ export class Config {
         return Config.uiUrl + "/#/sidebar";
     }
 
-    public static contentUrl(prompt: string): string {
-        return Config.uiUrl + "/#/content?prompt=" + encodeURI(prompt);
+    public static contentUrl(prompt: string, numberOfOptions: number): string {
+        return `${Config.uiUrl}/#/content?prompt=${encodeURI(prompt)}&numberOfOptions=${numberOfOptions}`;
     }
 }

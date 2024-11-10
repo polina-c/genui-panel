@@ -18,7 +18,10 @@ Widget _unknownScreenBuilder(BuildContext context, Map<String, String> args) =>
 final _screens = <String, ScreenBuilder>{
   AppRoutes.unknown: _unknownScreenBuilder,
   AppRoutes.sidebar: (_, __) => const SidebarScreen(),
-  AppRoutes.content: (_, args) => ContentScreen(prompt: args['prompt'] ?? ''),
+  AppRoutes.content: (_, args) => ContentScreen(
+        prompt: args['prompt'] ?? '',
+        numberOfOptions: int.tryParse(args['numberOfOptions'] ?? '1') ?? 1,
+      ),
 };
 
 class MyApp extends StatefulWidget {

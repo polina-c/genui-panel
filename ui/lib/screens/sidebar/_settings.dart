@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SettingsController {
   int _numberOfOptions = 1;
@@ -52,7 +51,7 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
                     });
                   },
                 ),
-                const Text('Open gen UI side by side'),
+                const Text('Open generated UI side by side with previous'),
               ],
             ),
             const SizedBox(width: 8),

@@ -31,7 +31,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         console.log(`!!!!!! node sidebar, type: ${type}, prompt: ${data?.prompt}`);
 
         if (type === messageTypes.generateUi) {
-          showContentPanel(data?.prompt, () => view.postMessage(
+          showContentPanel(data?.prompt ?? '', data?.numberOfOptions ?? 1, () => view.postMessage(
             {
               type: messageTypes.reveal,
               to: messageLocations.dart,

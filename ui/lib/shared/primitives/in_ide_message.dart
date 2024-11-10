@@ -6,7 +6,7 @@ abstract class InIdeMessage {
   String jsonEncode() => convert.jsonEncode(toJson());
 }
 
-// Do not rename, because the names are hard coded in node.
+// Do not rename, because some names are hard coded in node.
 // Should we use proto?
 enum _InIdeMessageType {
   generateUi,
@@ -17,6 +17,9 @@ class _JsonFields {
   static const String type = 'type';
   static const String prompt = 'prompt';
   static const String data = 'data';
+
+  static const String numberOfOptions = 'numberOfOptions';
+  static const String openOnSide = 'openOnSide';
 }
 
 InIdeMessage messageFromJson(String jsonString) {
@@ -28,21 +31,33 @@ InIdeMessage messageFromJson(String jsonString) {
   final type = _InIdeMessageType.values.byName(typeString);
   switch (type) {
     case _InIdeMessageType.generateUi:
-      return GenerateUiMessage(json[_JsonFields.prompt] as String);
+      return GenerateUiMessage(
+        prompt: json[_JsonFields.prompt] as String,
+        numberOfOptions: json[_JsonFields.numberOfOptions] as int,
+        openOnSide: json[_JsonFields.openOnSide] as bool,
+      );
     case _InIdeMessageType.reveal:
       return RevealMessage(json[_JsonFields.prompt] as String);
   }
 }
 
 class GenerateUiMessage extends InIdeMessage {
-  GenerateUiMessage(this.prompt);
+  GenerateUiMessage({
+    required this.prompt,
+    required this.numberOfOptions,
+    required this.openOnSide,
+  });
 
   final String prompt;
+  final int numberOfOptions;
+  final bool openOnSide;
 
   @override
   Map<String, dynamic> toJson() => {
         _JsonFields.type: _InIdeMessageType.generateUi.name,
         _JsonFields.prompt: prompt,
+        _JsonFields.numberOfOptions: numberOfOptions,
+        _JsonFields.openOnSide: openOnSide,
       };
 }
 

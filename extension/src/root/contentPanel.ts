@@ -6,7 +6,7 @@ import { messageTypes, parseMessageData } from '../shared/in_ide_message';
 
 let next = 1;
 
-export function showContentPanel(prompt: string, revealCallback: RevealCallback) {
+export function showContentPanel(prompt: string, numberOfOptions: number, revealCallback: RevealCallback) {
 	const column = vscode.window.activeTextEditor
 		? vscode.window.activeTextEditor.viewColumn
 		: undefined;
@@ -28,7 +28,7 @@ export function showContentPanel(prompt: string, revealCallback: RevealCallback)
 		enableCommandUris: true,
 	};
 
-	const url = Config.contentUrl(prompt);
+	const url = Config.contentUrl(prompt, numberOfOptions);
 	panel.webview.html = htmlWithFlutterIFrame(url);
 
 	panel.webview.onDidReceiveMessage(

@@ -1,9 +1,5 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
-import 'package:google_sign_in/google_sign_in.dart' as google_sign_in;
 
 /// The scopes that the app needs.
 ///
