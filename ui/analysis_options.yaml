@@ -7,6 +7,8 @@ analyzer:
 
 linter:
   rules:
+    - avoid_void_async
+    - discarded_futures
     - sort_constructors_first
     - sort_unnamed_constructors_first
     - unawaited_futures

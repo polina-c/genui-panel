@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:google_sign_in_web/google_sign_in_web.dart';
 
 import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/logo_icon.dart';
@@ -18,12 +21,14 @@ class _SidebarScreenState extends State<SidebarScreen> {
   final _text = TextEditingController();
   final _auth = SignInController();
   final _focus = FocusNode();
+  late final GoogleSignInPlugin _googleSignIn;
 
   @override
   void dispose() {
     _text.dispose();
     _auth.dispose();
     _focus.dispose();
+    unawaited(_googleSignIn.disconnect());
     // It seems [onMessagePosted] does not provide a way to remove listeners.
     super.dispose();
   }
@@ -31,8 +36,15 @@ class _SidebarScreenState extends State<SidebarScreen> {
   @override
   void initState() {
     super.initState();
+    unawaited(_initSignIn());
     onMessagePosted.listen(_handleMessage);
     _auth.addListener(_handleAuthChange);
+  }
+
+  Future<void> _initSignIn() async {
+    _googleSignIn = GoogleSignInPlugin();
+    await _googleSignIn.init();
+    _auth.resetUser();
   }
 
   void _handleMessage(PostMessageEvent event) {
@@ -63,6 +75,10 @@ class _SidebarScreenState extends State<SidebarScreen> {
           padding: EdgeInsets.all(14.0),
           child: LogoIcon(),
         ),
+        actions: <Widget>[
+          _googleSignIn.renderButton(),
+          SignInButton(controller: _auth),
+        ],
       ),
       body: SizedBox(
         height: 1200,
@@ -76,8 +92,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 PromptInput(_text),
                 const SizedBox(height: 40),
                 ElevatedButton(
-                  onPressed:
-                      _requestGenUi, //_auth.currentUser == null ? null : _requestGenUi,
+                  onPressed: _requestGenUi,
                   child: const Text('Generate UI'),
                   style: ButtonStyle(
                     elevation: WidgetStateProperty.resolveWith<double>(
@@ -95,13 +110,15 @@ class _SidebarScreenState extends State<SidebarScreen> {
           ),
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
-      floatingActionButton: SignIn(controller: _auth),
     );
   }
 
   void _requestGenUi() {
+    if (_auth.currentUser == null) {
+      unawaited(_auth.initiateSignIn());
+    }
     postMessageToAll(GenerateUiMessage(_text.text).jsonEncode());
+
     // final response = await http.get(
     //   Uri.parse('https://people.googleapis.com/v1/people/me/connections'
     //       '?requestMask.includeField=person.names'),

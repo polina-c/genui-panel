@@ -1,5 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+
+import 'package:google_sign_in/google_sign_in.dart' as google_sign_in;
 
 /// The scopes that the app needs.
 ///
@@ -22,6 +26,22 @@ class SignInController extends ChangeNotifier {
     notifyListeners();
   }
 
+  void resetUser() {
+    _user = _googleSignIn.currentUser;
+    notifyListeners();
+  }
+
+  // /// Triggers sign in.
+  // ///
+  // /// TODO: follow up on this
+  // ///
+  // /// The `signIn` method is discouraged on the web because it can't reliably provide an `idToken`.
+  // /// Use `signInSilently` and `renderButton` to authenticate your users instead.
+  // /// Read more: https://pub.dev/packages/google_sign_in_web
+  Future<void> initiateSignIn() async {
+    await _googleSignIn.signInSilently();
+  }
+
   @override
   void dispose() {
     _user = null;
@@ -29,20 +49,20 @@ class SignInController extends ChangeNotifier {
   }
 }
 
-class SignIn extends StatefulWidget {
-  const SignIn({super.key, this.controller});
+class SignInButton extends StatefulWidget {
+  const SignInButton({super.key, this.controller});
 
   final SignInController? controller;
 
   @override
-  State<SignIn> createState() => _SignInState();
+  State<SignInButton> createState() => _SignInButtonState();
 }
 
-class _SignInState extends State<SignIn> {
+class _SignInButtonState extends State<SignInButton> {
   GoogleSignInAccount? _currentUser;
 
   @override
-  void didUpdateWidget(covariant SignIn oldWidget) {
+  void didUpdateWidget(covariant SignInButton oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.controller != oldWidget.controller) {
       widget.controller?.currentUser = _currentUser;
@@ -78,9 +98,8 @@ class _AuthButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(
+    return TextButton(
       onPressed: onPressed,
-      elevation: 1,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: FittedBox(

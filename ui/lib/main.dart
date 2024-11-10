@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'screens/content/content.dart';
@@ -30,6 +32,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'gen UI',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
@@ -40,7 +43,7 @@ class _MyAppState extends State<MyApp> {
         print('!!! generating route: name:${settings.name}');
         final uri = Uri.parse(settings.name ?? AppRoutes.unknown);
         print('!!! ${uri.path}, ${uri.queryParameters}');
-        SystemNavigator.routeInformationUpdated(uri: uri);
+        unawaited(SystemNavigator.routeInformationUpdated(uri: uri));
         final builder = _screens[uri.path] ?? _unknownScreenBuilder;
         return NoAnimationMaterialPageRoute(
           builder: (context) => builder(context, uri.queryParameters),
