@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { showContentPanel } from "./contentPanel";
+import { showContentPanel } from "./content";
 import { Config } from "../shared/config";
 import { everyScreenJsScript, htmlWithFlutterIFrame } from "../shared/iframe_with_flutter";
 import { messageLocations, messageTypes, parseMessageData } from "../shared/in_ide_message";
