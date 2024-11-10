@@ -44,7 +44,7 @@ class _ContentScreenState extends State<ContentScreen> {
               ],
             ),
             const SizedBox(height: 20),
-            const _ContentCard(),
+            const _Card(),
           ],
         ),
       ),
@@ -52,14 +52,14 @@ class _ContentScreenState extends State<ContentScreen> {
   }
 }
 
-class _ContentCard extends StatefulWidget {
-  const _ContentCard();
+class _Card extends StatefulWidget {
+  const _Card();
 
   @override
-  State<_ContentCard> createState() => _ContentCardState();
+  State<_Card> createState() => _CardState();
 }
 
-class _ContentCardState extends State<_ContentCard> {
+class _CardState extends State<_Card> {
   bool _isLoaded = false;
 
   @override
