@@ -1,26 +1,41 @@
 import * as vscode from "vscode";
-import { ContentPanel } from "./contentPanel";
+import { showContentPanel } from "./contentPanel";
 import { Config } from "../shared/config";
 import { everyScreenJsScript, htmlWithFlutterIFrame } from "../shared/iframe_with_flutter";
-import { generateContentMessageType } from "../shared/cross_app_constants";
+import { messageTypes } from "../shared/cross_app_constants";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
 
-  constructor(private _extensionUri: vscode.Uri) { }
+  constructor() { }
+
+  private _view?: vscode.WebviewView;
+
+  private get _webview(): vscode.Webview { return this._view!.webview; }
+
+  private handleReveal(prompt: string) {
+    console.log(`!!!!!! node sidebar, handleReveal, ${prompt}`);
+    this._webview.postMessage({
+      type: messageTypes.reveal,
+      to: 'dart',
+      prompt: prompt,
+    });
+  }
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
     context: vscode.WebviewViewResolveContext<unknown>,
     token: vscode.CancellationToken
   ): void | Thenable<void> {
-    webviewView.webview.options = {
+    this._view = webviewView;
+
+    this._webview.options = {
       enableScripts: true,
       enableCommandUris: true,
     };
-    webviewView.webview.html = htmlWithFlutterIFrame(Config.sidebarUrl);
+    this._webview.html = htmlWithFlutterIFrame(Config.sidebarUrl);
 
-    webviewView.webview.onDidReceiveMessage(
+    this._webview.onDidReceiveMessage(
       (message) => {
         console.log(`!!!!!! node sidebar, got message, ${typeof (message)}, ${message}`);
         const data = JSON.parse(message?.data);
@@ -28,8 +43,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
 
         console.log(`!!!!!! node sidebar, type: ${type}, prompt: ${data?.prompt}`);
 
-        if (type === generateContentMessageType) {
-          ContentPanel.show(data?.prompt);
+        if (type === messageTypes.generateUi) {
+          showContentPanel(data?.prompt, this.handleReveal);
         }
       },
     );
