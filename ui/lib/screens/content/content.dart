@@ -82,20 +82,30 @@ class _CardState extends State<_Card> {
         child: SizedBox(
           height: size,
           child: _isLoaded
-              ? const _CardContent(size)
-              : Row(
-                  children: [
-                    const CircularProgressIndicator(),
-                  ],
-                ),
+              ? const _CardContentLoaded(size)
+              : const _CardContentWaiting(),
         ),
       ),
     );
   }
 }
 
-class _CardContent extends StatelessWidget {
-  const _CardContent(this.size);
+class _CardContentWaiting extends StatelessWidget {
+  const _CardContentWaiting({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        CircularProgressIndicator(),
+      ],
+    );
+  }
+}
+
+class _CardContentLoaded extends StatelessWidget {
+  const _CardContentLoaded(this.size);
 
   final double size;
 
