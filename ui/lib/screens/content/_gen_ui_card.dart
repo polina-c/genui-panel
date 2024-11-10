@@ -145,6 +145,23 @@ class _GenUi extends StatelessWidget {
     Colors.pink,
     Colors.indigo,
     Colors.cyan,
+    Colors.deepOrange,
+    Colors.deepPurple,
+    Colors.lime,
+    Colors.lightBlue,
+    Colors.lightGreen,
+    Colors.yellow,
+    Colors.deepOrangeAccent,
+    Colors.deepPurpleAccent,
+    Colors.limeAccent,
+    Colors.lightBlueAccent,
+    Colors.lightGreenAccent,
+    Colors.yellowAccent,
+    Colors.black,
+    Colors.amberAccent,
+    Colors.blueAccent,
+    Colors.greenAccent,
+    Colors.redAccent,
   ];
 
   final _icons = <IconData>[
