@@ -5,7 +5,7 @@ import { everyScreenJsScript, htmlWithFlutterIFrame } from '../shared/iframe_wit
 export class ContentPanel {
 	constructor() { }
 
-	public static readonly viewType = 'catCodicons';
+	public static readonly viewType = 'genUiContent';
 
 	public static show(prompt: string) {
 		const column = vscode.window.activeTextEditor

@@ -13,23 +13,10 @@
   "contributes": {
     "commands": [
       {
-        "command": "genui-panel.helloWorld",
-        "title": "Hello World"
-      },
-      {
-        "command": "genui-panel.openview",
-        "title": "Sidebar View"
-      },
-      {
         "command": "genui-panel.menu.view",
         "category": "vscode-extension-sidebar-html",
         "title": "Sample WebView in VS Code Sidebar",
         "icon": "$(clear-all)"
-      },
-      {
-        "command": "catCodicons.show",
-        "title": "Show Cat Codicons",
-        "category": "Cat Codicons"
       }
     ],
     "viewsContainers": {
