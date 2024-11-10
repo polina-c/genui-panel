@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { Config } from '../shared/config';
-import { everyScreenJsScript } from '../shared/js_script';
+import { everyScreenJsScript } from '../shared/iframe_with_flutter';
 
 export class ContentPanel {
 	constructor() { }

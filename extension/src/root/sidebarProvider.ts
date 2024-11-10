@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { ContentPanel } from "./contentPanel";
 import { Config } from "../shared/config";
-import { everyScreenJsScript } from "../shared/js_script";
+import { everyScreenJsScript } from "../shared/iframe_with_flutter";
 import { generateContentMessageType } from "../shared/cross_app_constants";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
