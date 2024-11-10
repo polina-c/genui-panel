@@ -19,11 +19,37 @@ class _ContentScreenState extends State<ContentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: [
-        Text(widget.prompt ?? '<No prompt>'),
-        const SizedBox(height: 20),
-      ],
+        body: Padding(
+      padding: const EdgeInsets.all(24.0),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(widget.prompt ?? '<No prompt>'),
+              const SizedBox(width: 8),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Reveal'),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          const _Content(),
+        ],
+      ),
     ));
+  }
+}
+
+class _Content extends StatelessWidget {
+  const _Content();
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder(
+      color: Colors.amber,
+      child: Icon(Icons.integration_instructions_rounded),
+    );
   }
 }
