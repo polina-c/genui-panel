@@ -131,7 +131,7 @@ class _CardContentLoaded extends StatelessWidget {
         Align(
           alignment: Alignment.bottomRight,
           child: IconButton(
-              icon: const Icon(Icons.copy),
+              icon: const Icon(Icons.copy, color: Colors.grey),
               onPressed: () async {
                 await Clipboard.setData(const ClipboardData(text: _code));
               }),
