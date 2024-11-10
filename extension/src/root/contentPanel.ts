@@ -22,31 +22,9 @@ export class ContentPanel {
 			enableScripts: true,
 			enableCommandUris: true,
 		};
-		panel.webview.html = this._getHtmlContent(prompt);
-	}
 
-	private static _getHtmlContent(prompt: string): string {
 		const url = Config.contentUrl(prompt);
-		return htmlWithFlutterIFrame(url);
-
-		// 		return `
-		// <!DOCTYPE html>
-		// <html>
-		// <head>
-		// 	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
-		// 	<script>${everyScreenJsScript}</script>
-		// </head>
-		// <body>
-		//   <iframe
-		//     src="${url}"
-		//     width="100%"
-		//     height="${heightPx}px"
-		//     style="border: none;"
-		//     allow="clipboard-read; clipboard-write; cross-origin-isolated">
-		//   </iframe>
-		// </body>
-		// </html>
-		// `;
+		panel.webview.html = htmlWithFlutterIFrame(url);
 	}
 }
 
