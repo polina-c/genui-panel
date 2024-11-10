@@ -13,7 +13,7 @@ export function showContentPanel(prompt: string, revealCallback: RevealCallback)
 
 	const panel = vscode.window.createWebviewPanel(
 		'genUiContent',
-		`GenUI ${next}`,
+		`Gen UI ${next}`,
 		column || vscode.ViewColumn.One,
 		{
 			enableScripts: true,

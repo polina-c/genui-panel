@@ -89,8 +89,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 ),
                 const SizedBox(height: 40),
                 ElevatedButton(
-                  onPressed:
-                      _requestGenUi, //_auth.currentUser == null ? null : _requestGenUi,
+                  onPressed: _auth.currentUser == null ? null : _requestGenUi,
                   child: const Text('Generate UI'),
                   style: ButtonStyle(
                     elevation: WidgetStateProperty.resolveWith<double>(
