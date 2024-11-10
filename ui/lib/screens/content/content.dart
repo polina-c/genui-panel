@@ -25,8 +25,9 @@ class _ContentScreenState extends State<ContentScreen> {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text(widget.prompt ?? '<No prompt>'),
+              Text(widget.prompt ?? '<No prompt>', maxLines: 5),
               const SizedBox(width: 8),
               ElevatedButton(
                 onPressed: () {},
@@ -34,7 +35,9 @@ class _ContentScreenState extends State<ContentScreen> {
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 8),
+          const Divider(),
+          const SizedBox(height: 8),
           const _Content(),
         ],
       ),
