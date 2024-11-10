@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/post_message/post_message.dart';
@@ -110,17 +113,29 @@ class _CardContentLoaded extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Stack(
       children: [
-        SizedBox(
-          child: FittedBox(
-            child: _GenUi(),
-          ),
-          width: size,
+        Row(
+          children: [
+            SizedBox(
+              child: FittedBox(
+                child: _GenUi(),
+              ),
+              width: size,
+            ),
+            const VerticalDivider(),
+            const SizedBox(width: 8),
+            ScrolledText(_code),
+          ],
         ),
-        const VerticalDivider(),
-        const SizedBox(width: 8),
-        ScrolledText(_code),
+        Align(
+          alignment: Alignment.bottomRight,
+          child: IconButton(
+              icon: const Icon(Icons.copy),
+              onPressed: () async {
+                await Clipboard.setData(const ClipboardData(text: _code));
+              }),
+        ),
       ],
     );
   }
