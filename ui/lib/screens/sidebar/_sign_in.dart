@@ -4,10 +4,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 /// The scopes that the app needs.
 ///
 /// See full list of scopes here: https://developers.google.com/identity/protocols/oauth2/scopes
-const List<String> _scopes = <String>[
-  //'email',
-  //'https://www.googleapis.com/auth/contacts.readonly',
-];
+const List<String> _scopes = <String>[];
 
 GoogleSignIn _googleSignIn = GoogleSignIn(
   // Mast be the same as in <meta> in index.html in web folder.
@@ -17,10 +14,12 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
   scopes: _scopes,
 );
 
-class GenUiSignIn {
+class GenUiAuth {
   static GoogleSignInAccount? get currentUser => _googleSignIn.currentUser;
   static Future<void> signIn() => _googleSignIn.signIn();
   static Future<void> signOut() => _googleSignIn.signOut();
+  static Stream<GoogleSignInAccount?> get onUserChange =>
+      _googleSignIn.onCurrentUserChanged;
 }
 
 class SignInController extends ChangeNotifier {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
 import '_sign_in.dart';
+import 'logo_menu.dart';
 
 class SidebarScreen extends StatefulWidget {
   const SidebarScreen({super.key});
@@ -59,13 +59,9 @@ class _SidebarScreenState extends State<SidebarScreen> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Gen UI', style: TextStyle(color: primaryColor)),
         // See https://stackoverflow.com/questions/44087400/flutter-svg-rendering.
-        leading: Padding(
-          padding: const EdgeInsets.all(14.0),
-          child: SvgPicture.asset(
-            'assets/logo.svg',
-            colorFilter: ColorFilter.mode(primaryColor, BlendMode.srcIn),
-            semanticsLabel: 'GenUI logo',
-          ),
+        leading: const Padding(
+          padding: EdgeInsets.all(6.0),
+          child: LogoMenu(),
         ),
       ),
       body: SizedBox(
@@ -89,7 +85,8 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 ),
                 const SizedBox(height: 40),
                 ElevatedButton(
-                  onPressed: _auth.currentUser == null ? null : _requestGenUi,
+                  onPressed:
+                      _requestGenUi, //_auth.currentUser == null ? null : _requestGenUi,
                   child: const Text('Generate UI'),
                   style: ButtonStyle(
                     elevation: WidgetStateProperty.resolveWith<double>(
