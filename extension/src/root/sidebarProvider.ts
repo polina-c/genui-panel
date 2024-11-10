@@ -34,37 +34,4 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       },
     );
   }
-
-  //   private _getHtmlContent(webview: vscode.Webview): string {
-
-  //     // const indexUri = webview.asWebviewUri(
-  //     //   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
-  //     // );
-
-  //     const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
-
-  //     return `
-  // <!DOCTYPE html>
-  // <html>
-  // <head>
-  // 	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
-  // 	<script>${everyScreenJsScript}</script>
-  // </head>
-  // <body>
-  //   <button onclick="messageToDart()">Message to Dart :)</ button>
-  //   <br/>
-  //   <br/>
-  //   <br/>
-  //   <iframe
-  //     id="sidebar"
-  //     src="${Config.sidebarUrl}"
-  //     width="100%"
-  //     height="${heightPx}px"
-  //     style="border: none;"
-  //     allow="clipboard-read; clipboard-write; cross-origin-isolated">
-  //   </iframe>
-  // </body>
-  // </html>
-  // `;
-  //   }
 }
