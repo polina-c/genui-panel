@@ -4,6 +4,7 @@ import { htmlWithFlutterIFrame } from '../shared/iframe_with_flutter';
 import { RevealCallback } from '../shared/reveal';
 import { messageTypes, parseMessageData } from '../shared/in_ide_message';
 
+let next = 1;
 
 export function showContentPanel(prompt: string, revealCallback: RevealCallback) {
 	const column = vscode.window.activeTextEditor
@@ -12,13 +13,15 @@ export function showContentPanel(prompt: string, revealCallback: RevealCallback)
 
 	const panel = vscode.window.createWebviewPanel(
 		'genUiContent',
-		"GenUI",
+		`GenUI ${next}`,
 		column || vscode.ViewColumn.One,
 		{
 			enableScripts: true,
 			retainContextWhenHidden: true,
 		},
 	);
+
+	next++;
 
 	panel.webview.options = {
 		enableScripts: true,

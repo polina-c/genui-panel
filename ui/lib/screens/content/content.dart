@@ -7,9 +7,9 @@ import '../../shared/primitives/horizontal_card.dart';
 import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 
-import '_genUiCard.dart';
+import '_gen_ui_card.dart';
 import '../../shared/primitives/scrolled_text.dart';
-import '_promptCard.dart';
+import '_prompt_card.dart';
 
 class ContentScreen extends StatefulWidget {
   ContentScreen({super.key, String? prompt}) {
