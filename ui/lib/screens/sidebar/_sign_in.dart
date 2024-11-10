@@ -31,16 +31,14 @@ class SignInController extends ChangeNotifier {
     notifyListeners();
   }
 
-  // /// Triggers sign in.
-  // ///
   // /// TODO: follow up on this
   // ///
   // /// The `signIn` method is discouraged on the web because it can't reliably provide an `idToken`.
   // /// Use `signInSilently` and `renderButton` to authenticate your users instead.
   // /// Read more: https://pub.dev/packages/google_sign_in_web
-  Future<void> initiateSignIn() async {
-    await _googleSignIn.signInSilently();
-  }
+  // Future<void> initiateSignIn() async {
+  //   await _googleSignIn.signInSilently();
+  // }
 
   @override
   void dispose() {

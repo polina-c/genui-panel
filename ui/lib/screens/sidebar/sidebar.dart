@@ -76,7 +76,8 @@ class _SidebarScreenState extends State<SidebarScreen> {
           child: LogoIcon(),
         ),
         actions: <Widget>[
-          _googleSignIn.renderButton(),
+          // It looks amazing, but it does not work as expected.
+          // _googleSignIn.renderButton(),
           SignInButton(controller: _auth),
         ],
       ),
@@ -115,7 +116,11 @@ class _SidebarScreenState extends State<SidebarScreen> {
 
   void _requestGenUi() {
     if (_auth.currentUser == null) {
-      unawaited(_auth.initiateSignIn());
+      // TODO: figure out how to trigger sign in.
+      // This guidance does not work as expected:
+      // /// The `signIn` method is discouraged on the web because it can't reliably provide an `idToken`.
+      // /// Use `signInSilently` and `renderButton` to authenticate your users instead.
+      // /// Read more: https://pub.dev/packages/google_sign_in_web
     }
     postMessageToAll(GenerateUiMessage(_text.text).jsonEncode());
 
