@@ -18,10 +18,15 @@ Widget _unknownScreenBuilder(BuildContext context, Map<String, String> args) =>
 final _screens = <String, ScreenBuilder>{
   AppRoutes.unknown: _unknownScreenBuilder,
   AppRoutes.sidebar: (_, __) => const SidebarScreen(),
-  AppRoutes.content: (_, args) => ContentScreen(
-        prompt: args['prompt'] ?? '',
-        numberOfOptions: int.tryParse(args['numberOfOptions'] ?? '1') ?? 1,
-      ),
+  AppRoutes.content: (_, args) {
+    final prompt = args['prompt'] ?? '';
+    final numberOfOptions = int.tryParse(args['numberOfOptions'] ?? '1') ?? 1;
+
+    return ContentScreen(
+      prompt: prompt,
+      numberOfOptions: numberOfOptions,
+    );
+  },
 };
 
 class MyApp extends StatefulWidget {
@@ -36,7 +41,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'gen UI',
+      title: 'Gen UI',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         useMaterial3: true,

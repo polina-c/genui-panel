@@ -1,7 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
+import '../../shared/primitives/constants.dart';
+import '../../shared/primitives/screen_container.dart';
 import '_gen_ui_card.dart';
 import '_prompt_card.dart';
 
@@ -10,7 +10,7 @@ class ContentScreen extends StatefulWidget {
     super.key,
     required this.prompt,
     required int numberOfOptions,
-  }) : numberOfOptions = max(1, numberOfOptions);
+  }) : numberOfOptions = numberOfOptions.clamp(1, maxNumberOfGeneratedOptions);
 
   final String prompt;
   final int numberOfOptions;
@@ -30,7 +30,7 @@ class _ContentScreenState extends State<ContentScreen> {
         .map((_) => const GenUiCard())
         .toList();
 
-    return Scaffold(
+    return AppScaffold(
       backgroundColor: backgroundColor,
       body: Padding(
         padding: const EdgeInsets.all(24.0),
@@ -45,7 +45,6 @@ class _ContentScreenState extends State<ContentScreen> {
             ),
             const SizedBox(height: 20),
             ...cards,
-            const GenUiCard(),
           ],
         ),
       ),

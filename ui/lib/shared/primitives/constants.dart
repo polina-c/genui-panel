@@ -1,0 +1,1 @@
+const maxNumberOfGeneratedOptions = 6;

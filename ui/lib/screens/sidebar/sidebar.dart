@@ -7,6 +7,7 @@ import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/logo_icon.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
+import '../../shared/primitives/screen_container.dart';
 import '_prompt_input.dart';
 import '_settings.dart';
 import '_sign_in.dart';
@@ -69,7 +70,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).colorScheme.primary;
-    return Scaffold(
+    return AppScaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Gen UI', style: TextStyle(color: primaryColor)),

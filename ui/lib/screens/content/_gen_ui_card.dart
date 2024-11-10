@@ -152,7 +152,6 @@ class _GenUi extends StatelessWidget {
     Icons.favorite,
     Icons.star,
     Icons.thumb_up,
-    Icons.thumb_down,
     Icons.check,
     Icons.close,
     Icons.done,

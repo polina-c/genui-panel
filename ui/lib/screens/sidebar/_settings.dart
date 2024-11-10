@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../shared/primitives/constants.dart';
+
 class SettingsController {
   int _numberOfOptions = 1;
   int get numberOfOptions => _numberOfOptions;
@@ -68,7 +70,7 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
                       () => widget.controller._numberOfOptions = newValue ?? 1,
                     );
                   },
-                  items: List.generate(10, (index) {
+                  items: List.generate(maxNumberOfGeneratedOptions, (index) {
                     return DropdownMenuItem<int>(
                       value: index + 1,
                       child: Text('${index + 1}'),
