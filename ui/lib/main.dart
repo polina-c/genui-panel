@@ -26,21 +26,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // @override
-  // void initState() {
-  //   print('!!! dart init started.');
-  //   super.initState();
-
-  //   onPostMessage.map((event) {
-  //     print('!!! dart event1: $event');
-  //     return event.data;
-  //   });
-  //   onPostMessage.listen((event) {
-  //     print('!!! dart event2: $event');
-  //   });
-  //   print('!!! dart init done.');
-  // }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,10 +39,10 @@ class _MyAppState extends State<MyApp> {
         print('!!! generating route: name:${settings.name}');
         final uri = Uri.parse(settings.name ?? AppRoutes.unknown);
         print('!!! ${uri.path}, ${uri.queryParameters}');
-        final screenBuilder = _screens[uri.path];
-        final builder = screenBuilder ?? _unknownScreenBuilder;
+        final builder = _screens[uri.path] ?? _unknownScreenBuilder;
         return NoAnimationMaterialPageRoute(
-            builder: (context) => builder(context, uri.queryParameters));
+          builder: (context) => builder(context, uri.queryParameters),
+        );
       },
     );
   }
