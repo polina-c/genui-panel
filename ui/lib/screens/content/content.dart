@@ -51,11 +51,29 @@ class _ContentScreenState extends State<ContentScreen> {
   }
 }
 
-class _Content extends StatelessWidget {
+class _Content extends StatefulWidget {
   const _Content();
 
   @override
+  State<_Content> createState() => _ContentState();
+}
+
+class _ContentState extends State<_Content> {
+  bool _isLoaded = false;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 1), () {
+      setState(() => _isLoaded = true);
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
+    if (!_isLoaded) {
+      return const CircularProgressIndicator();
+    }
     return const Placeholder(
       color: Colors.amber,
       child: Icon(Icons.integration_instructions_rounded),
