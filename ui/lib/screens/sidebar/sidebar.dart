@@ -8,6 +8,7 @@ import '../../shared/primitives/logo_icon.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
 import '_prompt_input.dart';
+import '_settings.dart';
 import '_sign_in.dart';
 
 class SidebarScreen extends StatefulWidget {
@@ -21,6 +22,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
   final _text = TextEditingController();
   final _auth = SignInController();
   final _focus = FocusNode();
+  final _settings = SettingsController();
   late final GoogleSignInPlugin _googleSignIn;
 
   @override
@@ -28,6 +30,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
     _text.dispose();
     _auth.dispose();
     _focus.dispose();
+    _settings.dispose();
     unawaited(_googleSignIn.disconnect());
     // It seems [onMessagePosted] does not provide a way to remove listeners.
     super.dispose();
@@ -91,7 +94,11 @@ class _SidebarScreenState extends State<SidebarScreen> {
               children: <Widget>[
                 const SizedBox(height: 20),
                 PromptInput(_text),
-                const SizedBox(height: 40),
+                Align(
+                  alignment: AlignmentDirectional.centerStart,
+                  child: SettingsExpandableButton(_settings),
+                ),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: _requestGenUi,
                   child: const Text('Generate UI'),
