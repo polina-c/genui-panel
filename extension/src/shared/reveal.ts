@@ -1,1 +1,1 @@
-export type RevealCallback = (prompt: string) => void;
+export type RevealCallback = () => void;

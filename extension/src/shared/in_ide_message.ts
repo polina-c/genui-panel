@@ -8,9 +8,13 @@ export class messageLocations {
     static readonly nodeContent = 'nodeContent';
 }
 
-export function prepareMessageToResend(message: any, from: string, to: string): Object {
-
-    return {};
-
+export function parseMessageData(message: any): Object {
+    let data = message?.data;
+    if (typeof (data) === 'string') {
+        console.log('!!!! parseMessageData: parsing data');
+        data = JSON.parse(data);
+        console.log('!!!! parseMessageData: parsed data');
+    }
+    return data;
 }
 
