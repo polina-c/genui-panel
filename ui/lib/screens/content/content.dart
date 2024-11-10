@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/post_message/post_message.dart';
-import 'dart:math';
 
 import '_scrolled_text.dart';
 
@@ -65,7 +64,7 @@ class _CardState extends State<_Card> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(milliseconds: 30000), () {
+    Future.delayed(const Duration(milliseconds: 700), () {
       setState(() => _isLoaded = true);
     });
   }
@@ -91,7 +90,7 @@ class _CardState extends State<_Card> {
 }
 
 class _CardContentWaiting extends StatelessWidget {
-  const _CardContentWaiting({super.key});
+  const _CardContentWaiting();
 
   @override
   Widget build(BuildContext context) {
