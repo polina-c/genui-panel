@@ -44,7 +44,7 @@ class _ExampleDropdown extends StatelessWidget {
     return PopupMenuButton<int>(
       tooltip: 'Select example',
       icon: const Icon(Icons.arrow_drop_down_circle),
-      iconColor: Theme.of(context).colorScheme.inversePrimary,
+      iconColor: Theme.of(context).colorScheme.primary,
       itemBuilder: (BuildContext context) {
         return promptExamples.asMap().entries.map((e) {
           return PopupMenuItem<int>(
