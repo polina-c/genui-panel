@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/post_message/post_message.dart';
+import 'dart:math';
+
+import '_scrolled_text.dart';
 
 class ContentScreen extends StatefulWidget {
   ContentScreen({super.key, String? prompt}) {
@@ -40,9 +43,7 @@ class _ContentScreenState extends State<ContentScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 8),
-            const Divider(),
-            const SizedBox(height: 8),
+            const SizedBox(height: 20),
             const _Content(),
           ],
         ),
@@ -51,6 +52,58 @@ class _ContentScreenState extends State<ContentScreen> {
   }
 }
 
+class _Content extends StatefulWidget {
+  const _Content();
+
+  @override
+  State<_Content> createState() => _ContentState();
+}
+
+class _ContentState extends State<_Content> {
+  bool _isLoaded = false;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(milliseconds: 300), () {
+      setState(() => _isLoaded = true);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!_isLoaded) {
+      return const CircularProgressIndicator();
+    }
+
+    const size = 256.0;
+
+    return Card(
+      color: Colors.white,
+      elevation: 4,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SizedBox(
+          height: size,
+          child: Row(
+            children: [
+              SizedBox(
+                child: FittedBox(
+                  child: _GenUi(),
+                ),
+                width: size,
+              ),
+              const VerticalDivider(),
+              ScrolledText(_code),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+const _code = '''
 class _Content extends StatefulWidget {
   const _Content();
 
@@ -74,9 +127,72 @@ class _ContentState extends State<_Content> {
     if (!_isLoaded) {
       return const CircularProgressIndicator();
     }
-    return const Placeholder(
-      color: Colors.amber,
-      child: Icon(Icons.integration_instructions_rounded),
+
+    const size = 256.0;
+
+    return Card(
+      color: Colors.white,
+      elevation: 4,
+      child: SizedBox(
+        child: FittedBox(
+          child: _GenUi(),
+        ),
+        height: size,
+        width: size,
+      ),
+    );
+  }
+}
+''';
+
+class _GenUi extends StatelessWidget {
+  _GenUi();
+
+  final random = Random();
+
+  final _colors = <Color>[
+    Colors.amber,
+    Colors.blue,
+    Colors.green,
+    Colors.red,
+    Colors.purple,
+    Colors.orange,
+    Colors.teal,
+    Colors.pink,
+    Colors.indigo,
+    Colors.cyan,
+  ];
+
+  final _icons = <IconData>[
+    Icons.face,
+    Icons.favorite,
+    Icons.star,
+    Icons.thumb_up,
+    Icons.thumb_down,
+    Icons.check,
+    Icons.close,
+    Icons.done,
+    Icons.done_all,
+    Icons.done_outline,
+    Icons.face_5,
+    Icons.face_6,
+    Icons.dangerous,
+    Icons.warning,
+    Icons.error,
+    Icons.error_outline,
+    Icons.track_changes,
+    Icons.trending_up,
+    Icons.trending_down,
+    Icons.trending_flat,
+    Icons.trending_neutral,
+    Icons.upcoming,
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Icon(
+      _icons[random.nextInt(_icons.length)],
+      color: _colors[random.nextInt(_colors.length)],
     );
   }
 }
