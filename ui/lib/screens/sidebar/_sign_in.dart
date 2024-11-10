@@ -14,14 +14,6 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
   scopes: _scopes,
 );
 
-class GenUiAuth {
-  static GoogleSignInAccount? get currentUser => _googleSignIn.currentUser;
-  static Future<void> signIn() => _googleSignIn.signIn();
-  static Future<void> signOut() => _googleSignIn.signOut();
-  static Stream<GoogleSignInAccount?> get onUserChange =>
-      _googleSignIn.onCurrentUserChanged;
-}
-
 class SignInController extends ChangeNotifier {
   GoogleSignInAccount? _user;
   GoogleSignInAccount? get currentUser => _user;

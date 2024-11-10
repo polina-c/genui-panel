@@ -1,6 +1,7 @@
 # Development Guidance
 
 [tech notes](https://docs.google.com/document/d/1ReI23IcRr65cPxu3L4jx5tVqfvmoI2EAOHaucKnkVkg/edit?tab=t.0#heading=h.ijy48vijd9j0)
+Internal information: http://go/genui-panel-readme
 
 ## Extension
 
@@ -92,7 +93,7 @@ Using:
 * https://pub.dev/packages/google_sign_in_web
 * To generate client ID: https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
 
-Internal information: go/genui-panel-readme
+See more details in http://go/genui-panel-readme
 
 ## TODO before releasing
 
