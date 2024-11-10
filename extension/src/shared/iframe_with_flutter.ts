@@ -1,4 +1,6 @@
 
+//   <button onclick="messageToDart()">Message to Dart :)</ button>
+
 export function htmlWithFlutterIFrame(flutterUrl: string): string {
   const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
 
@@ -10,10 +12,6 @@ export function htmlWithFlutterIFrame(flutterUrl: string): string {
 	<script>${everyScreenJsScript}</script>
 </head>
 <body>
-  <button onclick="messageToDart()">Message to Dart :)</ button>
-  <br/>
-  <br/>
-  <br/>
   <iframe
     id="sidebar"
     src="${flutterUrl}"

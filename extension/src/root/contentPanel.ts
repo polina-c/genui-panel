@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { Config } from '../shared/config';
-import { everyScreenJsScript } from '../shared/iframe_with_flutter';
+import { everyScreenJsScript, htmlWithFlutterIFrame } from '../shared/iframe_with_flutter';
 
 export class ContentPanel {
 	constructor() { }
@@ -26,28 +26,27 @@ export class ContentPanel {
 	}
 
 	private static _getHtmlContent(prompt: string): string {
-
-		const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
 		const url = Config.contentUrl(prompt);
+		return htmlWithFlutterIFrame(url);
 
-		return `
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
-	<script>${everyScreenJsScript}</script>
-</head>
-<body>
-  <iframe
-    src="${url}"
-    width="100%"
-    height="${heightPx}px"
-    style="border: none;"
-    allow="clipboard-read; clipboard-write; cross-origin-isolated">
-  </iframe>
-</body>
-</html>
-`;
+		// 		return `
+		// <!DOCTYPE html>
+		// <html>
+		// <head>
+		// 	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
+		// 	<script>${everyScreenJsScript}</script>
+		// </head>
+		// <body>
+		//   <iframe
+		//     src="${url}"
+		//     width="100%"
+		//     height="${heightPx}px"
+		//     style="border: none;"
+		//     allow="clipboard-read; clipboard-write; cross-origin-isolated">
+		//   </iframe>
+		// </body>
+		// </html>
+		// `;
 	}
 }
 

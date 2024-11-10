@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { ContentPanel } from "./contentPanel";
 import { Config } from "../shared/config";
-import { everyScreenJsScript } from "../shared/iframe_with_flutter";
+import { everyScreenJsScript, htmlWithFlutterIFrame } from "../shared/iframe_with_flutter";
 import { generateContentMessageType } from "../shared/cross_app_constants";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
@@ -18,7 +18,8 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       enableScripts: true,
       enableCommandUris: true,
     };
-    webviewView.webview.html = this._getHtmlContent(webviewView.webview);
+    webviewView.webview.html = htmlWithFlutterIFrame(Config.sidebarUrl);
+
     webviewView.webview.onDidReceiveMessage(
       (message) => {
         console.log(`!!!!!! node sidebar, got message, ${typeof (message)}, ${message}`);
@@ -34,36 +35,36 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
     );
   }
 
-  private _getHtmlContent(webview: vscode.Webview): string {
+  //   private _getHtmlContent(webview: vscode.Webview): string {
 
-    // const indexUri = webview.asWebviewUri(
-    //   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
-    // );
+  //     // const indexUri = webview.asWebviewUri(
+  //     //   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
+  //     // );
 
-    const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
+  //     const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
 
-    return `
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
-	<script>${everyScreenJsScript}</script>
-</head>
-<body>
-  <button onclick="messageToDart()">Message to Dart :)</ button>
-  <br/>
-  <br/>
-  <br/>
-  <iframe
-    id="sidebar"
-    src="${Config.sidebarUrl}"
-    width="100%"
-    height="${heightPx}px"
-    style="border: none;"
-    allow="clipboard-read; clipboard-write; cross-origin-isolated">
-  </iframe>
-</body>
-</html>
-`;
-  }
+  //     return `
+  // <!DOCTYPE html>
+  // <html>
+  // <head>
+  // 	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
+  // 	<script>${everyScreenJsScript}</script>
+  // </head>
+  // <body>
+  //   <button onclick="messageToDart()">Message to Dart :)</ button>
+  //   <br/>
+  //   <br/>
+  //   <br/>
+  //   <iframe
+  //     id="sidebar"
+  //     src="${Config.sidebarUrl}"
+  //     width="100%"
+  //     height="${heightPx}px"
+  //     style="border: none;"
+  //     allow="clipboard-read; clipboard-write; cross-origin-isolated">
+  //   </iframe>
+  // </body>
+  // </html>
+  // `;
+  //   }
 }
