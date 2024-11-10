@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'screens/content/content.dart';
 import 'screens/sidebar/sidebar.dart';
 import 'screens/unknown.dart';
-import 'shared/primitives/navigation.dart';
+import 'shared/primitives/app_navigation.dart';
+import 'shared/primitives/no_animation_route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,7 +56,7 @@ class _MyAppState extends State<MyApp> {
         print('!!! ${uri.path}, ${uri.queryParameters}');
         final screenBuilder = _screens[uri.path];
         final builder = screenBuilder ?? _unknownScreenBuilder;
-        return MaterialPageRoute(
+        return NoAnimationMaterialPageRoute(
             builder: (context) => builder(context, uri.queryParameters));
       },
     );
