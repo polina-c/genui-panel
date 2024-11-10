@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:http/http.dart' as http;
 
 import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/post_message/post_message.dart';
@@ -38,6 +37,11 @@ class _SidebarScreenState extends State<SidebarScreen> {
 
   void _handleMessage(PostMessageEvent event) {
     print('!!!! dart sidebar received message: ${event.origin}, ${event.data}');
+    final data = event.data as String;
+    final message = messageFromJson(data) as RevealMessage;
+    print('!!!! dart sidebar parsed message: ${message.prompt}');
+    _text.text = message.prompt;
+    print('!!!! dart sidebar updated message: ${message.prompt}');
   }
 
   void _handleAuthChange() {

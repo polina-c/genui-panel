@@ -16,9 +16,14 @@ enum _InIdeMessageType {
 class _JsonFields {
   static const String type = 'type';
   static const String prompt = 'prompt';
+  static const String data = 'data';
 }
 
-InIdeMessage fromJson(Map<String, dynamic> json) {
+InIdeMessage messageFromJson(String jsonString) {
+  var json = convert.jsonDecode(jsonString) as Map<String, dynamic>;
+  if (json[_JsonFields.data] != null) {
+    json = json[_JsonFields.data] as Map<String, dynamic>;
+  }
   final typeString = json[_JsonFields.type] as String;
   final type = _InIdeMessageType.values.byName(typeString);
   switch (type) {
