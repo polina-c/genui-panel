@@ -38,20 +38,6 @@ class _ContentScreenState extends State<ContentScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             PromptCard(widget.prompt ?? '<No prompt>'),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(widget.prompt ?? '<No prompt>', maxLines: 5),
-                const SizedBox(width: 8),
-                ElevatedButton(
-                  onPressed: () => postMessageToAll(
-                    RevealMessage(widget.prompt ?? '').jsonEncode(),
-                  ),
-                  child: const Text('Reveal'),
-                ),
-              ],
-            ),
             const SizedBox(height: 20),
             const GenUiCard(),
           ],
