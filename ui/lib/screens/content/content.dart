@@ -30,7 +30,11 @@ class _ContentScreenState extends State<ContentScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            PromptCard(widget.prompt ?? '<No prompt>'),
+            PromptCard(
+              widget.prompt ??
+                  'You did not describe what you want,'
+                      ' so we will generate something nice for you.',
+            ),
             const SizedBox(height: 20),
             const GenUiCard(),
           ],

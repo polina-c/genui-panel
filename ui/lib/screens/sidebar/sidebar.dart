@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../shared/primitives/in_ide_message.dart';
+import '../../shared/primitives/logo_icon.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
 import '_sign_in.dart';
-import 'logo_menu.dart';
 
 class SidebarScreen extends StatefulWidget {
   const SidebarScreen({super.key});
@@ -60,8 +60,8 @@ class _SidebarScreenState extends State<SidebarScreen> {
         title: Text('Gen UI', style: TextStyle(color: primaryColor)),
         // See https://stackoverflow.com/questions/44087400/flutter-svg-rendering.
         leading: const Padding(
-          padding: EdgeInsets.all(6.0),
-          child: LogoMenu(),
+          padding: EdgeInsets.all(14.0),
+          child: LogoIcon(),
         ),
       ),
       body: SizedBox(
