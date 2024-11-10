@@ -7,7 +7,7 @@ export class ContentPanel {
 
 	public static readonly viewType = 'catCodicons';
 
-	public static show() {
+	public static show(prompt: string) {
 		const column = vscode.window.activeTextEditor
 			? vscode.window.activeTextEditor.viewColumn
 			: undefined;
@@ -22,14 +22,10 @@ export class ContentPanel {
 			enableScripts: true,
 			enableCommandUris: true,
 		};
-		panel.webview.html = this._getHtmlContent();
+		panel.webview.html = this._getHtmlContent(prompt);
 	}
 
-	private static _getHtmlContent(): string {
-
-		// const indexUri = webview.asWebviewUri(
-		//   vscode.Uri.joinPath(this._extensionUri, "assets", "web", "index.html")
-		// );
+	private static _getHtmlContent(prompt: string): string {
 
 		const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
 
