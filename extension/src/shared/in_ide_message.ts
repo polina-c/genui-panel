@@ -15,6 +15,13 @@ export function parseMessageData(message: any): Object {
         data = JSON.parse(data);
         console.log('!!!! parseMessageData: parsed data');
     }
+    console.log(`!!!! parsed data: ${JSON.stringify(data)}`);
     return data;
 }
 
+export function parseBoolean(value: any, defaultValue: boolean): boolean {
+    if (value === undefined || value === null || value === '') {
+        return defaultValue;
+    }
+    return value === 'true' || value === true || value === 1 || value === '1';
+}

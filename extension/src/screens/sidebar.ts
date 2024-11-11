@@ -1,8 +1,8 @@
 import * as vscode from "vscode";
 import { showContentPanel } from "./content";
 import { Config } from "../shared/config";
-import { everyScreenJsScript, htmlWithFlutterIFrame } from "../shared/iframe_with_flutter";
-import { messageLocations, messageTypes, parseMessageData } from "../shared/in_ide_message";
+import { htmlWithFlutterIFrame } from "../shared/iframe_with_flutter";
+import { messageLocations, messageTypes, parseBoolean, parseMessageData } from "../shared/in_ide_message";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
@@ -28,17 +28,31 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         const data: any = parseMessageData(message);
         const type = data?.type;
 
-        console.log(`!!!!!! node sidebar, type: ${type}, prompt: ${data?.prompt}`);
+        const prompt = data?.prompt;
+        const numberOfOptions = data?.numberOfOptions ?? 1;
 
-        if (type === messageTypes.generateUi) {
-          showContentPanel(data?.prompt ?? '', data?.numberOfOptions ?? 1, () => view.postMessage(
+        const sideBySide = parseBoolean(data?.sideBySide, false);
+        console.log(`!!!!!! node sidebar, sideBySide parsed from ${data?.sideBySide} to ${sideBySide}`);
+        console.log(`!!!!!! node sidebar, type: ${type}, numberOfOptions: ${numberOfOptions}, sideBySide: ${sideBySide}, prompt: ${prompt}`);
+
+        if (type !== messageTypes.generateUi) {
+          return;
+        }
+
+        showContentPanel(
+          prompt,
+          numberOfOptions,
+          sideBySide,
+          // What to do when the user selects wants to reveal the prompt in the sidebar.
+          () => view.postMessage(
             {
               type: messageTypes.reveal,
               to: messageLocations.dart,
               prompt: data?.prompt,
             }
-          ));
-        }
+          ),
+        );
+
       },
     );
   }

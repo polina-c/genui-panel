@@ -2,7 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-import { SidebarProvider } from './root/sidebarProvider';
+import { SidebarProvider } from './screens/sidebar';
 import { Config } from './shared/config';
 
 // This method is called when your extension is activated

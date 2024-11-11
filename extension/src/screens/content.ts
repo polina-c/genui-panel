@@ -6,22 +6,29 @@ import { messageTypes, parseMessageData } from '../shared/in_ide_message';
 
 let next = 1;
 
-export function showContentPanel(prompt: string, numberOfOptions: number, revealCallback: RevealCallback) {
+function getColumnForNewWebview(sideBySide: boolean) {
+	if (sideBySide) {
+		return vscode.ViewColumn.Beside;
+	}
+
 	const column = vscode.window.activeTextEditor
 		? vscode.window.activeTextEditor.viewColumn
 		: undefined;
 
+	return column || vscode.ViewColumn.One;
+}
+
+
+export function showContentPanel(prompt: string, numberOfOptions: number, sideBySide: boolean, revealCallback: RevealCallback) {
 	const panel = vscode.window.createWebviewPanel(
 		'genUiContent',
-		`Gen UI ${next}`,
-		column || vscode.ViewColumn.One,
+		`Gen UI ${next++}`,
+		getColumnForNewWebview(sideBySide),
 		{
 			enableScripts: true,
 			retainContextWhenHidden: true,
 		},
 	);
-
-	next++;
 
 	panel.webview.options = {
 		enableScripts: true,

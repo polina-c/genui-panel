@@ -53,7 +53,9 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
                     });
                   },
                 ),
-                const Text('Open generated UI side by side with previous'),
+                const Text(
+                  'Open the generated UI to the side of the active editor.',
+                ),
               ],
             ),
             const SizedBox(width: 8),
