@@ -22,6 +22,7 @@ python3 -m http.server 50001 --directory assets/web
 ### Rebuild code
 
 ```
+npm install
 npm run compile
 ```
 
