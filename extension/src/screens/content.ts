@@ -6,8 +6,8 @@ import { messageTypes, parseMessageData } from '../shared/in_ide_message';
 
 let next = 1;
 
-function getColumnForNewWebview(sideBySide: boolean) {
-	if (sideBySide) {
+function getColumnForNewWebview(openOnSide: boolean) {
+	if (openOnSide) {
 		return vscode.ViewColumn.Beside;
 	}
 
@@ -19,11 +19,11 @@ function getColumnForNewWebview(sideBySide: boolean) {
 }
 
 
-export function showContentPanel(prompt: string, numberOfOptions: number, sideBySide: boolean, revealCallback: RevealCallback) {
+export function showContentPanel(prompt: string, numberOfOptions: number, openOnSide: boolean, revealCallback: RevealCallback) {
 	const panel = vscode.window.createWebviewPanel(
 		'genUiContent',
 		`Gen UI ${next++}`,
-		getColumnForNewWebview(sideBySide),
+		getColumnForNewWebview(openOnSide),
 		{
 			enableScripts: true,
 			retainContextWhenHidden: true,

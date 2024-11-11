@@ -31,9 +31,9 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         const prompt = data?.prompt;
         const numberOfOptions = data?.numberOfOptions ?? 1;
 
-        const sideBySide = parseBoolean(data?.sideBySide, false);
-        console.log(`!!!!!! node sidebar, sideBySide parsed from ${data?.sideBySide} to ${sideBySide}`);
-        console.log(`!!!!!! node sidebar, type: ${type}, numberOfOptions: ${numberOfOptions}, sideBySide: ${sideBySide}, prompt: ${prompt}`);
+        const openOnSide = parseBoolean(data?.openOnSide, false);
+        console.log(`!!!!!! node sidebar, openOnSide parsed from ${data?.openOnSide} to ${openOnSide}`);
+        console.log(`!!!!!! node sidebar, type: ${type}, numberOfOptions: ${numberOfOptions}, openOnSide: ${openOnSide}, prompt: ${prompt}`);
 
         if (type !== messageTypes.generateUi) {
           return;
@@ -42,7 +42,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         showContentPanel(
           prompt,
           numberOfOptions,
-          sideBySide,
+          openOnSide,
           // What to do when the user selects wants to reveal the prompt in the sidebar.
           () => view.postMessage(
             {
