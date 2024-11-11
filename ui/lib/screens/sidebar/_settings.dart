@@ -122,6 +122,8 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
               ),
             ],
           ),
+          const SizedBox(height: 30),
+          const Text('Please, ignore dev artifacts below:'),
           TextButton(
             onPressed: () {
               postMessageToAll(ExperimentalWindowMessage().jsonEncode());

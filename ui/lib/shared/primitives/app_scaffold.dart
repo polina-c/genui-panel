@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'constants.dart';
+
 class AppScaffold extends StatelessWidget {
   const AppScaffold({
     super.key,
@@ -15,7 +17,14 @@ class AppScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(child: body),
+      body: SingleChildScrollView(
+          child: Column(
+        children: [
+          body,
+          const SizedBox(height: 600),
+          const Text(version),
+        ],
+      )),
       appBar: appBar,
       backgroundColor: backgroundColor,
     );

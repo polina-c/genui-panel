@@ -22,7 +22,7 @@ final _screens = <String, ScreenBuilder>{
   AppRoutes.content: (_, args) {
     final prompt = args['prompt'] ?? '';
     final numberOfOptions = int.tryParse(args['numberOfOptions'] ?? '1') ?? 1;
-    final uiSizePx = int.tryParse(args['uiSizePx'] ?? '16') ?? defaultUiSizePx;
+    final uiSizePx = int.tryParse(args['uiSizePx'] ?? '') ?? defaultUiSizePx;
     return ContentScreen(
       prompt: prompt,
       numberOfOptions: numberOfOptions,

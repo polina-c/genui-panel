@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../shared/primitives/constants.dart';
-import '../../shared/primitives/screen_container.dart';
+import '../../shared/primitives/app_scaffold.dart';
 import '_gen_ui_card.dart';
 import '_prompt_card.dart';
 

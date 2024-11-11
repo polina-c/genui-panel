@@ -7,7 +7,7 @@ import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/logo_icon.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
-import '../../shared/primitives/screen_container.dart';
+import '../../shared/primitives/app_scaffold.dart';
 import '_prompt_input.dart';
 import '_settings.dart';
 import '_sign_in.dart';
