@@ -7,13 +7,11 @@ class ScrollableText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
-        child: Text(
-          text,
-          softWrap: false,
-          overflow: TextOverflow.clip,
-        ),
+    return SingleChildScrollView(
+      child: Text(
+        text,
+        softWrap: false,
+        overflow: TextOverflow.clip,
       ),
     );
   }

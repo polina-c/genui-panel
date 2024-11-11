@@ -23,9 +23,14 @@ class PromptInput extends StatelessWidget {
           maxLines: 20,
           autofocus: true,
         ),
-        _ExampleDropdown((example) {
-          text.text = example.prompt;
-        }),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            _ExampleDropdown((example) {
+              text.text = example.prompt;
+            }),
+          ],
+        ),
       ],
     );
   }
