@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../shared/primitives/constants.dart';
+import '../../shared/primitives/in_ide_message.dart';
+import '../../shared/primitives/post_message/post_message.dart';
 
 class SettingsController {
   int _numberOfOptions = 1;
@@ -102,8 +104,9 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
               const Text('UI size in pixels: '),
               const SizedBox(width: 8),
               SizedBox(
-                width: 200,
+                width: 80,
                 child: TextField(
+                  textAlign: TextAlign.right,
                   keyboardType: TextInputType.number,
                   controller: _sizeController,
                   onChanged: (String value) {
@@ -118,6 +121,12 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
                 ),
               ),
             ],
+          ),
+          TextButton(
+            onPressed: () {
+              postMessageToAll(ExperimentalWindowMessage().jsonEncode());
+            },
+            child: const Text('Open experimental window'),
           ),
         ]
       ],

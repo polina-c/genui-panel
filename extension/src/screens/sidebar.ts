@@ -1,8 +1,9 @@
 import * as vscode from "vscode";
 import { showContentPanel } from "./content";
 import { Config } from "../shared/config";
-import { htmlWithFlutterIFrame } from "../shared/iframe_with_flutter";
+import { htmlWithIFrame } from "../shared/iframe_with_flutter";
 import { messageLocations, messageTypes, parseBoolean, parseMessageData } from "../shared/in_ide_message";
+import { showExperimentalPanel } from "./experimental";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.openview";
@@ -20,7 +21,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       enableScripts: true,
       enableCommandUris: true,
     };
-    view.html = htmlWithFlutterIFrame(Config.sidebarUrl);
+    view.html = htmlWithIFrame(Config.sidebarUrl);
 
     view.onDidReceiveMessage(
       (message) => {
@@ -34,6 +35,12 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         const openOnSide = parseBoolean(data?.openOnSide, false);
         console.log(`!!!!!! node sidebar, openOnSide parsed from ${data?.openOnSide} to ${openOnSide}`);
         console.log(`!!!!!! node sidebar, type: ${type}, numberOfOptions: ${numberOfOptions}, openOnSide: ${openOnSide}, prompt: ${prompt}`);
+
+        if (type === messageTypes.experimental) {
+          console.log(`!!!!!! node sidebar, opening experimental page`);
+          showExperimentalPanel();
+          return;
+        }
 
         if (type !== messageTypes.generateUi) {
           return;

@@ -1,6 +1,7 @@
 export class messageTypes {
-    static readonly generateUi = 'generateUi';
-    static readonly reveal = 'reveal';
+    static readonly generateUi = 'generateUiMessage';
+    static readonly reveal = 'revealMessage';
+    static readonly experimental = 'experimentalWindowMessage';
 }
 export class messageLocations {
     static readonly dart = 'dart';

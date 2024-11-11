@@ -1,7 +1,7 @@
 
 //   <button onclick="messageToDart()">Message to Dart :)</ button>
 
-export function htmlWithFlutterIFrame(flutterUrl: string): string {
+export function htmlWithIFrame(url: string): string {
   const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
 
   return `
@@ -13,8 +13,8 @@ export function htmlWithFlutterIFrame(flutterUrl: string): string {
 </head>
 <body>
   <iframe
-    id="flutterIFrame"
-    src="${flutterUrl}"
+    id="mainIFrame"
+    src="${url}"
     width="100%"
     height="${heightPx}px"
     style="border: none;"
@@ -30,7 +30,7 @@ const vscodeInJs = acquireVsCodeApi();
 
 function messageToDart(message) {
   console.log('!!!!!! script: posting message to dart...');
-  document.getElementById('flutterIFrame').contentWindow.postMessage(message, '*');
+  document.getElementById('mainIFrame').contentWindow.postMessage(message, '*');
   console.log('!!!!!! script: posting message to dart done.');
 }
 

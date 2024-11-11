@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { Config } from '../shared/config';
-import { htmlWithFlutterIFrame } from '../shared/iframe_with_flutter';
+import { htmlWithIFrame } from '../shared/iframe_with_flutter';
 import { RevealCallback } from '../shared/reveal';
 import { messageTypes, parseMessageData } from '../shared/in_ide_message';
 
@@ -36,7 +36,7 @@ export function showContentPanel(prompt: string, numberOfOptions: number, openOn
 	};
 
 	const url = Config.contentUrl(prompt, numberOfOptions);
-	panel.webview.html = htmlWithFlutterIFrame(url);
+	panel.webview.html = htmlWithIFrame(url);
 
 	panel.webview.onDidReceiveMessage(
 		(message) => {
