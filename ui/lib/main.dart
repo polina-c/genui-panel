@@ -6,6 +6,7 @@ import 'screens/content/content.dart';
 import 'screens/sidebar/sidebar.dart';
 import 'screens/unknown.dart';
 import 'shared/primitives/app_navigation.dart';
+import 'shared/primitives/constants.dart';
 import 'shared/primitives/no_animation_route.dart';
 
 void main() {
@@ -21,10 +22,11 @@ final _screens = <String, ScreenBuilder>{
   AppRoutes.content: (_, args) {
     final prompt = args['prompt'] ?? '';
     final numberOfOptions = int.tryParse(args['numberOfOptions'] ?? '1') ?? 1;
-
+    final uiSizePx = int.tryParse(args['uiSizePx'] ?? '16') ?? defaultUiSizePx;
     return ContentScreen(
       prompt: prompt,
       numberOfOptions: numberOfOptions,
+      uiSizePx: uiSizePx,
     );
   },
 };

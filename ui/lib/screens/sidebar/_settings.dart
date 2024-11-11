@@ -11,7 +11,7 @@ class SettingsController {
   bool _openOnSide = false;
   bool get openOnSide => _openOnSide;
 
-  int _uiSizePx = 300;
+  int _uiSizePx = defaultUiSizePx;
   int get uiSizePx => _uiSizePx;
 
   /// No-op placeholder.

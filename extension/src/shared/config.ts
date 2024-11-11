@@ -1,7 +1,7 @@
 
 export class Config {
     static isIdx: boolean = !!process.env.MONOSPACE_ENV;
-    static isLocal: boolean = true;
+    static isLocal: boolean = false;
 
     public static get uiUrl(): string {
         return Config.isLocal ? "http://localhost:8080" : "https://genui-panel.web.app";
@@ -11,7 +11,7 @@ export class Config {
         return Config.uiUrl + "/#/sidebar";
     }
 
-    public static contentUrl(prompt: string, numberOfOptions: number): string {
-        return `${Config.uiUrl}/#/content?prompt=${encodeURI(prompt)}&numberOfOptions=${numberOfOptions}`;
+    public static contentUrl(prompt: string, numberOfOptions: number, uiSizePx: number | undefined,): string {
+        return `${Config.uiUrl}/#/content?prompt=${encodeURI(prompt)}&numberOfOptions=${numberOfOptions}&uiSizePx=${uiSizePx}`;
     }
 }

@@ -8,7 +8,9 @@ import '../../shared/primitives/horizontal_card.dart';
 import '../../shared/primitives/scrolled_text.dart';
 
 class GenUiCard extends StatefulWidget {
-  const GenUiCard();
+  GenUiCard({required int uiSizePx}) : uiSizePx = uiSizePx.toDouble();
+
+  final double uiSizePx;
 
   @override
   State<GenUiCard> createState() => _GenUiCardState();
@@ -27,12 +29,10 @@ class _GenUiCardState extends State<GenUiCard> {
 
   @override
   Widget build(BuildContext context) {
-    const size = 420.0;
-
     return HorizontalCard(
-      height: size,
+      height: widget.uiSizePx,
       child: _isLoaded
-          ? const _CardContentLoaded(size)
+          ? _CardContentLoaded(widget.uiSizePx)
           : const _CardContentWaiting(),
     );
   }

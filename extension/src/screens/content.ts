@@ -19,7 +19,13 @@ function getColumnForNewWebview(openOnSide: boolean) {
 }
 
 
-export function showContentPanel(prompt: string, numberOfOptions: number, openOnSide: boolean, revealCallback: RevealCallback) {
+export function showContentPanel(
+	prompt: string,
+	numberOfOptions: number,
+	openOnSide: boolean,
+	uiSizePx: number | undefined,
+	revealCallback: RevealCallback,
+) {
 	const panel = vscode.window.createWebviewPanel(
 		'genUiContent',
 		`Gen UI ${next++}`,
@@ -35,7 +41,7 @@ export function showContentPanel(prompt: string, numberOfOptions: number, openOn
 		enableCommandUris: true,
 	};
 
-	const url = Config.contentUrl(prompt, numberOfOptions);
+	const url = Config.contentUrl(prompt, numberOfOptions, uiSizePx);
 	panel.webview.html = htmlWithIFrame(url);
 
 	panel.webview.onDidReceiveMessage(

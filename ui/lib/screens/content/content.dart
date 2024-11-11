@@ -10,8 +10,11 @@ class ContentScreen extends StatefulWidget {
     super.key,
     required this.prompt,
     required int numberOfOptions,
-  }) : numberOfOptions = numberOfOptions.clamp(1, maxNumberOfGeneratedOptions);
+    required int uiSizePx,
+  })  : numberOfOptions = numberOfOptions.clamp(1, maxNumberOfGeneratedOptions),
+        uiSizePx = uiSizePx.clamp(minUiSizePx, maxUiSizePx);
 
+  final int uiSizePx;
   final String prompt;
   final int numberOfOptions;
 
@@ -27,7 +30,7 @@ class _ContentScreenState extends State<ContentScreen> {
 
     // ignore: inference_failure_on_instance_creation
     final cards = Iterable.generate(widget.numberOfOptions)
-        .map((_) => const GenUiCard())
+        .map((_) => GenUiCard(uiSizePx: widget.uiSizePx))
         .toList();
 
     return AppScaffold(
