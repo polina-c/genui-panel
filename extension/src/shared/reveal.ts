@@ -1,1 +1,2 @@
-export type RevealCallback = () => void;
+export type CallbackToPanel = (message: any) => void;
+

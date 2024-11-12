@@ -11,13 +11,14 @@ class ContentScreen extends StatefulWidget {
     required this.prompt,
     required int numberOfOptions,
     required int uiSizePx,
-    required String panelName,
+    required this.panelName,
   })  : numberOfOptions = numberOfOptions.clamp(1, maxNumberOfGeneratedOptions),
         uiSizePx = uiSizePx.clamp(minUiSizePx, maxUiSizePx);
 
   final int uiSizePx;
   final String prompt;
   final int numberOfOptions;
+  final String panelName;
 
   @override
   State<ContentScreen> createState() => _ContentScreenState();
@@ -29,10 +30,16 @@ class _ContentScreenState extends State<ContentScreen> {
     final backgroundColor =
         Theme.of(context).colorScheme.primaryFixedDim.withAlpha(150);
 
-    // ignore: inference_failure_on_instance_creation
-    final cards = Iterable.generate(widget.numberOfOptions)
-        .map((_) => GenUiCard(uiSizePx: widget.uiSizePx))
-        .toList();
+    final List<GenUiCard> cards;
+    if (widget.numberOfOptions == 1) {
+      cards = [GenUiCard(uiSizePx: widget.uiSizePx, uiId: widget.panelName)];
+    } else {
+      // ignore: inference_failure_on_instance_creation
+      cards = Iterable<int>.generate(widget.numberOfOptions)
+          .map((int index) => GenUiCard(
+              uiSizePx: widget.uiSizePx, uiId: '${widget.panelName},$index'))
+          .toList();
+    }
 
     return AppScaffold(
       backgroundColor: backgroundColor,

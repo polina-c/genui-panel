@@ -3,29 +3,27 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class GenUi {
-  GenUi({required this.panelName, required this.icon, required this.color});
+  GenUi({required this.uiId, required this.icon, required this.color});
 
   GenUi.fromJson(Map<String, dynamic> json)
-      : panelName = json['panelName'] as String,
+      : uiId = json['uiId'] as String,
         icon = json['icon'] as int,
         color = json['color'] as int;
 
-  GenUi.random() {
+  GenUi.random(this.uiId) {
     icon = random.nextInt(icons.length);
     color = random.nextInt(colors.length);
-    panelName = (_nextId++).toString();
   }
 
-  static int _nextId = 1;
   final random = Random();
 
   Map<String, dynamic> toJson() => {
-        'panelName': panelName,
+        'uiId': uiId,
         'icon': icon,
         'color': color,
       };
 
-  late final String panelName;
+  late final String uiId;
   late final int icon;
   late final int color;
 

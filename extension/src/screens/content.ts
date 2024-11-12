@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
 import { Config } from '../shared/config';
 import { htmlWithIFrame } from '../shared/iframe_with_flutter';
-import { RevealCallback as RevealPromptCallback } from '../shared/reveal';
-import { messageTypes, parseMessageData } from '../shared/in_ide_message';
+import { CallbackToPanel } from '../shared/reveal';
+import { isMessageToSidebar, parseMessageData } from '../shared/in_ide_message';
 
 let next = 1;
 
@@ -18,18 +18,16 @@ function getColumnForNewWebview(openOnSide: boolean) {
 	return column || vscode.ViewColumn.One;
 }
 
-
 export function showContentPanel(
 	prompt: string,
 	numberOfOptions: number,
 	openOnSide: boolean,
 	uiSizePx: number | undefined,
 	extensionUri: vscode.Uri,
-	revealPromptCallback: RevealPromptCallback,
+	callbackToPanel: CallbackToPanel,
 ) {
 	const panelName = `UI_${next++}.genui`;
 	const panel = vscode.window.createWebviewPanel(
-
 		'genUiContent',
 		panelName,
 		getColumnForNewWebview(openOnSide),
@@ -54,14 +52,9 @@ export function showContentPanel(
 		(message) => {
 			console.log(`!!!!!! node content, got message, ${typeof (message)}, ${message}`);
 			const data: any = parseMessageData(message);
-			const type = data?.type;
-
-			console.log(`!!!!!! node content, type: ${type}, prompt: ${data?.prompt}`);
-
-			if (type === messageTypes.revealPrompt) {
-				revealPromptCallback();
+			if (isMessageToSidebar(data)) {
+				callbackToPanel(data);
 			}
-		},
+		}
 	);
 }
-

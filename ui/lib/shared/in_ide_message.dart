@@ -102,7 +102,7 @@ class RevealUiMessage extends InIdeMessage {
 
   @override
   Map<String, dynamic> toJson() => {
-        _JsonFields.type: _InIdeMessageType.revealPromptMessage.name,
+        _JsonFields.type: _InIdeMessageType.revealUiMessage.name,
         _JsonFields.ui: ui.toJson(),
       };
 }

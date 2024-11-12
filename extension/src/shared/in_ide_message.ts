@@ -4,6 +4,13 @@ export class messageTypes {
     static readonly revealUi = 'revealUiMessage';
     static readonly experimental = 'experimentalWindowMessage';
 }
+
+export function isMessageToSidebar(data: any): boolean {
+    const type = data?.type;
+    const result = type === messageTypes.experimental || type === messageTypes.generateUi;
+    console.log(`!!!!!! node content, type: ${type}, isToSidebar: ${result}, prompt: ${data?.prompt}`);
+    return result;
+}
 export class messageLocations {
     static readonly dart = 'dart';
     static readonly nodeSidebar = 'nodeSidebar';
