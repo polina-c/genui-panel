@@ -53,7 +53,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           // What to do when the user selects wants to reveal the prompt in the sidebar.
           () => view.postMessage(
             {
-              type: messageTypes.reveal,
+              type: messageTypes.revealPrompt,
               to: messageLocations.dart,
               prompt: data?.prompt,
             }

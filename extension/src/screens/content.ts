@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { Config } from '../shared/config';
 import { htmlWithIFrame } from '../shared/iframe_with_flutter';
-import { RevealCallback } from '../shared/reveal';
+import { RevealCallback as RevealPromptCallback } from '../shared/reveal';
 import { messageTypes, parseMessageData } from '../shared/in_ide_message';
 
 let next = 1;
@@ -25,7 +25,7 @@ export function showContentPanel(
 	openOnSide: boolean,
 	uiSizePx: number | undefined,
 	extensionUri: vscode.Uri,
-	revealCallback: RevealCallback,
+	revealPromptCallback: RevealPromptCallback,
 ) {
 	const panelName = `UI_${next++}.genui`;
 	const panel = vscode.window.createWebviewPanel(
@@ -58,8 +58,8 @@ export function showContentPanel(
 
 			console.log(`!!!!!! node content, type: ${type}, prompt: ${data?.prompt}`);
 
-			if (type === messageTypes.reveal) {
-				revealCallback();
+			if (type === messageTypes.revealPrompt) {
+				revealPromptCallback();
 			}
 		},
 	);

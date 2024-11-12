@@ -1,6 +1,7 @@
 export class messageTypes {
     static readonly generateUi = 'generateUiMessage';
-    static readonly reveal = 'revealPromptMessage';
+    static readonly revealPrompt = 'revealPromptMessage';
+    static readonly revealUi = 'revealUiMessage';
     static readonly experimental = 'experimentalWindowMessage';
 }
 export class messageLocations {
