@@ -1,8 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../shared/primitives/genui.dart';
 import '../../shared/primitives/horizontal_card.dart';
 
 import '../../shared/primitives/scrolled_text.dart';
@@ -18,10 +17,13 @@ class GenUiCard extends StatefulWidget {
 
 class _GenUiCardState extends State<GenUiCard> {
   bool _isLoaded = false;
+  late final GenUi _genUi;
 
   @override
   void initState() {
     super.initState();
+    _genUi = GenUi.random();
+
     Future.delayed(const Duration(milliseconds: 700), () {
       setState(() => _isLoaded = true);
     });
@@ -32,7 +34,7 @@ class _GenUiCardState extends State<GenUiCard> {
     return HorizontalCard(
       height: widget.uiSizePx,
       child: _isLoaded
-          ? _CardContentLoaded(widget.uiSizePx)
+          ? _CardContentLoaded(widget.uiSizePx, _genUi)
           : const _CardContentWaiting(),
     );
   }
@@ -53,9 +55,10 @@ class _CardContentWaiting extends StatelessWidget {
 }
 
 class _CardContentLoaded extends StatelessWidget {
-  const _CardContentLoaded(this.size);
+  const _CardContentLoaded(this.size, this.genUi);
 
   final double size;
+  final GenUi genUi;
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +72,7 @@ class _CardContentLoaded extends StatelessWidget {
               children: [
                 SizedBox(
                   child: FittedBox(
-                    child: _GenUi(),
+                    child: _GenUiRendered(genUi),
                   ),
                   width: size,
                 ),
@@ -133,70 +136,21 @@ class _ContentState extends State<_Content> {
 }
 ''';
 
-class _GenUi extends StatelessWidget {
-  _GenUi();
+class _GenUiRendered extends StatefulWidget {
+  _GenUiRendered(this.genUi);
 
-  final random = Random();
+  final GenUi genUi;
 
-  final _colors = <Color>[
-    Colors.amber,
-    Colors.blue,
-    Colors.green,
-    Colors.red,
-    Colors.purple,
-    Colors.orange,
-    Colors.teal,
-    Colors.pink,
-    Colors.indigo,
-    Colors.cyan,
-    Colors.deepOrange,
-    Colors.deepPurple,
-    Colors.lime,
-    Colors.lightBlue,
-    Colors.lightGreen,
-    Colors.yellow,
-    Colors.deepOrangeAccent,
-    Colors.deepPurpleAccent,
-    Colors.limeAccent,
-    Colors.lightBlueAccent,
-    Colors.lightGreenAccent,
-    Colors.yellowAccent,
-    Colors.black,
-    Colors.amberAccent,
-    Colors.blueAccent,
-    Colors.greenAccent,
-    Colors.redAccent,
-  ];
+  @override
+  State<_GenUiRendered> createState() => _GenUiRenderedState();
+}
 
-  final _icons = <IconData>[
-    Icons.face,
-    Icons.favorite,
-    Icons.star,
-    Icons.thumb_up,
-    Icons.check,
-    Icons.close,
-    Icons.done,
-    Icons.done_all,
-    Icons.done_outline,
-    Icons.face_5,
-    Icons.face_6,
-    Icons.dangerous,
-    Icons.warning,
-    Icons.error,
-    Icons.error_outline,
-    Icons.track_changes,
-    Icons.trending_up,
-    Icons.trending_down,
-    Icons.trending_flat,
-    Icons.trending_neutral,
-    Icons.upcoming,
-  ];
-
+class _GenUiRenderedState extends State<_GenUiRendered> {
   @override
   Widget build(BuildContext context) {
     return Icon(
-      _icons[random.nextInt(_icons.length)],
-      color: _colors[random.nextInt(_colors.length)],
+      widget.genUi.iconValue,
+      color: widget.genUi.colorValue,
     );
   }
 }
