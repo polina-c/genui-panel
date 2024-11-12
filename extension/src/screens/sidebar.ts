@@ -6,7 +6,7 @@ import { messageLocations, messageTypes, parseBoolean, parseMessageData } from "
 import { showExperimentalPanel } from "./experimental";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
-  public static readonly viewType = "genui-panel.openview";
+  public static readonly viewType = "genui-panel.view";
 
   constructor() { }
 

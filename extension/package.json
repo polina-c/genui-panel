@@ -10,45 +10,23 @@
     "Other"
   ],
   "main": "./dist/extension.js",
-  "iconDefinitions": {
-    "_leaf_icon": {
-      "iconPath": "./assets/leaf.svg"
-    }
-  },
   "contributes": {
-    "commands": [
-      {
-        "command": "genui-panel.menu.view",
-        "category": "vscode-extension-sidebar-html",
-        "title": "Sample WebView in VS Code Sidebar",
-        "icon": "$(clear-all)"
-      }
-    ],
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "custom-activitybar",
+          "id": "genui-panel-sidebar",
           "title": "Gen UI :)",
           "icon": "assets/logo.svg"
         }
       ]
     },
     "views": {
-      "custom-activitybar": [
+      "genui-panel-sidebar": [
         {
           "type": "webview",
-          "id": "genui-panel.openview",
+          "id": "genui-panel.view",
           "name": "View",
           "contextualTitle": "View"
-        }
-      ]
-    },
-    "menus": {
-      "view/title": [
-        {
-          "command": "genui-panel.menu.view",
-          "group": "navigation",
-          "when": "view == genui-panel.openview"
         }
       ]
     }
