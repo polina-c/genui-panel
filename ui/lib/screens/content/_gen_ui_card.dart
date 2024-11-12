@@ -63,11 +63,17 @@ class _CardContentLoaded extends StatelessWidget {
       children: [
         Row(
           children: [
-            SizedBox(
-              child: FittedBox(
-                child: _GenUi(),
-              ),
-              width: size,
+            Stack(
+              alignment: Alignment.bottomRight,
+              children: [
+                SizedBox(
+                  child: FittedBox(
+                    child: _GenUi(),
+                  ),
+                  width: size,
+                ),
+                TextButton(onPressed: () {}, child: const Text('Reveal')),
+              ],
             ),
             const VerticalDivider(),
             const SizedBox(width: 8),
