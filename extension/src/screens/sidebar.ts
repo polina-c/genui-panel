@@ -8,7 +8,7 @@ import { showExperimentalPanel } from "./experimental";
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.view";
 
-  constructor() { }
+  constructor(private readonly extentionContext: vscode.ExtensionContext) { }
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
@@ -49,6 +49,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           numberOfOptions,
           openOnSide,
           uiSizePx,
+          this.extentionContext.extensionUri,
           // What to do when the user selects wants to reveal the prompt in the sidebar.
           () => view.postMessage(
             {

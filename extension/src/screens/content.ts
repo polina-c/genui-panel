@@ -24,12 +24,13 @@ export function showContentPanel(
 	numberOfOptions: number,
 	openOnSide: boolean,
 	uiSizePx: number | undefined,
+	extensionUri: vscode.Uri,
 	revealCallback: RevealCallback,
 ) {
 	const panel = vscode.window.createWebviewPanel(
 
 		'genUiContent',
-		`Gen UI ${next++}`,
+		`UI_${next++}.genui`,
 		getColumnForNewWebview(openOnSide),
 		{
 			enableScripts: true,
@@ -37,6 +38,8 @@ export function showContentPanel(
 
 		},
 	);
+
+	panel.iconPath = vscode.Uri.joinPath(extensionUri, "assets", "leaf.svg");
 
 	panel.webview.options = {
 		enableScripts: true,
