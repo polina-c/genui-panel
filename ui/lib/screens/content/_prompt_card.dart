@@ -6,9 +6,9 @@ import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/scrolled_text.dart';
 
 class PromptCard extends StatelessWidget {
-  const PromptCard(this.text, {super.key});
+  const PromptCard(this.prompt, {super.key});
 
-  final String text;
+  final String prompt;
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +16,15 @@ class PromptCard extends StatelessWidget {
       height: 140,
       child: Stack(
         children: [
-          ScrollableText(text.isEmpty
+          ScrollableText(prompt.isEmpty
               ? 'You did not describe what you want,'
                   ' so we will generate something nice for you.'
-              : text),
+              : prompt),
           Align(
             alignment: Alignment.bottomRight,
             child: TextButton(
                 onPressed: () => postMessageToAll(
-                      RevealPromptMessage(text).jsonEncode(),
+                      RevealPromptMessage(prompt: prompt).jsonEncode(),
                     ),
                 child: const Text('Reveal')),
           ),

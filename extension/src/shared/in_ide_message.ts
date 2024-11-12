@@ -13,7 +13,7 @@ export function isMessageToSidebar(data: any): boolean {
 }
 export class messageFromTo {
     static readonly fromContentToSidebar = 'fromContentToSidebar';
-    static readonly fromSidebarToExtension = 'fromSidebarToExtension';
+    static readonly fromSidebarToIde = 'fromSidebarToIde';
 }
 
 export function parseMessageData(message: any): Object {

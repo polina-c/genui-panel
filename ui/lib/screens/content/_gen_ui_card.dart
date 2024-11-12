@@ -81,7 +81,7 @@ class _CardContentLoaded extends StatelessWidget {
                 ),
                 TextButton(
                     onPressed: () => postMessageToAll(
-                          RevealUiMessage(genUi).jsonEncode(),
+                          RevealUiMessage(ui: genUi).jsonEncode(),
                         ),
                     child: const Text('Reveal')),
               ],

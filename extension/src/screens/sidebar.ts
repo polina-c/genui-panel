@@ -51,36 +51,10 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           uiSizePx,
           this.extensionContext.extensionUri,
           // What to do when the content panel want to say something to the sidebar.
-          (messageFromContent) => constructMessageForSidebar(messageFromContent),
+          (messageFromContent) => view.postMessage(messageFromContent),
         );
 
       },
     );
   }
 }
-
-
-function constructMessageForSidebar(messageFromContent: any) {
-
-
-  // type: messageTypes.revealPrompt,
-  //   to: messageLocations.dart,
-  //     prompt: data?.prompt,
-
-  return {
-    type: messageTypes.generateUi,
-    prompt: fromSidebar?.prompt,
-    numberOfOptions: fromSidebar?.numberOfOptions,
-    openOnSide: fromSidebar?.openOnSide,
-    uiSizePx: fromSidebar?.uiSizePx,
-  };
-
-  view.postMessage(
-    {
-      type: messageTypes.revealPrompt,
-      to: messageFromTo.dart,
-      prompt: data?.prompt,
-    }
-  );
-}
-
