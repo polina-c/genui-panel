@@ -60,6 +60,7 @@ class _CardContentLoaded extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.bottomRight,
       children: [
         Row(
           children: [
@@ -80,14 +81,11 @@ class _CardContentLoaded extends StatelessWidget {
             ScrollableText(_code),
           ],
         ),
-        Align(
-          alignment: Alignment.bottomRight,
-          child: IconButton(
-              icon: const Icon(Icons.copy, color: Colors.grey),
-              onPressed: () async {
-                await Clipboard.setData(const ClipboardData(text: _code));
-              }),
-        ),
+        IconButton(
+            icon: const Icon(Icons.copy, color: Colors.grey),
+            onPressed: () async {
+              await Clipboard.setData(const ClipboardData(text: _code));
+            }),
       ],
     );
   }
