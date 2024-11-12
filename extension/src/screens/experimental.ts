@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { Config } from '../shared/config';
 import { htmlWithIFrame as htmlWithIFrame } from '../shared/iframe_with_flutter';
 import { CallbackToSidebar } from '../shared/reveal';
-import { messageTypes, parseMessageData } from '../shared/in_ide_message';
+import { iFrameType, messageTypes, parseMessageData } from '../shared/in_ide_message';
 
 
 
@@ -24,6 +24,6 @@ export function showExperimentalPanel() {
 	};
 
 	const url = `https://genui.corp.google.com/&output=embed`;
-	panel.webview.html = htmlWithIFrame(url);
+	panel.webview.html = htmlWithIFrame(url, iFrameType.experiment);
 }
 

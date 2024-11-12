@@ -2,7 +2,7 @@ import * as vscode from "vscode";
 import { showContentPanel } from "./content";
 import { Config } from "../shared/config";
 import { htmlWithIFrame } from "../shared/iframe_with_flutter";
-import { messageFromTo, messageTypes, parseBoolean, parseMessageData } from "../shared/in_ide_message";
+import { iFrameType, messageFromTo, messageTypes, parseBoolean, parseMessageData } from "../shared/in_ide_message";
 import { showExperimentalPanel } from "./experimental";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
@@ -21,7 +21,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
       enableScripts: true,
       enableCommandUris: true,
     };
-    view.html = htmlWithIFrame(Config.sidebarUrl);
+    view.html = htmlWithIFrame(Config.sidebarUrl, iFrameType.sidebar);
 
     view.onDidReceiveMessage(
       (message) => {

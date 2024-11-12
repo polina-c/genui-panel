@@ -6,14 +6,20 @@ export class messageTypes {
 }
 
 export function isMessageToSidebar(data: any): boolean {
-    const type = data?.type;
-    const result = type === messageTypes.experimental || type === messageTypes.generateUi;
-    console.log(`!!!!!! node content, type: ${type}, isToSidebar: ${result}, prompt: ${data?.prompt}`);
+    const fromTo = data?.fromTo;
+    const result = fromTo === messageFromTo.fromContentToSidebar;
+    console.log(`!!!!!! node content, type: ${data?.type}, isToSidebar: ${result}, prompt: ${data?.prompt}`);
     return result;
 }
 export class messageFromTo {
     static readonly fromContentToSidebar = 'fromContentToSidebar';
     static readonly fromSidebarToIde = 'fromSidebarToIde';
+}
+
+export class iFrameType {
+    static readonly content = 'content';
+    static readonly sidebar = 'sidebar';
+    static readonly experiment = 'experiment';
 }
 
 export function parseMessageData(message: any): Object {

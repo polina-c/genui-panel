@@ -48,7 +48,7 @@ sealed class InIdeMessage {
     _assertType();
     final json = _concreteToJson();
     json[_JsonFields.type] = type.name;
-    json[_JsonFields.fromTo] = type.messageFromTo;
+    json[_JsonFields.fromTo] = type.messageFromTo.name;
     return json;
   }
 

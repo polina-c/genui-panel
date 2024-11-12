@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { Config } from '../shared/config';
 import { htmlWithIFrame } from '../shared/iframe_with_flutter';
 import { CallbackToSidebar } from '../shared/reveal';
-import { isMessageToSidebar, parseMessageData } from '../shared/in_ide_message';
+import { iFrameType, isMessageToSidebar, parseMessageData } from '../shared/in_ide_message';
 
 let next = 1;
 
@@ -46,7 +46,7 @@ export function showContentPanel(
 	};
 
 	const url = Config.contentUrl(prompt, numberOfOptions, uiSizePx, panelName);
-	panel.webview.html = htmlWithIFrame(url);
+	panel.webview.html = htmlWithIFrame(url, iFrameType.content);
 
 	panel.webview.onDidReceiveMessage(
 		(message) => {

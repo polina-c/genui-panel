@@ -1,7 +1,9 @@
 
 //   <button onclick="messageToDart()">Message to Dart :)</ button>
 
-export function htmlWithIFrame(url: string): string {
+import { messageFromTo } from "./in_ide_message";
+
+export function htmlWithIFrame(url: string, iFrameType: string): string {
   const heightPx = 1200; // 100% does not work here, because of infinite vertical size of container.
 
   return `
@@ -9,7 +11,7 @@ export function htmlWithIFrame(url: string): string {
 <html>
 <head>
 	<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'unsafe-inline'; style-src 'unsafe-inline';">
-	<script>${everyScreenJsScript}</script>
+	<script>${script(iFrameType)}</script>
 </head>
 <body>
   <iframe
@@ -25,7 +27,8 @@ export function htmlWithIFrame(url: string): string {
 `;
 }
 
-export const everyScreenJsScript = `
+function script(iFrameType: string): string {
+  return `
 const vscodeInJs = acquireVsCodeApi();
 
 function messageToDart(message) {
@@ -37,10 +40,10 @@ function messageToDart(message) {
 window.addEventListener('message', (event) => {
   console.log('!!!!!! script: got message', event);
   const message = {data: event.data, origin: event.origin};
-  const to = message.data?.to;
-  console.log('!!!!!! script: to ', to);
+  const fromTo = message.data?.fromTo;
+  console.log('!!!!!! script: fromTo ', fromTo);
 
-  if (to === 'dart') {
+  if (fromTo === '${messageFromTo.fromContentToSidebar}' && '${iFrameType}' === 'sidebar') {
     messageToDart(JSON.stringify(message));
   } else {
     vscodeInJs.postMessage(message);
@@ -48,3 +51,4 @@ window.addEventListener('message', (event) => {
   }
 });
 `;
+}
