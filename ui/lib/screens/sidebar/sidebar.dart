@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in_web/google_sign_in_web.dart';
 
-import '../../shared/primitives/app_scaffold.dart';
 import '../../shared/in_ide_message.dart';
+import '../../shared/primitives/app_scaffold.dart';
 import '../../shared/primitives/logo_icon.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';

@@ -2,17 +2,18 @@ import 'dart:convert' as convert;
 
 import 'primitives/genui.dart';
 
-abstract class InIdeMessage {
+sealed class InIdeMessage {
   Map<String, dynamic> toJson();
 
   String jsonEncode() => convert.jsonEncode(toJson());
 }
 
-// Do not rename, because some names are hard coded in node.
+// Rename carefully, because some names are hard coded in node.
 // Should we use proto?
 enum _InIdeMessageType {
   generateUiMessage,
-  revealMessage,
+  revealPromptMessage,
+  revealUiMessage,
   experimentalWindowMessage,
 }
 
@@ -27,11 +28,14 @@ class _JsonFields {
 
 InIdeMessage messageFromJson(String jsonString) {
   var json = convert.jsonDecode(jsonString) as Map<String, dynamic>;
+  // If the message is wrapped in a data field, unwrap it.
+  // Different sources wrap the message in different ways.
   if (json[_JsonFields.data] != null) {
     json = json[_JsonFields.data] as Map<String, dynamic>;
   }
   final typeString = json[_JsonFields.type] as String;
   final type = _InIdeMessageType.values.byName(typeString);
+
   switch (type) {
     case _InIdeMessageType.generateUiMessage:
       return GenerateUiMessage(
@@ -39,10 +43,14 @@ InIdeMessage messageFromJson(String jsonString) {
         numberOfOptions: json[_JsonFields.numberOfOptions] as int,
         openOnSide: json[_JsonFields.openOnSide] as bool,
       );
-    case _InIdeMessageType.revealMessage:
+    case _InIdeMessageType.revealPromptMessage:
       return RevealPromptMessage(json[_JsonFields.prompt] as String);
     case _InIdeMessageType.experimentalWindowMessage:
       return ExperimentalWindowMessage();
+    case _InIdeMessageType.revealUiMessage:
+      return RevealUiMessage(
+        GenUi.fromJson(json[_JsonFields.ui] as Map<String, dynamic>),
+      );
   }
 }
 
@@ -82,7 +90,7 @@ class RevealPromptMessage extends InIdeMessage {
 
   @override
   Map<String, dynamic> toJson() => {
-        _JsonFields.type: _InIdeMessageType.revealMessage.name,
+        _JsonFields.type: _InIdeMessageType.revealPromptMessage.name,
         _JsonFields.prompt: prompt,
       };
 }
@@ -94,7 +102,7 @@ class RevealUiMessage extends InIdeMessage {
 
   @override
   Map<String, dynamic> toJson() => {
-        _JsonFields.type: _InIdeMessageType.revealMessage.name,
+        _JsonFields.type: _InIdeMessageType.revealPromptMessage.name,
         _JsonFields.ui: ui.toJson(),
       };
 }
