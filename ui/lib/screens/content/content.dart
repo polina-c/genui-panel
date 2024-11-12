@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/primitives/constants.dart';
 import '../../shared/primitives/app_scaffold.dart';
+import '../../shared/primitives/constants.dart';
 import '_gen_ui_card.dart';
 import '_prompt_card.dart';
 
@@ -11,6 +11,7 @@ class ContentScreen extends StatefulWidget {
     required this.prompt,
     required int numberOfOptions,
     required int uiSizePx,
+    required String panelName,
   })  : numberOfOptions = numberOfOptions.clamp(1, maxNumberOfGeneratedOptions),
         uiSizePx = uiSizePx.clamp(minUiSizePx, maxUiSizePx);
 

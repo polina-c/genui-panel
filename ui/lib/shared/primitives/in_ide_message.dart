@@ -38,7 +38,7 @@ InIdeMessage messageFromJson(String jsonString) {
         openOnSide: json[_JsonFields.openOnSide] as bool,
       );
     case _InIdeMessageType.revealMessage:
-      return RevealMessage(json[_JsonFields.prompt] as String);
+      return RevealPromptMessage(json[_JsonFields.prompt] as String);
     case _InIdeMessageType.experimentalWindowMessage:
       return ExperimentalWindowMessage();
   }
@@ -73,8 +73,20 @@ class ExperimentalWindowMessage extends InIdeMessage {
       };
 }
 
-class RevealMessage extends InIdeMessage {
-  RevealMessage(this.prompt);
+class RevealPromptMessage extends InIdeMessage {
+  RevealPromptMessage(this.prompt);
+
+  final String prompt;
+
+  @override
+  Map<String, dynamic> toJson() => {
+        _JsonFields.type: _InIdeMessageType.revealMessage.name,
+        _JsonFields.prompt: prompt,
+      };
+}
+
+class RevealUiMessage extends InIdeMessage {
+  RevealUiMessage(this.prompt);
 
   final String prompt;
 

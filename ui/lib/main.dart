@@ -23,10 +23,12 @@ final _screens = <String, ScreenBuilder>{
     final prompt = args['prompt'] ?? '';
     final numberOfOptions = int.tryParse(args['numberOfOptions'] ?? '1') ?? 1;
     final uiSizePx = int.tryParse(args['uiSizePx'] ?? '') ?? defaultUiSizePx;
+    final panelName = args['panelName'] ?? defaultPanelName;
     return ContentScreen(
       prompt: prompt,
       numberOfOptions: numberOfOptions,
       uiSizePx: uiSizePx,
+      panelName: panelName,
     );
   },
 };

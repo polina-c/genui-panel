@@ -21,7 +21,7 @@ class PromptCard extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: TextButton(
                 onPressed: () => postMessageToAll(
-                      RevealMessage(text).jsonEncode(),
+                      RevealPromptMessage(text).jsonEncode(),
                     ),
                 child: const Text('Reveal')),
           ),

@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in_web/google_sign_in_web.dart';
 
+import '../../shared/primitives/app_scaffold.dart';
 import '../../shared/primitives/in_ide_message.dart';
 import '../../shared/primitives/logo_icon.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
-import '../../shared/primitives/app_scaffold.dart';
 import '_prompt_input.dart';
 import '_settings.dart';
 import '_sign_in.dart';
@@ -54,7 +54,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
   void _handleMessage(PostMessageEvent event) {
     print('!!!! dart sidebar received message: ${event.origin}, ${event.data}');
     final data = event.data as String;
-    final message = messageFromJson(data) as RevealMessage;
+    final message = messageFromJson(data) as RevealPromptMessage;
     print('!!!! dart sidebar parsed message: ${message.prompt}');
     _text.text = message.prompt;
     print('!!!! dart sidebar updated message: ${message.prompt}');
