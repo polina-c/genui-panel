@@ -10,6 +10,11 @@
     "Other"
   ],
   "main": "./dist/extension.js",
+  "iconDefinitions": {
+    "_leaf_icon": {
+      "iconPath": "./assets/leaf.svg"
+    }
+  },
   "contributes": {
     "commands": [
       {

@@ -27,12 +27,14 @@ export function showContentPanel(
 	revealCallback: RevealCallback,
 ) {
 	const panel = vscode.window.createWebviewPanel(
+
 		'genUiContent',
 		`Gen UI ${next++}`,
 		getColumnForNewWebview(openOnSide),
 		{
 			enableScripts: true,
 			retainContextWhenHidden: true,
+
 		},
 	);
 
