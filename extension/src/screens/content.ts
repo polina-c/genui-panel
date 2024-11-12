@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { Config } from '../shared/config';
 import { htmlWithIFrame } from '../shared/iframe_with_flutter';
-import { CallbackToPanel } from '../shared/reveal';
+import { CallbackToSidebar } from '../shared/reveal';
 import { isMessageToSidebar, parseMessageData } from '../shared/in_ide_message';
 
 let next = 1;
@@ -24,7 +24,7 @@ export function showContentPanel(
 	openOnSide: boolean,
 	uiSizePx: number | undefined,
 	extensionUri: vscode.Uri,
-	callbackToPanel: CallbackToPanel,
+	callbackToPanel: CallbackToSidebar,
 ) {
 	const panelName = `UI_${next++}.genui`;
 	const panel = vscode.window.createWebviewPanel(

@@ -16,7 +16,10 @@ class PromptCard extends StatelessWidget {
       height: 140,
       child: Stack(
         children: [
-          ScrollableText(text),
+          ScrollableText(text.isEmpty
+              ? 'You did not describe what you want,'
+                  ' so we will generate something nice for you.'
+              : text),
           Align(
             alignment: Alignment.bottomRight,
             child: TextButton(

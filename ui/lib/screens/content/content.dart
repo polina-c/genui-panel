@@ -36,8 +36,11 @@ class _ContentScreenState extends State<ContentScreen> {
     } else {
       // ignore: inference_failure_on_instance_creation
       cards = Iterable<int>.generate(widget.numberOfOptions)
-          .map((int index) => GenUiCard(
-              uiSizePx: widget.uiSizePx, uiId: '${widget.panelName},$index'))
+          .map(
+            (int index) => GenUiCard(
+                uiSizePx: widget.uiSizePx,
+                uiId: '${widget.panelName},${index + 1}'),
+          )
           .toList();
     }
 
@@ -48,12 +51,7 @@ class _ContentScreenState extends State<ContentScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            PromptCard(
-              widget.prompt.isEmpty
-                  ? 'You did not describe what you want,'
-                      ' so we will generate something nice for you.'
-                  : widget.prompt,
-            ),
+            PromptCard(widget.prompt),
             const SizedBox(height: 20),
             ...cards,
           ],

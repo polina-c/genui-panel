@@ -1,2 +1,2 @@
-export type CallbackToPanel = (message: any) => void;
+export type CallbackToSidebar = (message: any) => void;
 

@@ -11,10 +11,9 @@ export function isMessageToSidebar(data: any): boolean {
     console.log(`!!!!!! node content, type: ${type}, isToSidebar: ${result}, prompt: ${data?.prompt}`);
     return result;
 }
-export class messageLocations {
-    static readonly dart = 'dart';
-    static readonly nodeSidebar = 'nodeSidebar';
-    static readonly nodeContent = 'nodeContent';
+export class messageFromTo {
+    static readonly fromContentToSidebar = 'fromContentToSidebar';
+    static readonly fromSidebarToExtension = 'fromSidebarToExtension';
 }
 
 export function parseMessageData(message: any): Object {

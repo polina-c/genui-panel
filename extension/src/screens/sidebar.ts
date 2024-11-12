@@ -2,13 +2,13 @@ import * as vscode from "vscode";
 import { showContentPanel } from "./content";
 import { Config } from "../shared/config";
 import { htmlWithIFrame } from "../shared/iframe_with_flutter";
-import { messageLocations, messageTypes, parseBoolean, parseMessageData } from "../shared/in_ide_message";
+import { messageFromTo, messageTypes, parseBoolean, parseMessageData } from "../shared/in_ide_message";
 import { showExperimentalPanel } from "./experimental";
 
 export class SidebarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "genui-panel.view";
 
-  constructor(private readonly extentionContext: vscode.ExtensionContext) { }
+  constructor(private readonly extensionContext: vscode.ExtensionContext) { }
 
   resolveWebviewView(
     webviewView: vscode.WebviewView,
@@ -49,18 +49,38 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
           numberOfOptions,
           openOnSide,
           uiSizePx,
-          this.extentionContext.extensionUri,
-          // What to do when the user selects wants to reveal the prompt in the sidebar.
-          () => view.postMessage(
-            {
-              type: messageTypes.revealPrompt,
-              to: messageLocations.dart,
-              prompt: data?.prompt,
-            }
-          ),
+          this.extensionContext.extensionUri,
+          // What to do when the content panel want to say something to the sidebar.
+          (messageFromContent) => constructMessageForSidebar(messageFromContent),
         );
 
       },
     );
   }
 }
+
+
+function constructMessageForSidebar(messageFromContent: any) {
+
+
+  // type: messageTypes.revealPrompt,
+  //   to: messageLocations.dart,
+  //     prompt: data?.prompt,
+
+  return {
+    type: messageTypes.generateUi,
+    prompt: fromSidebar?.prompt,
+    numberOfOptions: fromSidebar?.numberOfOptions,
+    openOnSide: fromSidebar?.openOnSide,
+    uiSizePx: fromSidebar?.uiSizePx,
+  };
+
+  view.postMessage(
+    {
+      type: messageTypes.revealPrompt,
+      to: messageFromTo.dart,
+      prompt: data?.prompt,
+    }
+  );
+}
+
