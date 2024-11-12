@@ -4,6 +4,8 @@ import 'package:flutter/services.dart';
 import '../../shared/primitives/genui.dart';
 import '../../shared/primitives/horizontal_card.dart';
 
+import '../../shared/in_ide_message.dart';
+import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/scrolled_text.dart';
 
 class GenUiCard extends StatefulWidget {
@@ -76,7 +78,11 @@ class _CardContentLoaded extends StatelessWidget {
                   ),
                   width: size,
                 ),
-                TextButton(onPressed: () {}, child: const Text('Reveal')),
+                TextButton(
+                    onPressed: () => postMessageToAll(
+                          RevealUiMessage('').jsonEncode(),
+                        ),
+                    child: const Text('Reveal')),
               ],
             ),
             const VerticalDivider(),

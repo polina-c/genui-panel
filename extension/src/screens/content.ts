@@ -27,10 +27,11 @@ export function showContentPanel(
 	extensionUri: vscode.Uri,
 	revealCallback: RevealCallback,
 ) {
+	const panelName = `UI_${next++}.genui`;
 	const panel = vscode.window.createWebviewPanel(
 
 		'genUiContent',
-		`UI_${next++}.genui`,
+		panelName,
 		getColumnForNewWebview(openOnSide),
 		{
 			enableScripts: true,
@@ -46,7 +47,7 @@ export function showContentPanel(
 		enableCommandUris: true,
 	};
 
-	const url = Config.contentUrl(prompt, numberOfOptions, uiSizePx);
+	const url = Config.contentUrl(prompt, numberOfOptions, uiSizePx, panelName);
 	panel.webview.html = htmlWithIFrame(url);
 
 	panel.webview.onDidReceiveMessage(

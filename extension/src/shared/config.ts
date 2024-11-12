@@ -11,7 +11,7 @@ export class Config {
         return Config.uiUrl + "/#/sidebar";
     }
 
-    public static contentUrl(prompt: string, numberOfOptions: number, uiSizePx: number | undefined,): string {
-        return `${Config.uiUrl}/#/content?prompt=${encodeURI(prompt)}&numberOfOptions=${numberOfOptions}&uiSizePx=${uiSizePx}`;
+    public static contentUrl(prompt: string, numberOfOptions: number, uiSizePx: number | undefined, panelName: string): string {
+        return `${Config.uiUrl}/#/content?prompt=${encodeURI(prompt)}&numberOfOptions=${numberOfOptions}&uiSizePx=${uiSizePx}&panelName=${panelName}`;
     }
 }

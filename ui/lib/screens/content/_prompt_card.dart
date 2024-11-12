@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../shared/primitives/horizontal_card.dart';
-import '../../shared/primitives/in_ide_message.dart';
+import '../../shared/in_ide_message.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/scrolled_text.dart';
 
