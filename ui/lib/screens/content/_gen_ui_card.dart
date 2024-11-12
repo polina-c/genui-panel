@@ -25,7 +25,7 @@ class _GenUiCardState extends State<GenUiCard> {
   @override
   void initState() {
     super.initState();
-    _genUi = GenUi.random(widget.uiId);
+    _genUi = GenUi.random(uiId: widget.uiId);
 
     Future.delayed(const Duration(milliseconds: 700), () {
       setState(() => _isLoaded = true);

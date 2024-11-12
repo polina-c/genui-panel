@@ -5,7 +5,8 @@ import 'package:google_sign_in_web/google_sign_in_web.dart';
 
 import '../../shared/in_ide_message.dart';
 import '../../shared/primitives/app_scaffold.dart';
-import '../../shared/primitives/logo_icon.dart';
+import '../../shared/primitives/genui.dart';
+import '../../shared/primitives/custom_icons.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
 import '_prompt_input.dart';
@@ -13,7 +14,13 @@ import '_settings.dart';
 import '_sign_in.dart';
 
 class SidebarScreen extends StatefulWidget {
-  const SidebarScreen({super.key});
+  const SidebarScreen({super.key, required this.adjustUi});
+
+  /// Whether to reveal the UI.
+  ///
+  /// This is test only, in prod it is always false, and
+  /// normally reveal ui happens through message.
+  final bool adjustUi;
 
   @override
   State<SidebarScreen> createState() => _SidebarScreenState();
@@ -25,6 +32,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
   final _focus = FocusNode();
   final _settings = SettingsController();
   late final GoogleSignInPlugin _googleSignIn;
+  GenUi? _uiToAdjust;
 
   @override
   void dispose() {
@@ -43,6 +51,9 @@ class _SidebarScreenState extends State<SidebarScreen> {
     unawaited(_initSignIn());
     onMessagePosted.listen(_handleMessage);
     _auth.addListener(_handleAuthChange);
+    if (widget.adjustUi) {
+      _uiToAdjust = GenUi.random(uiId: 'testui');
+    }
   }
 
   Future<void> _initSignIn() async {
@@ -52,12 +63,23 @@ class _SidebarScreenState extends State<SidebarScreen> {
   }
 
   void _handleMessage(PostMessageEvent event) {
-    print('!!!! dart sidebar received message: ${event.origin}, ${event.data}');
+    print(
+        '!!!! dart sidebar: received message: ${event.origin}, ${event.data}');
     final data = event.data as String;
-    final message = messageFromJson(data) as RevealPromptMessage;
-    print('!!!! dart sidebar parsed message: ${message.prompt}');
-    _text.text = message.prompt;
-    print('!!!! dart sidebar updated message: ${message.prompt}');
+    final message = messageFromJson(data);
+    print('!!!! dart sidebar: parsed message: ${message.type}');
+    if (message is RevealPromptMessage) {
+      _text.text = message.prompt;
+      setState(() => _uiToAdjust = null);
+    } else if (message is RevealUiMessage) {
+      _text.text = '';
+      setState(() => _uiToAdjust = message.ui);
+    } else {
+      throw Exception(
+        'dart sidebar received unknown message: '
+        '${message.runtimeType}, ${message.type}',
+      );
+    }
   }
 
   void _handleAuthChange() {
@@ -94,7 +116,21 @@ class _SidebarScreenState extends State<SidebarScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 const SizedBox(height: 20),
-                PromptInput(_text),
+                if (_uiToAdjust != null) ...[
+                  Row(
+                    children: [
+                      const Text('Adjusting '),
+                      ElevatedButton.icon(
+                        onPressed: () {},
+                        label: Text(_uiToAdjust?.uiId ?? ''),
+                        icon: const LeafsIcon(),
+                      ),
+                      const Text(' :'),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                ],
+                PromptInput(_text, uiToAdjust: _uiToAdjust?.uiId),
                 Align(
                   alignment: AlignmentDirectional.centerStart,
                   child: SettingsExpandableButton(_settings),

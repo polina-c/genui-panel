@@ -14,3 +14,20 @@ class LogoIcon extends StatelessWidget {
     );
   }
 }
+
+class LeafsIcon extends StatelessWidget {
+  const LeafsIcon({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SizedBox(
+        child: FittedBox(
+            child: SvgPicture.asset('assets/leaf.svg',
+                semanticsLabel: 'green leafs')),
+        width: 20,
+        height: 20,
+      ),
+    );
+  }
+}

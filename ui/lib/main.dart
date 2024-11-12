@@ -18,7 +18,8 @@ Widget _unknownScreenBuilder(BuildContext context, Map<String, String> args) =>
 
 final _screens = <String, ScreenBuilder>{
   AppRoutes.unknown: _unknownScreenBuilder,
-  AppRoutes.sidebar: (_, __) => const SidebarScreen(),
+  AppRoutes.sidebar: (_, args) =>
+      SidebarScreen(adjustUi: (args['adjustUi'] ?? '') != ''),
   AppRoutes.content: (_, args) {
     final prompt = args['prompt'] ?? '';
     final numberOfOptions = int.tryParse(args['numberOfOptions'] ?? '1') ?? 1;

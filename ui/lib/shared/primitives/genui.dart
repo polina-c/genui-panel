@@ -10,7 +10,7 @@ class GenUi {
         icon = json['icon'] as int,
         color = json['color'] as int;
 
-  GenUi.random(this.uiId) {
+  GenUi.random({required this.uiId}) {
     icon = random.nextInt(icons.length);
     color = random.nextInt(colors.length);
   }

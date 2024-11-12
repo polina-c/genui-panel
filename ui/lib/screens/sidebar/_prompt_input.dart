@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import '_prompt_examples.dart';
 
 class PromptInput extends StatelessWidget {
-  const PromptInput(this.text);
+  const PromptInput(this.text, {required this.uiToAdjust});
   final TextEditingController text;
+  final String? uiToAdjust;
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +14,10 @@ class PromptInput extends StatelessWidget {
       children: [
         TextField(
           controller: text,
-          decoration: const InputDecoration(
-            hintText: 'Describe UI you want to generate.',
+          decoration: InputDecoration(
+            hintText: uiToAdjust == null
+                ? 'Describe UI you want to generate.'
+                : 'Describe how you want to adjust "$uiToAdjust"',
           ),
           keyboardType: TextInputType.multiline,
           // Defines the min height:
