@@ -1,5 +1,7 @@
 import 'dart:convert' as convert;
 
+import 'primitives/genui.dart';
+
 abstract class InIdeMessage {
   Map<String, dynamic> toJson();
 
@@ -18,7 +20,7 @@ class _JsonFields {
   static const String type = 'type';
   static const String prompt = 'prompt';
   static const String data = 'data';
-
+  static const String ui = 'ui';
   static const String numberOfOptions = 'numberOfOptions';
   static const String openOnSide = 'openOnSide';
 }
@@ -86,13 +88,13 @@ class RevealPromptMessage extends InIdeMessage {
 }
 
 class RevealUiMessage extends InIdeMessage {
-  RevealUiMessage(this.prompt);
+  RevealUiMessage(this.ui);
 
-  final String prompt;
+  final GenUi ui;
 
   @override
   Map<String, dynamic> toJson() => {
         _JsonFields.type: _InIdeMessageType.revealMessage.name,
-        _JsonFields.prompt: prompt,
+        _JsonFields.ui: ui.toJson(),
       };
 }
