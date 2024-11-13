@@ -119,12 +119,15 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 if (_uiToAdjust != null) ...[
                   Row(
                     children: [
-                      const Text('Adjusting '),
-                      ElevatedButton.icon(
-                        onPressed: () {},
-                        label: Text(_uiToAdjust?.uiId ?? ''),
-                        icon: const LeafsIcon(),
+                      SizedBox(
+                        child: IconButton(
+                          onPressed: () => setState(() => _uiToAdjust = null),
+                          icon: const Icon(Icons.close),
+                          iconSize: 16,
+                        ),
                       ),
+                      const Text('Adjust   '),
+                      GenUiReference(uiToAdjust: _uiToAdjust!),
                       const Text(' :'),
                     ],
                   ),
@@ -178,5 +181,26 @@ class _SidebarScreenState extends State<SidebarScreen> {
     //   headers: await _auth.currentUser!.authHeaders,
     // );
     // print('Response status: ${response.statusCode}');
+  }
+}
+
+class GenUiReference extends StatelessWidget {
+  const GenUiReference({super.key, required this.uiToAdjust});
+
+  final GenUi uiToAdjust;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {},
+      child: Row(
+        children: [
+          LeafsIcon(),
+          const SizedBox(width: 4),
+          Text(uiToAdjust.uiId),
+        ],
+      ),
+    );
+    ;
   }
 }
