@@ -44,6 +44,10 @@ npm run watch
 
 1. Create vsix file:
 
+    NOTE: before compiling and sharing the build do not forget to:
+    * switch 'local' to false in [config.ts](extension/src/shared/config.ts)
+    * `firebase deploy` ui
+
     ```
     vsce package --allow-missing-repository
     ```
