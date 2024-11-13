@@ -65,7 +65,6 @@ In child vscode: command Open Webview Developer Tools
 
 All commands here are for the directory `ui`.
 
-
 Basic commands:
 ```
 flutter build web
