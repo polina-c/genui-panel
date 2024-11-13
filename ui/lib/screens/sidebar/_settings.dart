@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../shared/in_ide_message.dart';
+import '../../shared/primitives/app_checkbox.dart';
 import '../../shared/primitives/constants.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 
@@ -13,6 +14,12 @@ class SettingsController {
 
   int _uiSizePx = defaultUiSizePx;
   int get uiSizePx => _uiSizePx;
+
+  bool _useAppTheme = false;
+  bool get useAppTheme => _useAppTheme;
+
+  bool _useAppWidgets = false;
+  bool get useAppWidgets => _useAppWidgets;
 
   /// No-op placeholder.
   void dispose() {}
@@ -49,6 +56,7 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
 
   @override
   Widget build(BuildContext context) {
+    const verticalSpace = SizedBox(height: 16);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -59,23 +67,14 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
               Icon(_isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down),
         ),
         if (_isExpanded) ...[
-          const SizedBox(width: 8),
-          Row(
-            children: [
-              Checkbox(
-                value: widget.controller.openOnSide,
-                onChanged: (bool? newValue) {
-                  setState(() {
-                    widget.controller._openOnSide = newValue ?? false;
-                  });
-                },
-              ),
-              const Text(
-                'Open the generated UI to the side.',
-              ),
-            ],
+          verticalSpace,
+          AppCheckbox(
+            onChanged: (bool newValue) =>
+                setState(() => widget.controller._openOnSide = newValue),
+            value: widget.controller.openOnSide,
+            label: 'Open the generated UI to the side.',
           ),
-          const SizedBox(width: 8),
+          verticalSpace,
           Row(
             children: [
               const Text('Number of options to generate: '),
@@ -98,7 +97,7 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
               ),
             ],
           ),
-          const SizedBox(width: 8),
+          verticalSpace,
           Row(
             children: [
               const Text('UI size in pixels: '),
@@ -122,8 +121,22 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
               ),
             ],
           ),
-          const SizedBox(height: 30),
-          const Text('Please, ignore dev artifacts below:'),
+          verticalSpace,
+          AppCheckbox(
+            onChanged: (bool newValue) =>
+                setState(() => widget.controller._useAppTheme = newValue),
+            value: widget.controller.useAppTheme,
+            label: 'Use theme of my application.',
+          ),
+          verticalSpace,
+          AppCheckbox(
+            onChanged: (bool newValue) =>
+                setState(() => widget.controller._useAppWidgets = newValue),
+            value: widget.controller.useAppWidgets,
+            label: 'Use widgets of my application.',
+          ),
+          const SizedBox(height: 40),
+          const Text('(Please, ignore artifacts below:)'),
           TextButton(
             onPressed: () {
               postMessageToAll(ExperimentalWindowMessage().jsonEncode());

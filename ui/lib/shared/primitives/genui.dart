@@ -52,7 +52,6 @@ class GenUi {
     Colors.lightBlueAccent,
     Colors.lightGreenAccent,
     Colors.yellowAccent,
-    Colors.black,
     Colors.amberAccent,
     Colors.blueAccent,
     Colors.greenAccent,
