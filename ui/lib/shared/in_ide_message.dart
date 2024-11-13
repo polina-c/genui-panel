@@ -34,6 +34,7 @@ class _JsonFields {
   static const String ui = 'ui';
   static const String numberOfOptions = 'numberOfOptions';
   static const String openOnSide = 'openOnSide';
+  static const String uiSizePx = 'uiSizePx';
 }
 
 sealed class InIdeMessage {
@@ -76,6 +77,7 @@ InIdeMessage messageFromJson(String jsonString) {
         prompt: json[_JsonFields.prompt] as String,
         numberOfOptions: json[_JsonFields.numberOfOptions] as int,
         openOnSide: json[_JsonFields.openOnSide] as bool,
+        uiSizePx: json[_JsonFields.uiSizePx] as int,
       );
 
     case InIdeMessageType.revealPromptMessage:
@@ -98,17 +100,20 @@ class GenerateUiMessage extends InIdeMessage {
     required this.prompt,
     required this.numberOfOptions,
     required this.openOnSide,
+    required this.uiSizePx,
   }) : super(InIdeMessageType.generateUiMessage);
 
   final String prompt;
   final int numberOfOptions;
   final bool openOnSide;
+  final int uiSizePx;
 
   @override
   Map<String, dynamic> _concreteToJson() => {
         _JsonFields.prompt: prompt,
         _JsonFields.numberOfOptions: numberOfOptions,
         _JsonFields.openOnSide: openOnSide,
+        _JsonFields.uiSizePx: uiSizePx,
       };
 }
 

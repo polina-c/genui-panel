@@ -26,14 +26,22 @@ class PromptInput extends StatelessWidget {
           maxLines: 20,
           autofocus: true,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            _ExampleDropdown((example) {
-              text.text = example.prompt;
-            }),
-          ],
+        Positioned(
+          top: 0,
+          child: ValueListenableBuilder(
+              valueListenable: text,
+              builder: (context, value, child) {
+                if (text.value.text.isEmpty) {
+                  return const SizedBox.shrink();
+                }
+                return IconButton(
+                  onPressed: text.clear,
+                  icon: const Icon(Icons.clear),
+                  iconSize: 16,
+                );
+              }),
         ),
+        _ExampleDropdown((example) => text.text = example.prompt),
       ],
     );
   }

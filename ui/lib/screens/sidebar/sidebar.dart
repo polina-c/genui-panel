@@ -5,8 +5,8 @@ import 'package:google_sign_in_web/google_sign_in_web.dart';
 
 import '../../shared/in_ide_message.dart';
 import '../../shared/primitives/app_scaffold.dart';
-import '../../shared/primitives/genui.dart';
 import '../../shared/primitives/custom_icons.dart';
+import '../../shared/primitives/genui.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
 import '_prompt_input.dart';
@@ -127,7 +127,8 @@ class _SidebarScreenState extends State<SidebarScreen> {
                         ),
                       ),
                       const Text('Adjust   '),
-                      GenUiReference(uiToAdjust: _uiToAdjust!),
+                      GenUiReference(
+                          uiToAdjust: _uiToAdjust!, settings: _settings),
                       const Text(' :'),
                     ],
                   ),
@@ -140,7 +141,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: _requestGenUi,
+                  onPressed: () => _requestGenUi(_settings),
                   child: const Text('Generate UI'),
                   style: ButtonStyle(
                     elevation: WidgetStateProperty.resolveWith<double>(
@@ -160,42 +161,22 @@ class _SidebarScreenState extends State<SidebarScreen> {
       ),
     );
   }
-
-  void _requestGenUi() {
-    if (_auth.currentUser == null) {
-      // TODO: figure out how to trigger sign in.
-      // This guidance does not work as expected:
-      // /// The `signIn` method is discouraged on the web because it can't reliably provide an `idToken`.
-      // /// Use `signInSilently` and `renderButton` to authenticate your users instead.
-      // /// Read more: https://pub.dev/packages/google_sign_in_web
-    }
-    postMessageToAll(GenerateUiMessage(
-      prompt: _text.text,
-      numberOfOptions: _settings.numberOfOptions,
-      openOnSide: _settings.openOnSide,
-    ).jsonEncode());
-
-    // final response = await http.get(
-    //   Uri.parse('https://people.googleapis.com/v1/people/me/connections'
-    //       '?requestMask.includeField=person.names'),
-    //   headers: await _auth.currentUser!.authHeaders,
-    // );
-    // print('Response status: ${response.statusCode}');
-  }
 }
 
 class GenUiReference extends StatelessWidget {
-  const GenUiReference({super.key, required this.uiToAdjust});
+  const GenUiReference(
+      {super.key, required this.uiToAdjust, required this.settings});
 
   final GenUi uiToAdjust;
+  final SettingsController settings;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () => _requestGenUi(settings, numberOfOptions: 1),
       child: Row(
         children: [
-          LeafsIcon(),
+          const LeafsIcon(),
           const SizedBox(width: 4),
           Text(uiToAdjust.uiId),
         ],
@@ -203,4 +184,13 @@ class GenUiReference extends StatelessWidget {
     );
     ;
   }
+}
+
+void _requestGenUi(SettingsController settings, {int? numberOfOptions}) {
+  postMessageToAll(GenerateUiMessage(
+    prompt: '',
+    numberOfOptions: numberOfOptions ?? settings.numberOfOptions,
+    openOnSide: settings.openOnSide,
+    uiSizePx: settings.uiSizePx,
+  ).jsonEncode());
 }
