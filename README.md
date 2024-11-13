@@ -58,16 +58,8 @@ npm run watch
 ### Read logs
 
 In IDX: chrome console (open it with Chrome > menu > more tools > developer tools)
-In host vscode: debug console
+In host vscode: debug console (select 'right' thing at top right)
 In child vscode: command Open Webview Developer Tools
-
-### Recreate flutter app
-
-IMPORTANT: switch to flutter stable to get support in IDX
-
-```
-flutter create ui  --platforms=web
-```
 
 ## UI
 
