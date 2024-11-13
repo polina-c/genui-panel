@@ -8,11 +8,12 @@ import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/scrolled_text.dart';
 
 class GenUiCard extends StatefulWidget {
-  GenUiCard({required int uiSizePx, required this.uiId})
+  GenUiCard({required int uiSizePx, required this.panelName, this.index})
       : uiSizePx = uiSizePx.toDouble();
 
   final double uiSizePx;
-  final String uiId;
+  final String panelName;
+  final int? index;
 
   @override
   State<GenUiCard> createState() => _GenUiCardState();
@@ -25,7 +26,7 @@ class _GenUiCardState extends State<GenUiCard> {
   @override
   void initState() {
     super.initState();
-    _genUi = GenUi.random(uiId: widget.uiId);
+    _genUi = GenUi.random(panelName: widget.panelName, index: widget.index);
 
     Future.delayed(const Duration(milliseconds: 700), () {
       setState(() => _isLoaded = true);
@@ -73,6 +74,14 @@ class _CardContentLoaded extends StatelessWidget {
             Stack(
               alignment: Alignment.bottomRight,
               children: [
+                Positioned(
+                  child: Text(
+                    genUi.index?.toString() ?? '',
+                    style: const TextStyle(color: Colors.grey),
+                  ),
+                  top: 0,
+                  left: 0,
+                ),
                 SizedBox(
                   child: FittedBox(
                     child: _GenUiRendered(genUi),

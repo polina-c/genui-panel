@@ -52,7 +52,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
     onMessagePosted.listen(_handleMessage);
     _auth.addListener(_handleAuthChange);
     if (widget.adjustUi) {
-      _uiToAdjust = GenUi.random(uiId: 'testui');
+      _uiToAdjust = GenUi.random(panelName: 'testui');
     }
   }
 
@@ -182,7 +182,6 @@ class GenUiReference extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }
 
