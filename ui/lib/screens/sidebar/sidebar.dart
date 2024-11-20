@@ -6,7 +6,7 @@ import 'package:google_sign_in_web/google_sign_in_web.dart';
 import '../../shared/in_ide_message.dart';
 import '../../shared/primitives/app_scaffold.dart';
 import '../../shared/primitives/custom_icons.dart';
-import '../../shared/primitives/genui.dart';
+import '../../shared/primitives/genui_widget.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
 import '_prompt_input.dart';
@@ -52,7 +52,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
     onMessagePosted.listen(_handleMessage);
     _auth.addListener(_handleAuthChange);
     if (widget.adjustUi) {
-      _uiToAdjust = GenUi.random(panelName: 'testui');
+      _uiToAdjust = GenUi.random(panelName: 'testui', prompt: 'test prompt');
     }
   }
 
@@ -141,7 +141,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () => _requestGenUi(_settings),
+                  onPressed: () => _requestGenUi(_text.text, _settings),
                   child: const Text('Generate UI'),
                   style: ButtonStyle(
                     elevation: WidgetStateProperty.resolveWith<double>(
@@ -173,7 +173,8 @@ class GenUiReference extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () => _requestGenUi(settings, numberOfOptions: 1),
+      onPressed: () =>
+          _requestGenUi(uiToAdjust.prompt, settings, numberOfOptions: 1),
       child: Row(
         children: [
           const LeafsIcon(),
@@ -185,9 +186,10 @@ class GenUiReference extends StatelessWidget {
   }
 }
 
-void _requestGenUi(SettingsController settings, {int? numberOfOptions}) {
+void _requestGenUi(String prompt, SettingsController settings,
+    {int? numberOfOptions}) {
   postMessageToAll(GenerateUiMessage(
-    prompt: '',
+    prompt: prompt,
     numberOfOptions: numberOfOptions ?? settings.numberOfOptions,
     openOnSide: settings.openOnSide,
     uiSizePx: settings.uiSizePx,

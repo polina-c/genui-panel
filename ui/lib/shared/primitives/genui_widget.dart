@@ -2,21 +2,31 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+class _JsonFields {
+  static const String panelName = 'panelName';
+  static const String index = 'index';
+  static const String icon = 'icon';
+  static const String color = 'color';
+  static const String prompt = 'prompt';
+}
+
 class GenUi {
   GenUi({
     required this.panelName,
     this.index,
     required this.icon,
     required this.color,
+    required this.prompt,
   });
 
   GenUi.fromJson(Map<String, dynamic> json)
-      : panelName = json['panelName'] as String,
-        index = json['index'] as int?,
-        icon = json['icon'] as int,
-        color = json['color'] as int;
+      : panelName = json[_JsonFields.panelName] as String,
+        index = json[_JsonFields.index] as int?,
+        icon = json[_JsonFields.icon] as int,
+        color = json[_JsonFields.color] as int,
+        prompt = json[_JsonFields.prompt] as String;
 
-  GenUi.random({required this.panelName, this.index}) {
+  GenUi.random({required this.panelName, required this.prompt, this.index}) {
     icon = random.nextInt(icons.length);
     color = random.nextInt(colors.length);
   }
@@ -24,10 +34,11 @@ class GenUi {
   final random = Random();
 
   Map<String, dynamic> toJson() => {
-        'panelName': panelName,
-        'index': index,
-        'icon': icon,
-        'color': color,
+        _JsonFields.panelName: panelName,
+        _JsonFields.index: index,
+        _JsonFields.icon: icon,
+        _JsonFields.color: color,
+        _JsonFields.prompt: prompt,
       };
 
   final String panelName;
@@ -37,9 +48,11 @@ class GenUi {
 
   late final int icon;
   late final int color;
+  final String prompt;
 
   Color get colorValue => colors[color];
   IconData get iconValue => icons[icon];
+
   static final colors = <Color>[
     Colors.amber,
     Colors.blue,

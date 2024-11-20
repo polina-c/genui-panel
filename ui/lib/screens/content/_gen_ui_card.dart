@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../shared/in_ide_message.dart';
-import '../../shared/primitives/genui.dart';
+import '../../shared/primitives/genui_widget.dart';
 import '../../shared/primitives/horizontal_card.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/scrolled_text.dart';
 
 class GenUiCard extends StatefulWidget {
-  GenUiCard({required int uiSizePx, required this.panelName, this.index})
-      : uiSizePx = uiSizePx.toDouble();
+  GenUiCard({
+    required int uiSizePx,
+    required this.panelName,
+    this.index,
+    required this.prompt,
+  }) : uiSizePx = uiSizePx.toDouble();
 
   final double uiSizePx;
   final String panelName;
   final int? index;
+  final String prompt;
 
   @override
   State<GenUiCard> createState() => _GenUiCardState();
@@ -26,7 +31,11 @@ class _GenUiCardState extends State<GenUiCard> {
   @override
   void initState() {
     super.initState();
-    _genUi = GenUi.random(panelName: widget.panelName, index: widget.index);
+    _genUi = GenUi.random(
+      prompt: widget.prompt,
+      panelName: widget.panelName,
+      index: widget.index,
+    );
 
     Future.delayed(const Duration(milliseconds: 700), () {
       setState(() => _isLoaded = true);

@@ -2,7 +2,7 @@ import 'dart:convert' as convert;
 
 import 'package:meta/meta.dart';
 
-import 'primitives/genui.dart';
+import 'primitives/genui_widget.dart';
 
 // Rename carefully, because some names are hard coded in node.
 // Should we use proto?

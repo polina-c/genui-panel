@@ -33,13 +33,18 @@ class _ContentScreenState extends State<ContentScreen> {
     final List<GenUiCard> cards;
     if (widget.numberOfOptions == 1) {
       cards = [
-        GenUiCard(uiSizePx: widget.uiSizePx, panelName: widget.panelName)
+        GenUiCard(
+          uiSizePx: widget.uiSizePx,
+          panelName: widget.panelName,
+          prompt: widget.prompt,
+        )
       ];
     } else {
       // ignore: inference_failure_on_instance_creation
       cards = Iterable<int>.generate(widget.numberOfOptions)
           .map(
             (int index) => GenUiCard(
+              prompt: widget.prompt,
               uiSizePx: widget.uiSizePx,
               panelName: widget.panelName,
               index: index + 1,

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
 
 import '../shared/primitives/app_navigation.dart';
+import '../shared/primitives/app_scaffold.dart';
+import '../shared/primitives/constants.dart';
 
 // Shows a list of all routes in the app.
 class UnknownScreen extends StatefulWidget {
@@ -14,17 +16,22 @@ class UnknownScreen extends StatefulWidget {
 class _UnknownScreenState extends State<UnknownScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-        children: AppRoutes.routes.map((String r) {
-      return Link(
-        uri: Uri.parse(r),
-        builder: (context, followLink) {
-          return TextButton(
-            onPressed: followLink,
-            child: Text(r),
-          );
-        },
-      );
-    }).toList());
+    return AppScaffold(
+      body: Center(
+        child: Column(
+          children: AppRoutes.routes.map((String r) {
+            return Link(
+              uri: Uri.parse(r),
+              builder: (context, followLink) {
+                return TextButton(
+                  onPressed: followLink,
+                  child: Text(r),
+                );
+              },
+            );
+          }).toList(),
+        ),
+      ),
+    );
   }
 }
