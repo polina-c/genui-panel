@@ -57,94 +57,98 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
   @override
   Widget build(BuildContext context) {
     const verticalSpace = SizedBox(height: 16);
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        TextButton.icon(
-          icon: const Icon(Icons.settings),
-          onPressed: () => setState(() => _isExpanded = !_isExpanded),
-          label:
-              Icon(_isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down),
-        ),
-        if (_isExpanded) ...[
-          verticalSpace,
-          AppCheckbox(
-            onChanged: (bool newValue) =>
-                setState(() => widget.controller._openOnSide = newValue),
-            value: widget.controller.openOnSide,
-            label: 'Open the generated UI to the side.',
+    return Container(
+      alignment: Alignment.topRight,
+      width: 260,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          TextButton.icon(
+            icon: const Icon(Icons.settings),
+            onPressed: () => setState(() => _isExpanded = !_isExpanded),
+            label:
+                Icon(_isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down),
           ),
-          verticalSpace,
-          Row(
-            children: [
-              const Text('Number of options to generate: '),
-              const SizedBox(width: 8),
-              DropdownButton<int>(
-                isDense: true,
-                focusColor: Colors.white,
-                value: widget.controller.numberOfOptions,
-                onChanged: (int? newValue) {
-                  setState(
-                    () => widget.controller._numberOfOptions = newValue ?? 1,
-                  );
-                },
-                items: List.generate(maxNumberOfGeneratedOptions, (index) {
-                  return DropdownMenuItem<int>(
-                    value: index + 1,
-                    child: Text('${index + 1}'),
-                  );
-                }),
-              ),
-            ],
-          ),
-          verticalSpace,
-          Row(
-            children: [
-              const Text('UI size in pixels: '),
-              const SizedBox(width: 8),
-              SizedBox(
-                width: 80,
-                child: TextField(
-                  textAlign: TextAlign.right,
-                  keyboardType: TextInputType.number,
-                  controller: _sizeController,
-                  onChanged: (String value) {
-                    final parsedValue = int.tryParse(value);
-                    if (parsedValue == null) return;
-                    if (parsedValue <= 0) return;
-                    if (parsedValue > 1000) return;
-                    setState(() {
-                      widget.controller._uiSizePx = parsedValue;
-                    });
+          if (_isExpanded) ...[
+            verticalSpace,
+            AppCheckbox(
+              onChanged: (bool newValue) =>
+                  setState(() => widget.controller._openOnSide = newValue),
+              value: widget.controller.openOnSide,
+              label: 'Open the generated UI to the side.',
+            ),
+            verticalSpace,
+            Row(
+              children: [
+                const Text('Number of options to generate: '),
+                const SizedBox(width: 8),
+                DropdownButton<int>(
+                  isDense: true,
+                  focusColor: Colors.white,
+                  value: widget.controller.numberOfOptions,
+                  onChanged: (int? newValue) {
+                    setState(
+                      () => widget.controller._numberOfOptions = newValue ?? 1,
+                    );
                   },
+                  items: List.generate(maxNumberOfGeneratedOptions, (index) {
+                    return DropdownMenuItem<int>(
+                      value: index + 1,
+                      child: Text('${index + 1}'),
+                    );
+                  }),
                 ),
-              ),
-            ],
-          ),
-          verticalSpace,
-          AppCheckbox(
-            onChanged: (bool newValue) =>
-                setState(() => widget.controller._useAppTheme = newValue),
-            value: widget.controller.useAppTheme,
-            label: 'Use theme of my application.',
-          ),
-          verticalSpace,
-          AppCheckbox(
-            onChanged: (bool newValue) =>
-                setState(() => widget.controller._useAppWidgets = newValue),
-            value: widget.controller.useAppWidgets,
-            label: 'Use widgets of my application.',
-          ),
-          const SizedBox(height: 40),
-          const Text('(Please, ignore artifacts below:)'),
-          TextButton(
-            onPressed: () {
-              postMessageToAll(ExperimentalWindowMessage().jsonEncode());
-            },
-            child: const Text('Open experimental window'),
-          ),
-        ]
-      ],
+              ],
+            ),
+            verticalSpace,
+            Row(
+              children: [
+                const Text('UI size in pixels: '),
+                const SizedBox(width: 8),
+                SizedBox(
+                  width: 80,
+                  child: TextField(
+                    textAlign: TextAlign.right,
+                    keyboardType: TextInputType.number,
+                    controller: _sizeController,
+                    onChanged: (String value) {
+                      final parsedValue = int.tryParse(value);
+                      if (parsedValue == null) return;
+                      if (parsedValue <= 0) return;
+                      if (parsedValue > 1000) return;
+                      setState(() {
+                        widget.controller._uiSizePx = parsedValue;
+                      });
+                    },
+                  ),
+                ),
+              ],
+            ),
+            verticalSpace,
+            AppCheckbox(
+              onChanged: (bool newValue) =>
+                  setState(() => widget.controller._useAppTheme = newValue),
+              value: widget.controller.useAppTheme,
+              label: 'Use theme of my application.',
+            ),
+            verticalSpace,
+            AppCheckbox(
+              onChanged: (bool newValue) =>
+                  setState(() => widget.controller._useAppWidgets = newValue),
+              value: widget.controller.useAppWidgets,
+              label: 'Use widgets of my application.',
+            ),
+            const SizedBox(height: 40),
+            const Text('(Please, ignore artifacts below:)'),
+            TextButton(
+              onPressed: () {
+                postMessageToAll(ExperimentalWindowMessage().jsonEncode());
+              },
+              child: const Text('Open experimental window'),
+            ),
+          ]
+        ],
+      ),
     );
   }
 }

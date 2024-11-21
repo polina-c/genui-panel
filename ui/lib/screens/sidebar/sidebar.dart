@@ -135,10 +135,6 @@ class _SidebarScreenState extends State<SidebarScreen> {
                   const SizedBox(height: 20),
                 ],
                 PromptInput(_text, uiToAdjust: _uiToAdjust?.uiId),
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: SettingsExpandableButton(_settings),
-                ),
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () => _requestGenUi(_text.text, _settings),
@@ -153,6 +149,10 @@ class _SidebarScreenState extends State<SidebarScreen> {
                       },
                     ),
                   ),
+                ),
+                Align(
+                  alignment: AlignmentDirectional.centerEnd,
+                  child: SettingsExpandableButton(_settings),
                 ),
               ],
             ),
