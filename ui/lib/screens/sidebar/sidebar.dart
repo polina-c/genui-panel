@@ -9,6 +9,8 @@ import '../../shared/primitives/custom_icons.dart';
 import '../../shared/primitives/genui_widget.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
+import '_example_selector.dart';
+import '_prompt_examples.dart';
 import '_prompt_input.dart';
 import '_settings.dart';
 import '_sign_in.dart';
@@ -126,7 +128,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                           iconSize: 16,
                         ),
                       ),
-                      const Text('Adjust   '),
+                      const Text('Editing   '),
                       GenUiReference(
                           uiToAdjust: _uiToAdjust!, settings: _settings),
                       const Text(' :'),
@@ -135,6 +137,11 @@ class _SidebarScreenState extends State<SidebarScreen> {
                   const SizedBox(height: 20),
                 ],
                 PromptInput(_text, uiToAdjust: _uiToAdjust?.uiId),
+                const SizedBox(height: 20),
+                ExampleSelector(
+                  onSelection: (PromptExample example) =>
+                      _text.text = example.prompt,
+                ),
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () => _requestGenUi(_text.text, _settings),

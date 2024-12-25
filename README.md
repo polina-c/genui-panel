@@ -1,5 +1,7 @@
 # Development Guidance
 
+[internal readme](http://go/genui-panel-readme)
+
 [tech notes](https://docs.google.com/document/d/1ReI23IcRr65cPxu3L4jx5tVqfvmoI2EAOHaucKnkVkg/edit?tab=t.0#heading=h.ijy48vijd9j0)
 Internal information: http://go/genui-panel-readme
 

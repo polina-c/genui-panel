@@ -41,34 +41,7 @@ class PromptInput extends StatelessWidget {
                 );
               }),
         ),
-        _ExampleDropdown((example) => text.text = example.prompt),
       ],
-    );
-  }
-}
-
-typedef ExampleSelectedCallback = void Function(PromptExample example);
-
-class _ExampleDropdown extends StatelessWidget {
-  const _ExampleDropdown(this.onSelection);
-
-  final ExampleSelectedCallback onSelection;
-
-  @override
-  Widget build(BuildContext context) {
-    return PopupMenuButton<int>(
-      tooltip: 'Select example',
-      icon: const Icon(Icons.arrow_drop_down_circle),
-      iconColor: Theme.of(context).colorScheme.primary,
-      itemBuilder: (BuildContext context) {
-        return promptExamples.asMap().entries.map((e) {
-          return PopupMenuItem<int>(
-            value: e.key,
-            child: Text(e.value.name),
-            onTap: () => onSelection(e.value),
-          );
-        }).toList();
-      },
     );
   }
 }
