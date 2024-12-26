@@ -27,8 +27,7 @@ class ContentScreen extends StatefulWidget {
 class _ContentScreenState extends State<ContentScreen> {
   @override
   Widget build(BuildContext context) {
-    final backgroundColor =
-        Theme.of(context).colorScheme.primaryFixedDim.withAlpha(150);
+    final backgroundColor = Theme.of(context).colorScheme.secondaryContainer;
 
     final List<GenUiCard> cards;
     if (widget.numberOfOptions == 1) {
