@@ -15,15 +15,19 @@ class PromptInput extends StatelessWidget {
         TextField(
           controller: text,
           decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
             hintText: uiToAdjust == null
                 ? 'Describe UI you want to generate.'
                 : 'Describe how you want to adjust "$uiToAdjust"',
           ),
+
           keyboardType: TextInputType.multiline,
           // Defines the min height:
           minLines: 5,
           // Defines the max height, before scrolling:
-          maxLines: 20,
+          maxLines: 12,
           autofocus: true,
         ),
         Positioned(
