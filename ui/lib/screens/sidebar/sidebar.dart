@@ -148,20 +148,16 @@ class _SidebarScreenState extends State<SidebarScreen> {
                       _text.text = example.prompt,
                 ),
                 const SizedBox(height: 20),
-                Wrap(
-                  alignment: WrapAlignment.spaceBetween,
-                  runAlignment: WrapAlignment.spaceBetween,
-                  children: [
-                    Settings(_settings),
-                    const SizedBox(height: 20),
-                    ElevatedButton(
-                      onPressed: () => _requestGenUi(_text.text, _settings),
-                      child: const Text('Generate UI'),
-                      style: ButtonStyle(
-                        elevation: WidgetStateProperty.all(4),
-                      ),
+                Settings(_settings),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: ElevatedButton(
+                    onPressed: () => _requestGenUi(_text.text, _settings),
+                    child: const Text('Generate UI'),
+                    style: ButtonStyle(
+                      elevation: WidgetStateProperty.all(4),
                     ),
-                  ],
+                  ),
                 ),
               ],
             ),
