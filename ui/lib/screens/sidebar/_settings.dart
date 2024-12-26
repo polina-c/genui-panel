@@ -25,8 +25,8 @@ class SettingsController {
   void dispose() {}
 }
 
-class SettingsExpandableButton extends StatefulWidget {
-  const SettingsExpandableButton(
+class Settings extends StatefulWidget {
+  const Settings(
     this.controller, {
     super.key,
   });
@@ -34,11 +34,10 @@ class SettingsExpandableButton extends StatefulWidget {
   final SettingsController controller;
 
   @override
-  State<SettingsExpandableButton> createState() =>
-      _SettingsExpandableButtonState();
+  State<Settings> createState() => _SettingsState();
 }
 
-class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
+class _SettingsState extends State<Settings> {
   bool _isExpanded = false;
   final _sizeController = TextEditingController();
 
@@ -61,8 +60,9 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
       alignment: Alignment.topRight,
       width: 260,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          _NumberOfOptions(controller: widget.controller),
           TextButton.icon(
             icon: const Icon(Icons.settings),
             onPressed: () => setState(() => _isExpanded = !_isExpanded),
@@ -78,28 +78,6 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
               label: 'Open the generated UI to the side.',
             ),
             verticalSpace,
-            Row(
-              children: [
-                const Text('Number of options to generate: '),
-                const SizedBox(width: 8),
-                DropdownButton<int>(
-                  isDense: true,
-                  focusColor: Colors.white,
-                  value: widget.controller.numberOfOptions,
-                  onChanged: (int? newValue) {
-                    setState(
-                      () => widget.controller._numberOfOptions = newValue ?? 1,
-                    );
-                  },
-                  items: List.generate(maxNumberOfGeneratedOptions, (index) {
-                    return DropdownMenuItem<int>(
-                      value: index + 1,
-                      child: Text('${index + 1}'),
-                    );
-                  }),
-                ),
-              ],
-            ),
             verticalSpace,
             Row(
               children: [
@@ -149,6 +127,43 @@ class _SettingsExpandableButtonState extends State<SettingsExpandableButton> {
           ]
         ],
       ),
+    );
+  }
+}
+
+class _NumberOfOptions extends StatefulWidget {
+  const _NumberOfOptions({required this.controller});
+
+  final SettingsController controller;
+
+  @override
+  State<_NumberOfOptions> createState() => _NumberOfOptionsState();
+}
+
+class _NumberOfOptionsState extends State<_NumberOfOptions> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        const Text('Number of options to generate: '),
+        const SizedBox(width: 8),
+        DropdownButton<int>(
+          isDense: true,
+          focusColor: Colors.white,
+          value: widget.controller.numberOfOptions,
+          onChanged: (int? newValue) {
+            setState(() {
+              widget.controller._numberOfOptions = newValue ?? 1;
+            });
+          },
+          items: List.generate(maxNumberOfGeneratedOptions, (index) {
+            return DropdownMenuItem<int>(
+              value: index + 1,
+              child: Text('${index + 1}'),
+            );
+          }),
+        ),
+      ],
     );
   }
 }
