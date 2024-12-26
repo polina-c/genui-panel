@@ -26,7 +26,7 @@ class PromptCard extends StatelessWidget {
                 onPressed: () => postMessageToAll(
                       RevealPromptMessage(prompt: prompt).jsonEncode(),
                     ),
-                child: const Text('Reveal')),
+                child: const Text('Edit')),
           ),
         ],
       ),

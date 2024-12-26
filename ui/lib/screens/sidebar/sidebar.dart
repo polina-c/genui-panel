@@ -116,6 +116,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 26.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 const SizedBox(height: 20),
                 if (_uiToAdjust != null) ...[
@@ -143,9 +144,9 @@ class _SidebarScreenState extends State<SidebarScreen> {
                       _text.text = example.prompt,
                 ),
                 const SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Wrap(
+                  alignment: WrapAlignment.spaceBetween,
+                  runAlignment: WrapAlignment.spaceBetween,
                   children: [
                     Settings(_settings),
                     ElevatedButton(

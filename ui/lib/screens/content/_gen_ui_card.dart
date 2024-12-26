@@ -101,7 +101,7 @@ class _CardContentLoaded extends StatelessWidget {
                     onPressed: () => postMessageToAll(
                           RevealUiMessage(ui: genUi).jsonEncode(),
                         ),
-                    child: const Text('Reveal')),
+                    child: const Text('Edit')),
               ],
             ),
             const VerticalDivider(),

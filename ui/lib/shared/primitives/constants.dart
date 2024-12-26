@@ -6,4 +6,4 @@ const maxUiSizePx = 700;
 
 const defaultPanelName = 'UI.genui';
 
-const version = '0.0.3.4';
+const version = '0.0.3.5';
