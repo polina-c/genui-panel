@@ -73,9 +73,11 @@ class _SidebarScreenState extends State<SidebarScreen> {
     if (message is RevealPromptMessage) {
       _text.text = message.prompt;
       setState(() => _uiToAdjust = null);
+      _focus.requestFocus();
     } else if (message is RevealUiMessage) {
       _text.text = '';
       setState(() => _uiToAdjust = message.ui);
+      _focus.requestFocus();
     } else {
       throw Exception(
         'dart sidebar received unknown message: '
@@ -131,13 +133,15 @@ class _SidebarScreenState extends State<SidebarScreen> {
                       ),
                       const Text('Editing   '),
                       GenUiReference(
-                          uiToAdjust: _uiToAdjust!, settings: _settings),
-                      const Text(' :'),
+                        uiToAdjust: _uiToAdjust!,
+                        settings: _settings,
+                      ),
                     ],
                   ),
                   const SizedBox(height: 20),
                 ],
-                PromptInput(_text, uiToAdjust: _uiToAdjust?.uiId),
+                PromptInput(_text,
+                    uiToAdjust: _uiToAdjust?.uiId, focusNode: _focus),
                 const SizedBox(height: 20),
                 ExampleSelector(
                   onSelection: (PromptExample example) =>
@@ -149,6 +153,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
                   runAlignment: WrapAlignment.spaceBetween,
                   children: [
                     Settings(_settings),
+                    const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () => _requestGenUi(_text.text, _settings),
                       child: const Text('Generate UI'),

@@ -29,7 +29,9 @@ npm run compile
 
 1. If you want to use local UI:
     a. Temporarily update config.ts to have isLocal = true
-    d. In Run and Debug select `ui` and run (or press F5)
+    d. Run UI via one of options:
+        * In Run and Debug select `ui` and run (or press F5)
+        * Run `flutter run -d chrome --web-port=8080`
 
 2. To start recompilation on changes run:
 

@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '_prompt_examples.dart';
-
 class PromptInput extends StatelessWidget {
-  const PromptInput(this.text, {required this.uiToAdjust});
+  const PromptInput(
+    this.text, {
+    required this.uiToAdjust,
+    required this.focusNode,
+  });
   final TextEditingController text;
   final String? uiToAdjust;
+  final FocusNode focusNode;
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +17,7 @@ class PromptInput extends StatelessWidget {
       children: [
         TextField(
           controller: text,
+          focusNode: focusNode,
           decoration: InputDecoration(
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
