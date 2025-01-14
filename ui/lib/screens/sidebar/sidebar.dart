@@ -141,11 +141,20 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 ],
                 PromptInput(_settings.prompt,
                     uiToAdjust: _uiToAdjust?.uiId, focusNode: _focus),
-                const SizedBox(height: 20),
-                ExampleSelector(
-                  onSelection: (PromptExample example) =>
-                      _settings.prompt.text = example.prompt,
-                ),
+                ValueListenableBuilder(
+                    valueListenable: _settings.prompt,
+                    builder: (_, __, ___) {
+                      if (_settings.prompt.text.isEmpty) {
+                        return Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: ExampleSelector(
+                            onSelection: (PromptExample example) =>
+                                _settings.prompt.text = example.prompt,
+                          ),
+                        );
+                      }
+                      return const SizedBox.shrink();
+                    }),
                 const SizedBox(height: 20),
                 GenerateBtnWithSettings(_settings),
               ],
