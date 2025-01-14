@@ -13,12 +13,14 @@ class PromptCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HorizontalCard(
+      elevation: 0,
+      color: null,
       height: 140,
       child: Stack(
         children: [
           ScrollableText(prompt.isEmpty
               ? 'You did not describe what you want,'
-                  ' so we will generate something nice for you.'
+                  ' so generating something nice for you.'
               : prompt),
           Align(
             alignment: Alignment.bottomRight,
