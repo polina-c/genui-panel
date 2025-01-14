@@ -59,8 +59,10 @@ class _ContentScreenState extends State<ContentScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const Text('Prompt:'),
             PromptCard(widget.prompt),
             const SizedBox(height: 20),
+            Text('Options (${widget.numberOfOptions}):'),
             ...cards,
           ],
         ),
