@@ -180,7 +180,10 @@ class _GenerateBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () => requestGenUi(settings),
+      onPressed: () {
+        requestGenUi(settings);
+        settings.prompt.clear();
+      },
       child: const Text('Generate UI'),
       style: ButtonStyle(elevation: WidgetStateProperty.all(4)),
     );

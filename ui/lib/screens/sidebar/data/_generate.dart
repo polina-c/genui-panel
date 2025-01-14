@@ -12,7 +12,7 @@ import '../../../shared/primitives/post_message/primitives.dart';
 import '../ui/_example_selector.dart';
 import '../data/_prompt_examples.dart';
 import '../ui/_prompt_input.dart';
-import '../ui/_settings.dart';
+import '../ui/_generate.dart';
 import '../ui/_sign_in.dart';
 
 void requestGenUi(SettingsController settings, {int? numberOfOptions}) {

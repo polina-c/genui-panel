@@ -42,7 +42,7 @@ allowing users to see how the colors and sizes change with selections.
   ),
   PromptExample(
     name: 'Math quest',
-    prompt: 'Show user two random numbers, ask user'
+    prompt: 'Show user two random numbers, ask user '
         'to sum them and verify the result.',
   ),
   PromptExample(
