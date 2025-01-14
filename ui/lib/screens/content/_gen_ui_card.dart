@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../shared/in_ide_message.dart';
-import '../../shared/primitives/genui_widget.dart';
-import '../../shared/primitives/horizontal_card.dart';
+import '../../shared/primitives/ui/genui_widget.dart';
+import '../../shared/primitives/ui/horizontal_card.dart';
 import '../../shared/primitives/post_message/post_message.dart';
-import '../../shared/primitives/scrolled_text.dart';
+import '../../shared/primitives/ui/scrolled_text.dart';
 
 class GenUiCard extends StatefulWidget {
   GenUiCard({

@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in_web/google_sign_in_web.dart';
 
 import '../../shared/in_ide_message.dart';
-import '../../shared/primitives/app_scaffold.dart';
-import '../../shared/primitives/custom_icons.dart';
-import '../../shared/primitives/genui_widget.dart';
+import '../../shared/primitives/ui/app_scaffold.dart';
+import '../../shared/primitives/ui/custom_icons.dart';
+import '../../shared/primitives/ui/genui_widget.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
-import '_example_selector.dart';
-import '_prompt_examples.dart';
-import '_prompt_input.dart';
-import '_settings.dart';
-import '_sign_in.dart';
+import 'data/_generate.dart';
+import 'ui/_example_selector.dart';
+import 'data/_prompt_examples.dart';
+import 'ui/_prompt_input.dart';
+import 'ui/_settings.dart';
+import 'ui/_sign_in.dart';
 
 class SidebarScreen extends StatefulWidget {
   const SidebarScreen({super.key, required this.adjustUi});
@@ -29,7 +30,6 @@ class SidebarScreen extends StatefulWidget {
 }
 
 class _SidebarScreenState extends State<SidebarScreen> {
-  final _text = TextEditingController();
   final _auth = SignInController();
   final _focus = FocusNode();
   final _settings = SettingsController();
@@ -38,7 +38,6 @@ class _SidebarScreenState extends State<SidebarScreen> {
 
   @override
   void dispose() {
-    _text.dispose();
     _auth.dispose();
     _focus.dispose();
     _settings.dispose();
@@ -71,11 +70,11 @@ class _SidebarScreenState extends State<SidebarScreen> {
     final message = messageFromJson(data);
     print('!!!! dart sidebar: parsed message: ${message.type}');
     if (message is RevealPromptMessage) {
-      _text.text = message.prompt;
+      _settings.prompt.text = message.prompt;
       setState(() => _uiToAdjust = null);
       _focus.requestFocus();
     } else if (message is RevealUiMessage) {
-      _text.text = '';
+      _settings.prompt.text = '';
       setState(() => _uiToAdjust = message.ui);
       _focus.requestFocus();
     } else {
@@ -140,25 +139,15 @@ class _SidebarScreenState extends State<SidebarScreen> {
                   ),
                   const SizedBox(height: 20),
                 ],
-                PromptInput(_text,
+                PromptInput(_settings.prompt,
                     uiToAdjust: _uiToAdjust?.uiId, focusNode: _focus),
                 const SizedBox(height: 20),
                 ExampleSelector(
                   onSelection: (PromptExample example) =>
-                      _text.text = example.prompt,
+                      _settings.prompt.text = example.prompt,
                 ),
                 const SizedBox(height: 20),
-                Settings(_settings),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: ElevatedButton(
-                    onPressed: () => _requestGenUi(_text.text, _settings),
-                    child: const Text('Generate UI'),
-                    style: ButtonStyle(
-                      elevation: WidgetStateProperty.all(4),
-                    ),
-                  ),
-                ),
+                GenerateBtnWithSettings(_settings),
               ],
             ),
           ),
@@ -178,8 +167,7 @@ class GenUiReference extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () =>
-          _requestGenUi(uiToAdjust.prompt, settings, numberOfOptions: 1),
+      onPressed: () => requestGenUi(settings, numberOfOptions: 1),
       child: Row(
         children: [
           const LeafsIcon(),
@@ -189,14 +177,4 @@ class GenUiReference extends StatelessWidget {
       ),
     );
   }
-}
-
-void _requestGenUi(String prompt, SettingsController settings,
-    {int? numberOfOptions}) {
-  postMessageToAll(GenerateUiMessage(
-    prompt: prompt,
-    numberOfOptions: numberOfOptions ?? settings.numberOfOptions,
-    openOnSide: settings.openOnSide,
-    uiSizePx: settings.uiSizePx,
-  ).jsonEncode());
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
 
-import '../shared/primitives/app_navigation.dart';
-import '../shared/primitives/app_scaffold.dart';
+import '../shared/primitives/ui/app_navigation.dart';
+import '../shared/primitives/ui/app_scaffold.dart';
 import '../shared/primitives/constants.dart';
 
 // Shows a list of all routes in the app.

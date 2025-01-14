@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/primitives/app_scaffold.dart';
+import '../../shared/primitives/ui/app_scaffold.dart';
 import '../../shared/primitives/constants.dart';
 import '_gen_ui_card.dart';
 import '_prompt_card.dart';

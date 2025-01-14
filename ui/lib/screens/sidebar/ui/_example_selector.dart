@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '_prompt_examples.dart';
+import '../data/_prompt_examples.dart';
 import '_prompt_input.dart';
 
 typedef ExampleSelectedCallback = void Function(PromptExample example);

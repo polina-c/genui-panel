@@ -5,9 +5,9 @@ import 'package:flutter/services.dart';
 import 'screens/content/content.dart';
 import 'screens/sidebar/sidebar.dart';
 import 'screens/unknown.dart';
-import 'shared/primitives/app_navigation.dart';
+import 'shared/primitives/ui/app_navigation.dart';
 import 'shared/primitives/constants.dart';
-import 'shared/primitives/no_animation_route.dart';
+import 'shared/primitives/ui/no_animation_route.dart';
 
 void main() {
   runApp(const MyApp());
