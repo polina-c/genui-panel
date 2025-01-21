@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../shared/primitives/ui/text_box_clear_button.dart';
+
 class PromptInput extends StatelessWidget {
   const PromptInput(
     this.text, {
@@ -12,44 +14,24 @@ class PromptInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: AlignmentDirectional.bottomEnd,
-      children: [
-        TextField(
-          controller: text,
-          focusNode: focusNode,
-          decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            hintText: uiToAdjust == null
-                ? 'Describe UI you want to generate.'
-                : 'Describe how you want to adjust "$uiToAdjust"',
-          ),
-
-          keyboardType: TextInputType.multiline,
-          // Defines the min height:
-          minLines: 5,
-          // Defines the max height, before scrolling:
-          maxLines: 12,
-          autofocus: true,
+    return TextField(
+      controller: text,
+      focusNode: focusNode,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.0),
         ),
-        Positioned(
-          top: 0,
-          child: ValueListenableBuilder(
-              valueListenable: text,
-              builder: (context, value, child) {
-                if (text.value.text.isEmpty) {
-                  return const SizedBox.shrink();
-                }
-                return IconButton(
-                  onPressed: text.clear,
-                  icon: const Icon(Icons.clear),
-                  iconSize: 16,
-                );
-              }),
-        ),
-      ],
+        hintText: uiToAdjust == null
+            ? 'Describe UI you want to generate.'
+            : 'Describe how you want to adjust "$uiToAdjust"',
+        suffixIcon: clearButton(text),
+      ),
+      keyboardType: TextInputType.multiline,
+      // Defines the min height:
+      minLines: 5,
+      // Defines the max height, before scrolling:
+      maxLines: 12,
+      autofocus: true,
     );
   }
 }

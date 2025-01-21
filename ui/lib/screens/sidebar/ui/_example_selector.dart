@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../shared/primitives/ui/colors.dart';
 import '../data/_prompt_examples.dart';
 import '_prompt_input.dart';
 
@@ -20,7 +21,7 @@ class ExampleSelector extends StatelessWidget {
         return TextButton(
           style: ButtonStyle(
             backgroundColor:
-                WidgetStateProperty.all(Theme.of(context).colorScheme.primary),
+                WidgetStateProperty.all(AppColors.primary(context)),
             foregroundColor: WidgetStateProperty.all(Colors.white),
           ),
           onPressed: () => onSelection(e.value),

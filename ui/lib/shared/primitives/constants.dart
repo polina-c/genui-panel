@@ -6,4 +6,4 @@ const maxUiSizePx = 700;
 
 const defaultPanelName = 'UI.genui';
 
-const version = 'genui for IDE 0.0.3.7';
+const version = 'genui for IDE 0.0.3.10';

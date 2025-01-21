@@ -4,26 +4,32 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in_web/google_sign_in_web.dart';
 
 import '../../shared/in_ide_message.dart';
-import '../../shared/primitives/ui/app_scaffold.dart';
-import '../../shared/primitives/ui/custom_icons.dart';
-import '../../shared/primitives/ui/genui_widget.dart';
 import '../../shared/primitives/post_message/post_message.dart';
 import '../../shared/primitives/post_message/primitives.dart';
+import '../../shared/primitives/ui/app_scaffold.dart';
+import '../../shared/primitives/ui/colors.dart';
+import '../../shared/primitives/ui/custom_icons.dart';
+import '../../shared/primitives/ui/genui_widget.dart';
 import 'data/_generate.dart';
-import 'ui/_example_selector.dart';
 import 'data/_prompt_examples.dart';
-import 'ui/_prompt_input.dart';
+import 'ui/_example_selector.dart';
 import 'ui/_generate.dart';
+import 'ui/_prompt_input.dart';
 import 'ui/_sign_in.dart';
 
 class SidebarScreen extends StatefulWidget {
-  const SidebarScreen({super.key, required this.adjustUi});
+  SidebarScreen({super.key, required Map<String, String> uriArgs}) {
+    editUi = uriArgs.containsKey('editUi');
+    print('!!! SidebarScreen: editUi: $editUi');
+  }
 
-  /// Whether to reveal the UI.
+  /// Whether to edit the UI.
   ///
   /// This is test only, in prod it is always false, and
-  /// normally reveal ui happens through message.
-  final bool adjustUi;
+  /// normally ui editing is initiated through message.
+  ///
+  /// Add `?editUi` to the URL to set it true.
+  late final bool editUi;
 
   @override
   State<SidebarScreen> createState() => _SidebarScreenState();
@@ -52,7 +58,7 @@ class _SidebarScreenState extends State<SidebarScreen> {
     unawaited(_initSignIn());
     onMessagePosted.listen(_handleMessage);
     _auth.addListener(_handleAuthChange);
-    if (widget.adjustUi) {
+    if (widget.editUi) {
       _uiToAdjust = GenUi.random(panelName: 'testui', prompt: 'test prompt');
     }
   }
@@ -94,10 +100,10 @@ class _SidebarScreenState extends State<SidebarScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final primaryColor = Theme.of(context).colorScheme.primary;
+    final primaryColor = AppColors.primary(context);
     return AppScaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: AppColors.accentBg(context),
         title: Text('Gen UI', style: TextStyle(color: primaryColor)),
         // See https://stackoverflow.com/questions/44087400/flutter-svg-rendering.
         leading: const Padding(
@@ -141,20 +147,21 @@ class _SidebarScreenState extends State<SidebarScreen> {
                 ],
                 PromptInput(_settings.prompt,
                     uiToAdjust: _uiToAdjust?.uiId, focusNode: _focus),
-                ValueListenableBuilder(
-                    valueListenable: _settings.prompt,
-                    builder: (_, __, ___) {
-                      if (_settings.prompt.text.isEmpty) {
-                        return Padding(
-                          padding: const EdgeInsets.only(top: 20),
-                          child: ExampleSelector(
-                            onSelection: (PromptExample example) =>
-                                _settings.prompt.text = example.prompt,
-                          ),
-                        );
-                      }
-                      return const SizedBox.shrink();
-                    }),
+                if (_uiToAdjust == null)
+                  ValueListenableBuilder(
+                      valueListenable: _settings.prompt,
+                      builder: (_, __, ___) {
+                        if (_settings.prompt.text.isEmpty) {
+                          return Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: ExampleSelector(
+                              onSelection: (PromptExample example) =>
+                                  _settings.prompt.text = example.prompt,
+                            ),
+                          );
+                        }
+                        return const SizedBox.shrink();
+                      }),
                 const SizedBox(height: 20),
                 GenerateBtnWithSettings(_settings),
               ],

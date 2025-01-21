@@ -78,7 +78,11 @@ flutter run -d web-server --web-port=8080 --release
 
 Demo version is hosted on polina's account: https://genui-panel.web.app/
 
-To deploy ask @polinach to give you permissions or to run:
+To deploy ask @polinach to make you contributor.
+
+IMPORTANT: switch to Flutter stable, because it is what firebase supports.
+
+Run:
 
 ```
 firebase deploy

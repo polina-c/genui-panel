@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../shared/in_ide_message.dart';
-import '../../shared/primitives/ui/horizontal_card.dart';
 import '../../shared/primitives/post_message/post_message.dart';
+import '../../shared/primitives/ui/colors.dart';
+import '../../shared/primitives/ui/horizontal_card.dart';
 import '../../shared/primitives/ui/scrolled_text.dart';
 
 class PromptCard extends StatelessWidget {
@@ -13,8 +14,8 @@ class PromptCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HorizontalCard(
-      elevation: 0,
-      color: null,
+      elevation: 2,
+      color: AppColors.softBg(context),
       height: 140,
       child: Stack(
         children: [

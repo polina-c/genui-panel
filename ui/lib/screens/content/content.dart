@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../shared/primitives/ui/app_scaffold.dart';
 import '../../shared/primitives/constants.dart';
+import '../../shared/primitives/ui/colors.dart';
 import '_gen_ui_card.dart';
 import '_prompt_card.dart';
 
@@ -27,8 +28,6 @@ class ContentScreen extends StatefulWidget {
 class _ContentScreenState extends State<ContentScreen> {
   @override
   Widget build(BuildContext context) {
-    final backgroundColor = Theme.of(context).colorScheme.secondaryContainer;
-
     final List<GenUiCard> cards;
     if (widget.numberOfOptions == 1) {
       cards = [
@@ -52,17 +51,19 @@ class _ContentScreenState extends State<ContentScreen> {
           .toList();
     }
 
+    final titleStyle = AppText.sectionTitle(context);
+
     return AppScaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: AppColors.softBg(context),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text('Prompt:'),
+            Text('Prompt:', style: titleStyle),
             PromptCard(widget.prompt),
             const SizedBox(height: 20),
-            Text('Options (${widget.numberOfOptions}):'),
+            Text('Options (${widget.numberOfOptions}):', style: titleStyle),
             ...cards,
           ],
         ),
