@@ -81,7 +81,7 @@ InIdeMessage messageFromJson(String jsonString) {
       );
 
     case InIdeMessageType.revealPromptMessage:
-      return RevealPromptMessage(
+      return EditPromptMessage(
         prompt: json[_JsonFields.prompt] as String,
       );
 
@@ -89,7 +89,7 @@ InIdeMessage messageFromJson(String jsonString) {
       return ExperimentalWindowMessage();
 
     case InIdeMessageType.revealUiMessage:
-      return RevealUiMessage(
+      return EditUiMessage(
         ui: GenUi.fromJson(json[_JsonFields.ui] as Map<String, dynamic>),
       );
   }
@@ -125,8 +125,8 @@ class ExperimentalWindowMessage extends InIdeMessage {
   Map<String, dynamic> _concreteToJson() => {};
 }
 
-class RevealPromptMessage extends InIdeMessage {
-  RevealPromptMessage({required this.prompt})
+class EditPromptMessage extends InIdeMessage {
+  EditPromptMessage({required this.prompt})
       : super(InIdeMessageType.revealPromptMessage);
 
   final String prompt;
@@ -138,8 +138,8 @@ class RevealPromptMessage extends InIdeMessage {
       };
 }
 
-class RevealUiMessage extends InIdeMessage {
-  RevealUiMessage({required this.ui}) : super(InIdeMessageType.revealUiMessage);
+class EditUiMessage extends InIdeMessage {
+  EditUiMessage({required this.ui}) : super(InIdeMessageType.revealUiMessage);
 
   final GenUi ui;
 

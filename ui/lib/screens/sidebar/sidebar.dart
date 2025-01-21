@@ -75,20 +75,28 @@ class _SidebarScreenState extends State<SidebarScreen> {
     final data = event.data as String;
     final message = messageFromJson(data);
     print('!!!! dart sidebar: parsed message: ${message.type}');
-    if (message is RevealPromptMessage) {
+    if (message is EditPromptMessage) {
       _settings.prompt.text = message.prompt;
       setState(() => _uiToAdjust = null);
-      _focus.requestFocus();
-    } else if (message is RevealUiMessage) {
+      _focusInput();
+    } else if (message is EditUiMessage) {
       _settings.prompt.text = '';
       setState(() => _uiToAdjust = message.ui);
-      _focus.requestFocus();
+      _focusInput();
     } else {
       throw Exception(
         'dart sidebar received unknown message: '
         '${message.runtimeType}, ${message.type}',
       );
     }
+  }
+
+  void _focusInput() {
+    // See https://stackoverflow.com/questions/56221653/focusnode-why-is-requestfocus-not-working
+
+    Future.delayed(const Duration(milliseconds: 50), () {
+      FocusScope.of(context).requestFocus(_focus);
+    });
   }
 
   void _handleAuthChange() {
