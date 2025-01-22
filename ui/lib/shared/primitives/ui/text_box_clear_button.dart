@@ -13,13 +13,16 @@ Widget clearButton(TextEditingController text) {
         if (text.value.text.isEmpty) {
           return const SizedBox.shrink();
         }
-        return SizedBox.shrink(
-          child: IconButton(
-            onPressed: text.clear,
-            icon: const Icon(Icons.clear),
-            color: AppColors.primary(context),
-            iconSize: 16,
-          ),
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            IconButton(
+              onPressed: text.clear,
+              icon: const Icon(Icons.clear),
+              color: AppColors.primary(context),
+              iconSize: 16,
+            ),
+          ],
         );
       });
 }

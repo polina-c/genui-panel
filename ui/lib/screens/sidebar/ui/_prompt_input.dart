@@ -24,7 +24,7 @@ class PromptInput extends StatelessWidget {
         hintText: uiToAdjust == null
             ? 'Describe UI you want to generate.'
             : 'Describe how you want to adjust "$uiToAdjust"',
-        suffixIcon: clearButton(text),
+        suffix: clearButton(text),
       ),
       keyboardType: TextInputType.multiline,
       // Defines the min height:
